@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <title>Document</title>
+</head>
+<body>
+    <!--ring div starts here-->
+    <div class="ring">
+        <i style="--clr:#00ff0a;"></i>
+        <i style="--clr:#ff0057;"></i>
+        <i style="--clr:#fffd44;"></i>
+        <div class="login">
+            <h2>Đăng nhập</h2>
+            <div class="inputBx">
+                <input type="text" placeholder="Tên tài khoản">
+            </div>
+            <div class="inputBx">
+                <input type="password" placeholder="Mật khẩu">
+            </div>
+            <a class="click" asp-controller="Home" asp-action="Index">Đăng nhập</a>
+            <div class="links">
+                <a href="#">Quên mật khẩu</a>
+                <a asp-controller="Regiter" asp-action="Regiter">Đăng kí</a>
+            </div>
+        </div>
+    </div>
+    <!--ring div ends here-->
+</body>
+</html>
