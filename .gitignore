@@ -1,0 +1,22 @@
+# Bỏ qua thư mục .vs của Visual Studio
+.vs/
+.vscode/
+
+# Bỏ qua tệp cấu hình người dùng của Visual Studio
+*.user
+*.suo
+
+# Bỏ qua các thư mục tạm thời và các tệp log
+*.log
+*.tmp
+
+# Bỏ qua tệp thư viện và đối tượng đã biên dịch
+*.obj
+*.dll
+*.exe
+*.pdb
+bin/
+obj/
+
+# Bỏ qua thư mục liên quan đến node_modules (nếu dùng Node.js)
+node_modules/
