@@ -6,7 +6,7 @@
     <title>@ViewData["Title"] - AI_Cooking_Guide_Website</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/AI_Cooking_Guide_Website.styles.css" asp-append-version="true" />
+  
 </head>
 <body>
   <header id="header" class="sticky-top bsb-tpl-header-sticky bsb-tpl-header-sticky-animationX">
@@ -30,7 +30,7 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1">
               <li class="nav-item">
-                                <a class="nav-link"  style="color: black;">Trang chủ</a>
+                                <a class="nav-link" asp-action="Index" asp-controller="Home" style="color: black;">Trang chủ</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#!" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Danh mục</a>
@@ -137,22 +137,7 @@
             </div>
         </div>
 
-        <!-- Copyright - Bootstrap Brain Component -->
-        <div class="bg-light py-3 py-md-5 border-top border-light-subtle">
-            <div class="container overflow-hidden">
-                <div class="row">
-                    <div class="col">
-                        <div class="footer-copyright-wrapper text-center">
-                            &copy; 2023. All Rights Reserved.
-                        </div>
-                        <div class="credits text-secondary text-center mt-2 fs-7">
-                            Built by <a href="https://bootstrapbrain.com/" class="link-secondary text-decoration-none">BootstrapBrain</a> with <span class="text-primary">&#9829;</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

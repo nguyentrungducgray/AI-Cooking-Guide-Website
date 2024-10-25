@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mMD12bG04DYX1olzfmV4Z0q0Gk48ikYCi6G9hqO7aHNHIlsry5hVGi/JbGrWFLTxoJBOIo/kuRvxivSPg4VN/w==",
+  "dgSpecHash": "I12HUKDhzizu+EWFzuBRQIa+Giq+E2dJKqSo/e056N3bbonGTsWPz6TO8ZXHp8YL3v83jp0uHMQnN1m7YmxORQ==",
   "success": true,
   "projectFilePath": "D:\\Computing Reseaver project\\AI Cooking Guide Website\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\AI Cooking Guide Website.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\trung\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

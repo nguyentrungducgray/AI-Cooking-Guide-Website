@@ -1,3 +1,5 @@
+using AI_Cooking_Guide_Website.ModelAI;
+
 namespace AI_Cooking_Guide_Website
 {
     public class Program
@@ -5,6 +7,12 @@ namespace AI_Cooking_Guide_Website
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // Cấu hình HttpClient
+            // Add services to the DI container.
+            builder.Services.AddScoped<RecipeApiService>();
+            builder.Services.AddHttpClient<RecipeApiService>();
+
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -32,5 +40,6 @@ namespace AI_Cooking_Guide_Website
 
             app.Run();
         }
+      
     }
 }
