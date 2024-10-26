@@ -48,5 +48,6 @@ namespace AI_Cooking_Guide_Website.ModelAI
                 return await response.Content.ReadAsStringAsync();
             }
         }
+
     }
 }

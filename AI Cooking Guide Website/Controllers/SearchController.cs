@@ -52,6 +52,7 @@ namespace AI_Cooking_Guide_Website.Controllers
                 {
                     var recipe = new RecipeModel
                     {
+                        Id = item["id"]?.ToObject<int>() ?? 0,  // Lấy ID
                         Title = item["title"]?.ToString(),
                         ImageUrl = item["image"]?.ToString(),
                         UsedIngredientCount = item["usedIngredientCount"]?.ToObject<int>() ?? 0,
@@ -71,34 +72,61 @@ namespace AI_Cooking_Guide_Website.Controllers
         }
 
 
+        [HttpGet]
         public async Task<IActionResult> RecipeDetails(int id)
         {
             try
             {
-                // Gọi RecipeApiService để lấy thông tin chi tiết món ăn
                 var jsonResponse = await _recipeApiService.GetRecipeDetailsAsync(id);
-
-                // Phân tích JSON để lấy thông tin món ăn
-                var recipeDetails = JObject.Parse(jsonResponse);
-
-                // Tạo mô hình cho món ăn
-                var recipeModel = new RecipeModel
+                if (string.IsNullOrWhiteSpace(jsonResponse))
                 {
-                    Title = recipeDetails["title"]?.ToString() ?? "Không có tiêu đề", // Nếu null, gán một giá trị mặc định
-                    ImageUrl = recipeDetails["image"]?.ToString() ?? "default_image_url.jpg", // Gán URL hình ảnh mặc định
-                    Instructions = recipeDetails["instructions"]?.ToString() ?? "Không có hướng dẫn", // Nếu không có hướng dẫn
-                    Ingredients = recipeDetails["extendedIngredients"]?.Select(i => i["name"]?.ToString()).ToList() ?? new List<string>(), // Gán danh sách nguyên liệu
+                    // Nếu không có phản hồi từ API, trả về một view với thông báo lỗi
+                    ModelState.AddModelError("", "Không tìm thấy thông tin món ăn.");
+                    return View(new RecipeDetailModel());
+                }
+
+                var recipeDetails = JObject.Parse(jsonResponse);
+                var recipeModel = new RecipeDetailModel
+                {
+                    Id = recipeDetails["id"].Value<int>(),
+                    Title = recipeDetails["title"]?.ToString(),
+                    ReadyInMinutes = recipeDetails["readyInMinutes"]?.Value<int>() ?? 0,
+                    Servings = recipeDetails["servings"]?.Value<int>() ?? 0,
+                    SourceUrl = recipeDetails["sourceUrl"]?.ToString(),
+                    Image = recipeDetails["image"]?.ToString(),
+                    Summary = recipeDetails["summary"]?.ToString(),
+                    DishTypes = recipeDetails["dishTypes"]?.ToObject<List<string>>() ?? new List<string>(),
+                    Diets = recipeDetails["diets"]?.ToObject<List<string>>() ?? new List<string>(),
+                    Instructions = recipeDetails["instructions"]?.ToString(),
+                    SpoonacularScore = recipeDetails["spoonacularScore"]?.Value<double>() ?? 0.0,
+                    AnalyzedInstructions = recipeDetails["analyzedInstructions"]?.Select(ai => new AnalyzedInstructionModel
+                    {
+                        Name = ai["name"]?.ToString(),
+                        Steps = ai["steps"]?.Select(s => new StepModel
+                        {
+                            Number = s["number"]?.ToObject<int>() ?? 0,
+                            Step = s["step"]?.ToString(),
+                            Ingredients = s["ingredients"]?.Select(i => new IngredientModel
+                            {
+                                Id = i["id"]?.ToObject<int>() ?? 0,
+                                Name = i["name"]?.ToString(),
+                                LocalizedName = i["localizedName"]?.ToString(),
+                                Image = i["image"]?.ToString()
+                            }).ToList() ?? new List<IngredientModel>()
+                        }).ToList() ?? new List<StepModel>()
+                    }).ToList() ?? new List<AnalyzedInstructionModel>()
+
                 };
 
-                // Trả về view với thông tin món ăn
                 return View(recipeModel);
             }
-            catch
+            catch (Exception ex)
             {
-                ModelState.AddModelError("", "Có lỗi xảy ra khi gọi API.");
-                return View(new RecipeModel()); // Trả về một đối tượng RecipeModel mới nếu có lỗi
+                ModelState.AddModelError("", "Có lỗi xảy ra khi gọi API: " + ex.Message);
+                return View(new RecipeDetailModel());
             }
         }
+
 
 
     }
