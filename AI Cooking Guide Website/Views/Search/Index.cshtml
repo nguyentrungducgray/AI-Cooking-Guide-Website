@@ -13,10 +13,10 @@
                 <form asp-controller="Search" asp-action="Index" method="post" class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center">
                     <div class="col-12 col-lg-8">
                         <label for="search-query" class="visually-hidden">Tìm kiếm món ăn hoặc nguyên liệu</label>
-                        <input id="search-query" name="query" class="form-control" placeholder="Nhập tên món ăn hoặc nguyên liệu..." required>
+                        <input id="search-query" name="query" class="form-control bsb-form-control-3xl" placeholder="Nhập tên món ăn hoặc nguyên liệu..." aria-label="email-newsletter-component" aria-describedby="email-newsletter-help" required>
                     </div>
                     <div class="col-12 col-lg-3 text-center text-lg-start">
-                        <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                        <button type="submit" class="btn btn-primary bsb-btn-3xl">Tìm kiếm</button>
                     </div>
                 </form>
             </div>
@@ -31,6 +31,8 @@
                 <h2 class="h4 mb-4 mb-md-5">Kết quả tìm kiếm</h2>
             </div>
         </div>
+    </div>
+    <div class="container overflow-hidden">
         <div class="row gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9">
             @if (Model != null && Model.Any())
             {
@@ -39,55 +41,56 @@
                     <div class="col-12 col-lg-4">
                         <article>
                             <div class="card border-0 bg-transparent">
-                                <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
-                                    <img class="img-fluid" src="@recipe.ImageUrl" alt="@recipe.Title" />
-                                    <figcaption>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-eye text-white bsb-hover-fadeInLeft" viewBox="0 0 16 16">
-                                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
-                                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
-                                        </svg>
-                                        <h4 class="h6 text-white bsb-hover-fadeInRight mt-2"> Chi Tiết </h4>
-                                    </figcaption>
-                                </figure>
-                                <div class="card-body m-0 p-0">
-                                    <div class="entry-header mb-3">
-                                        <ul class="entry-meta list-unstyled d-flex mb-3">
+                                <div class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
+                                    <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
+                                        <a class="dropdown-item" asp-controller="Search" asp-action="RecipeDetails" asp-route-id="@recipe.Id">
+                                            <img class="img-fluid bsb-scale bsb-hover-scale-up"  loading="lazy" src="@recipe.ImageUrl" alt="@recipe.Title" />
+                                        </a>
+                                        <figcaption>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-eye text-white bsb-hover-fadeInLeft" viewBox="0 0 16 16">
+                                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                                                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                                            </svg>
+                                            <h4 class="h6 text-white bsb-hover-fadeInRight mt-2"> Chi Tiết </h4>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="card-body m-0 p-0">
+                                        <div class="entry-header mb-3">
+                                            <ul class="entry-meta list-unstyled d-flex mb-3">
+                                                <li>
+                                                    <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7" href="#!">Bữa chính</a>
+                                                </li>
+                                            </ul>
+                                            <h2 class="card-title entry-title h4 m-0">
+                                                <a class="link-dark text-decoration-none">@recipe.Title</a>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer border-0 bg-transparent p-0 m-0">
+                                        <ul class="entry-meta list-unstyled d-flex align-items-center m-0">
                                             <li>
-                                                <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7" href="#!">Bữa chính</a>
+                                                <a class="fs-7 link-secondary text-decoration-none d-flex align-items-center" href="#!">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+                                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
+                                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                                    </svg>
+                                                    <p class="card-text">Số nguyên liệu đã sử dụng: @recipe.UsedIngredientCount</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span class="px-3">&bull;</span>
+                                            </li>
+                                            <li>
+                                                <a class="link-secondary text-decoration-none d-flex align-items-center" href="#!">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
+                                                        <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                                        <path d="M1.5 0a.5.5 0 0 1 .5.5v1h11V.5a.5.5 0 0 1 1 0v1h1a.5.5 0 0 1 .5.5v2a5.5 5.5 0 0 1-5.5 5.5H13v2.5l-2.5-2.5H4.5L1 13V6.5A5.5 5.5 0 0 1 6.5 1h.5V0h-1z" />
+                                                    </svg>
+
+                                                </a>
                                             </li>
                                         </ul>
-                                        <h2 class="card-title entry-title h4 m-0">
-                                            <a>@recipe.Title</a>
-                                        </h2>
-                                       
-                                        <a asp-controller="Search" asp-action="RecipeDetails" asp-route-id="@recipe.Id">Xem chi tiết</a>
-
                                     </div>
-                                </div>
-                                <div class="card-footer border-0 bg-transparent p-0 m-0">
-                                    <ul class="entry-meta list-unstyled d-flex align-items-center m-0">
-                                        <li>
-                                            <a class="fs-7 link-secondary text-decoration-none d-flex align-items-center" href="#!">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
-                                                    <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
-                                                    <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-                                                </svg>
-                                                <p class="card-text">Số nguyên liệu đã sử dụng: @recipe.UsedIngredientCount</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <span class="px-3">&bull;</span>
-                                        </li>
-                                        <li>
-                                            <a class="link-secondary text-decoration-none d-flex align-items-center" href="#!">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
-                                                    <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-                                                    <path d="M1.5 0a.5.5 0 0 1 .5.5v1h11V.5a.5.5 0 0 1 1 0v1h1a.5.5 0 0 1 .5.5v2a5.5 5.5 0 0 1-5.5 5.5H13v2.5l-2.5-2.5H4.5L1 13V6.5A5.5 5.5 0 0 1 6.5 1h.5V0h-1z" />
-                                                </svg>
-                                               
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                         </article>
@@ -101,5 +104,6 @@
                 </div>
             }
         </div>
+    </div>
     </div>
 </section>

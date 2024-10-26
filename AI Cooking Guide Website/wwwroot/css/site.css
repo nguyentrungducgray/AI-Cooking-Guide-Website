@@ -5399,7 +5399,8 @@ fieldset:disabled .btn {
 .card-img,
 .card-img-bottom,
 .card-img-top {
-    width: 100%
+    width: 100%; 
+    text-align: center;
 }
 
 .card-img,
