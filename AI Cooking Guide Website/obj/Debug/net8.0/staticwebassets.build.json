@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oPbIIZYaZ+AI/bgyiXAsBgapC0D9+APT/UTN1Wp56Cg=",
+  "Hash": "2M6OFqZVMdyylltJohJNHB9t3p3edLD1RljBwl2xWRw=",
   "Source": "AI Cooking Guide Website",
   "BasePath": "_content/AI Cooking Guide Website",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Admin.css"
+    },
+    {
+      "Identity": "E:\\du an cuoi nam\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\EditAdminList.css",
+      "SourceId": "AI Cooking Guide Website",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\du an cuoi nam\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\",
+      "BasePath": "_content/AI Cooking Guide Website",
+      "RelativePath": "css/EditAdminList.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\EditAdminList.css"
     },
     {
       "Identity": "E:\\du an cuoi nam\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\ListAdmin.css",
