@@ -6,61 +6,62 @@
     <title>@ViewData["Title"] - AI_Cooking_Guide_Website</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-  
+    <link rel="stylesheet" href="~/css/Admin.css" asp-append-version="true" />
 </head>
 <body>
-  <header id="header" class="sticky-top bsb-tpl-header-sticky bsb-tpl-header-sticky-animationX">
+    <header id="header" class="sticky-top bsb-tpl-header-sticky bsb-tpl-header-sticky-animationX">
 
-    <!-- Navbar 1 - Bootstrap Brain Component -->
-    <nav class="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret bsb-tpl-navbar-sticky bg-white border-bottom border-light-subtle" data-bsb-sticky-target="#header">
-      <div class="container">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
-          <img src="~/img/branding/planet-logo.svg" class="bsb-tpl-logo" alt="">
-        </a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-          </svg>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1">
-              <li class="nav-item">
+        <!-- Navbar 1 - Bootstrap Brain Component -->
+        <nav class="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret bsb-tpl-navbar-sticky bg-white border-bottom border-light-subtle" data-bsb-sticky-target="#header">
+            <div class="container">
+                <a class="brand" asp-controller="Home" asp-action="Index">
+                    <img src="~/img/logo/logo.png" class="icon" alt="">
+                    <span class="text" style="color:tomato; font-size: 24px; font-weight: 700;">Michelin Btec</span>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
+                            <li class="nav-item">
                                 <a class="nav-link" asp-action="Index" asp-controller="Home" style="color: black;">Trang chủ</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#!" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Danh mục</a>
-                <ul class="dropdown-menu border-0 shadow bsb-zoomIn" aria-labelledby="categoryDropdown">
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#!" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Danh mục</a>
+                                <ul class="dropdown-menu border-0 shadow bsb-zoomIn" aria-labelledby="categoryDropdown">
                                     <li><a class="dropdown-item" asp-controller="List" asp-action="Index">Tất cả</a></li>
                                     <li><a class="dropdown-item" asp-controller="List" asp-action="Index">Sáng</a></li>
                                     <li><a class="dropdown-item" asp-controller="List" asp-action="Index">Trưa</a></li>
                                     <li><a class="dropdown-item" asp-controller="List" asp-action="Index">Tối</a></li>
                                     <li><a class="dropdown-item" asp-controller="List" asp-action="Index">Ăn vặt</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
+                                </ul>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" asp-controller="Search" asp-action="Index">Tìm kiếm</a>
-              </li>
-              <li class="nav-item">
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" asp-controller="About" asp-action="Index">Về chúng tôi</a>
-              </li>
-              <li class="nav-item">
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" asp-controller="Contact" asp-action="Index">Liên hệ</a>
-              </li>
-              <li class="nav-item">
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" asp-controller="Login" asp-action="Login">Đăng kí/Đăng nhập</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
-  </header>
+    </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -75,8 +76,9 @@
                 <div class="row gy-3 gy-md-5 gy-xl-0 align-items-sm-center">
                     <div class="col-xs-12 col-sm-6 col-xl-3 order-0 order-xl-0">
                         <div class="footer-logo-wrapper text-center text-sm-start">
-                            <a href="#!">
-                                <img src="~/img/branding/planet-logo.svg" alt="" class="bsb-tpl-logo-footer">
+                            <a class="brand" asp-controller="Home" asp-action="Index">
+                                <img src="~/img/logo/logo.png" class="icon" alt="">
+                                <span class="text" style="color:tomato; font-size: 24px; font-weight: 700;">Michelin Btec</span>
                             </a>
                         </div>
                     </div>
@@ -137,7 +139,7 @@
             </div>
         </div>
 
-        
+
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

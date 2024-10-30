@@ -10,4 +10,5 @@
         public int MissedIngredientCount { get; set; }
     }
 
+
 }

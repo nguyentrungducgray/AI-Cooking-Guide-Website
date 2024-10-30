@@ -1,0 +1,61 @@
+﻿@model AI_Cooking_Guide_Website.Models.AddModel.Recipe
+
+<section class="py-3 py-md-5 py-xl-8 bg-light">
+    <div class="container">
+        <div class="row gy-3 gy-lg-0 align-items-lg-center justify-content-lg-between">
+            <div class="col-12 col-lg-7 order-1 order-lg-0">
+                <div class="entry-header mb-3">
+                    <h2 class="display-3 fw-bold mb-4">@Model.Name</h2>
+                </div>
+                <div class="entry-footer">
+                    <ul class="entry-meta list-unstyled d-flex align-items-center m-0">
+                        <li>
+                            <a class="fs-7 link-secondary text-decoration-none d-flex align-items-center" href="#!">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <a class="d-block bsb-hover-image overflow-hidden rounded" href="#!">
+                    <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy" src="@Model.Image" alt="@Model.Name" />
+                </a>
+            </div>
+
+            <h3 class="mt-4">Mô tả:</h3>
+            <p>@Model.Description</p>
+
+            <h3 class="mt-4">Nguyên liệu:</h3>
+            <ul>
+                @if (Model.Ingredients.Count > 0)
+                {
+                    // Lấy tất cả nguyên liệu ngoại trừ phần tử cuối
+                    foreach (var ingredient in Model.Ingredients.Take(Model.Ingredients.Count - 1))
+                    {
+                        <li>@ingredient</li>
+                    }
+                }
+                else
+                {
+                    <li>Không có nguyên liệu nào.</li>
+                }
+            </ul>
+            <h3 class="mt-4">Các bước nấu:</h3>
+            <ol>
+                @if (Model.Steps.Count > 0)
+                {
+                    // Lấy tất cả các bước nấu ngoại trừ phần tử cuối
+                    foreach (var step in Model.Steps.Take(Model.Steps.Count - 1))
+                    {
+                        <li>@step</li>
+                    }
+                }
+                else
+                {
+                    <li>Không có bước nấu nào.</li>
+                }
+            </ol>
+
+        </div>
+    </div>
+</section>
