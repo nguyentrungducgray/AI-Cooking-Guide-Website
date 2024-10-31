@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Admin\\Index.cshtml",
               "ToolTip": "D:\\hocki6\\Project\\S\u1EEDa \u0111\u1ED5i giao di\u1EC7n AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Admin\\Index.cshtml",
               "RelativeToolTip": "AI Cooking Guide Website\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AQIAAKMAAAAAAAAAAAAAAK0AAAAHAAAA",
+              "ViewState": "AQIAAKMAAAAAAAAAAAAuwL8AAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-30T11:22:55.639Z",
               "EditorCaption": ""
@@ -67,8 +67,7 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Views\\Search\\RecipeDetails.cshtml",
               "ViewState": "AQIAABUAAAAAAAAAAAAAACYAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-30T11:13:05.633Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T11:13:05.633Z"
             },
             {
               "$type": "Document",
@@ -80,8 +79,7 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Views\\Home\\FoodDetails.cshtml",
               "ViewState": "AQIAABkAAAAAAAAAAAAIwD0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-30T10:59:29.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T10:59:29.273Z"
             },
             {
               "$type": "Document",
@@ -93,8 +91,7 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Controllers\\HomeController.cs",
               "ViewState": "AQIAADQAAAAAAAAAAAAIwDsAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:00:54.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T11:00:54.587Z"
             },
             {
               "$type": "Document",
@@ -106,8 +103,7 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAHsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-30T10:21:25.365Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T10:21:25.365Z"
             }
           ]
         }
