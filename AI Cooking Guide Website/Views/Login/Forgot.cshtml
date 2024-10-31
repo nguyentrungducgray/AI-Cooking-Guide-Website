@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Quên Mật Khẩu";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - School</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/assets/css/bootstrap-datetimepicker.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/assets/css/ckeditor.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/assets/css/feather.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/assets/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/School.styles.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/09a5fdf6ba.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="main-wrapper login-body">
+        <div class="login-wrapper">
+            <div class="container">
+                <div class="loginbox">
+                    <div class="login-left">
+                        <img class="img-fluid full-width" src="~/img/hoc-nau-an.jpg" alt="Logo" style="object-fit: cover; width: 100%; height: 100%;">
+
+                    </div>
+                    <div class="login-right">
+                        <div class="login-right-wrap">
+                            <h1>Đặt lại mật khẩu</h1>
+                            <p class="account-subtitle">Hãy để chúng tôi giúp bạn</p>
+
+                            <form asp-controller="Login" asp-action="Forgot">
+                                <div class="form-group">
+                                    <label>Nhập địa chỉ email đã đăng ký của bạn <span class="login-danger">*</span></label>
+                                    <input class="form-control" type="email" name="email" required>
+                                    <span class="profile-views"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary btn-block" type="submit">Gửi liên kết đặt lại mật khẩu</button>
+                                </div>
+                            </form>
+
+                            @if (ViewBag.Message != null)
+                            {
+                                <div class="alert alert-success mt-3">
+                                    @ViewBag.Message
+                                </div>
+                            }
+
+                            @if (ViewBag.ResetLink != null)
+                            {
+                                <div class="alert alert-info mt-3">
+                                    <strong>Liên kết đặt lại mật khẩu của bạn:</strong>
+                                    <a href="@ViewBag.ResetLink">@ViewBag.ResetLink</a>
+                                </div>
+                            }
+
+                            <div class="form-group mb-0">
+                                <a class="btn btn-primary primary-reset btn-block" href="@Url.Action("Login", "Login")">Đăng Nhập</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/feather.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

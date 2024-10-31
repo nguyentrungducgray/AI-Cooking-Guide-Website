@@ -15,6 +15,8 @@ namespace AI_Cooking_Guide_Website.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.UserName = TempData["UserName"];
+            ViewBag.UserImage = TempData["UserImage"];
             return View();
         }
 
