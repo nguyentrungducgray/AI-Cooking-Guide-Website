@@ -1,3 +1,54 @@
+/* Thiết lập kiểu cho navbar */
+.navbar {
+    background-color: #f8f9fa;
+}
+
+    .navbar .navbar-nav .nav-link {
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+        .navbar .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+
+    /* Thiết lập cho menu thả xuống */
+    .navbar .dropdown-menu {
+        background-color: #ffffff;
+        border: 1px solid #e2e2e2;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+        .navbar .dropdown-menu .dropdown-item {
+            color: #333;
+            padding: 10px 20px;
+            font-size: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+            .navbar .dropdown-menu .dropdown-item:hover {
+                background-color: #f0f0f0;
+                color: #007bff;
+            }
+
+/* Thêm hiệu ứng zoom khi mở menu */
+.bsb-zoomIn {
+    animation: zoomIn 0.3s ease-in-out;
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 html {
     font-size: 14px;
 }

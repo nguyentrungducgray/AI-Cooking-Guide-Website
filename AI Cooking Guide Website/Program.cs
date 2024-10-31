@@ -13,7 +13,13 @@ namespace AI_Cooking_Guide_Website
             builder.Services.AddScoped<RecipeApiService>();
             builder.Services.AddHttpClient<RecipeApiService>();
 
-
+            // Thêm dịch vụ xác thực
+            builder.Services.AddAuthentication("YourCookieScheme")
+                .AddCookie("YourCookieScheme", options =>
+                {
+                    options.LoginPath = "/Login"; // Đường dẫn đến trang đăng nhập
+                    options.LogoutPath = "/Logout"; // Đường dẫn đến trang đăng xuất
+                });
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
