@@ -1,1 +1,14 @@
-[{"Id":"1","UserName":"Phuong Diem","Email":"phuongdiemtranthi23@gmail.com","Password":"diemmix123"}]
+[
+  {
+    "Id": "BH00465",
+    "UserName": "Gray",
+    "Email": "ducntbh00465@gmail.com",
+    "Password": "123"
+  },
+  {
+    "Id": "BH00556",
+    "UserName": "Admin",
+    "Email": "ducntbh00465@gmail.com",
+    "Password": "123"
+  }
+]
