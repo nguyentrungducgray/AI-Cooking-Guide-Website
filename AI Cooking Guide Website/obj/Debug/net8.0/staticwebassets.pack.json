@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\OIP.jpg",
+      "PackagePath": "staticwebassets\\images\\OIP.jpg"
+    },
+    {
       "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg",
       "PackagePath": "staticwebassets\\images\\kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg"
     },
@@ -91,6 +95,10 @@
     {
       "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\logo\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo\\logo.png"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\microphone.jpg",
+      "PackagePath": "staticwebassets\\img\\microphone.jpg"
     },
     {
       "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\page\\page-img-1.jpg",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "doy7WgQDhawRfeKgFibqHoKpbsUl1gwiUh+WUQ3wcV0=",
+  "Hash": "Ul+6vIUS+7Xwxz3Mg37TkAu0EuAe8YB1HLPTdlmwfC8=",
   "Source": "AI Cooking Guide Website",
   "BasePath": "_content/AI Cooking Guide Website",
   "Mode": "Default",
@@ -186,6 +186,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg"
+    },
+    {
+      "Identity": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\OIP.jpg",
+      "SourceId": "AI Cooking Guide Website",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\",
+      "BasePath": "_content/AI Cooking Guide Website",
+      "RelativePath": "images/OIP.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\OIP.jpg"
     },
     {
       "Identity": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\tao_pho_1.jpg",
@@ -471,6 +490,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\logo\\logo.png"
+    },
+    {
+      "Identity": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\microphone.jpg",
+      "SourceId": "AI Cooking Guide Website",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\",
+      "BasePath": "_content/AI Cooking Guide Website",
+      "RelativePath": "img/microphone.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\microphone.jpg"
     },
     {
       "Identity": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\page\\page-img-1.jpg",
