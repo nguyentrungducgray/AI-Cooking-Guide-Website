@@ -17758,3 +17758,49 @@ h6 {
         background-color: #0056b3; /* Màu nền khi hover */
         transform: scale(1.05); /* Phóng to nút một chút khi hover */
     }
+
+/* Thêm hiệu ứng nhấp nháy cho nút khi nhận diện giọng nói bật */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(0, 123, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+.voice-active {
+    animation: pulse 1.5s infinite; /* Lặp lại hiệu ứng */
+    border-color: #007bff;
+    border-radius: 5px;
+    color: #007bff;
+}
+
+    /* Hiệu ứng nổi lên trên cho ảnh microphone khi nhận diện giọng nói bật */
+    .voice-active img {
+        box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.6), 0px 0px 30px rgba(0, 123, 255, 0.4);
+        transform: scale(1.1); /* Phóng to ảnh để tạo hiệu ứng nổi lên */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+#voice-search-btn img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    position: relative; /* Giúp ảnh hiển thị trên các thành phần khác */
+    z-index: 1; /* Đặt ảnh lên trên nếu có lớp phủ */
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: -3px;
+}
+#voice-search-btn {
+    padding: 0; /* Xóa padding nếu cần */
+    overflow: visible; /* Cho phép ảnh tràn ra nếu cần */
+
+}

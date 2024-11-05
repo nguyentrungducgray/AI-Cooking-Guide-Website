@@ -5,24 +5,89 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-12 col-md-9 col-lg-8 col-xl-8 col-xxl-7">
-                <h2 class="display-4 fw-bold mb-4 mb-md-5 mb-xxl-6 text-center text-accent-emphasis">Tìm kiếm với công cụ AI tuyệt vời của chúng tôi</h2>
+                <h2 class="display-4 fw-bold mb-4 mb-md-5 mb-xxl-6 text-center text-accent-emphasis">
+                    Tìm kiếm với công cụ AI tuyệt vời của chúng tôi
+                </h2>
             </div>
         </div>
         <div class="row justify-content-md-center">
             <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7">
-                <form asp-controller="Search" asp-action="Index" method="post" class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center">
-                    <div class="col-12 col-lg-8">
+                <form id="search-form" asp-controller="Search" asp-action="Index" method="post" class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center">
+                    <div class="col-12 col-lg-7">
                         <label for="search-query" class="visually-hidden">Tìm kiếm món ăn hoặc nguyên liệu</label>
-                        <input id="search-query" name="query" class="form-control bsb-form-control-3xl" placeholder="Nhập tên món ăn hoặc nguyên liệu..." aria-label="email-newsletter-component" aria-describedby="email-newsletter-help" required>
+                        <input id="search-query" name="query" class="form-control bsb-form-control-3xl"
+                               placeholder="Nhập tên món ăn hoặc nguyên liệu..." aria-label="email-newsletter-component"
+                               aria-describedby="email-newsletter-help" required>
                     </div>
+                    <!-- Nút micro để tìm kiếm bằng giọng nói -->
+                    <div class="col-2 col-lg-1 d-flex align-items-center" style="height: 100%;">
+                        <a type="button" id="voice-search-btn" >
+                            <img src="~/img/microphone.jpg" alt="Alternate Text" class="img-fluid mx-auto" />
+                        </a>
+                    </div>
+
                     <div class="col-12 col-lg-3 text-center text-lg-start">
-                        <button type="submit" class="btn btn-primary bsb-btn-3xl">Tìm kiếm</button>
+                        <button type="submit" class="btn btn-primary bsb-btn-3xl" style="margin-top: 0px">Tìm kiếm</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    // Kiểm tra tính sẵn có của API SpeechRecognition
+    const searchInput = document.getElementById('search-query');
+    const voiceSearchBtn = document.getElementById('voice-search-btn');
+    const searchForm = document.getElementById('search-form');
+
+    if ('webkitSpeechRecognition' in window) {
+        const recognition = new webkitSpeechRecognition();
+        recognition.lang = 'vi-VN';
+        recognition.continuous = false;
+        recognition.interimResults = false;
+
+        let isRecognizing = false;
+
+        voiceSearchBtn.addEventListener('click', () => {
+            if (isRecognizing) {
+                recognition.stop();
+            } else {
+                recognition.start();
+            }
+        });
+
+        recognition.onstart = () => {
+            isRecognizing = true;
+            voiceSearchBtn.classList.add('voice-active'); // Thêm hiệu ứng nhấp nháy khi bắt đầu nhận diện
+        };
+
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            searchInput.value = transcript;
+        };
+
+        recognition.onspeechend = () => {
+            recognition.stop();
+            searchForm.submit();
+        };
+
+        recognition.onend = () => {
+            isRecognizing = false;
+            voiceSearchBtn.classList.remove('voice-active'); // Xóa hiệu ứng khi kết thúc nhận diện
+        };
+
+        recognition.onerror = (event) => {
+            console.error('Lỗi nhận dạng giọng nói:', event.error);
+            isRecognizing = false;
+            voiceSearchBtn.classList.remove('voice-active');
+        };
+    } else {
+        alert('Trình duyệt của bạn không hỗ trợ tìm kiếm bằng giọng nói');
+        voiceSearchBtn.disabled = true;
+    }
+
+</script>
 
 <section class="bsb-blog-5 py-3 py-md-5 py-xl-8 bsb-section-py-xxl-1">
     <div class="container">
@@ -44,7 +109,7 @@
                                 <div class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
                                     <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
                                         <a class="dropdown-item" asp-controller="Search" asp-action="RecipeDetails" asp-route-id="@recipe.Id">
-                                            <img class="img-fluid bsb-scale bsb-hover-scale-up"  loading="lazy" src="@recipe.ImageUrl" alt="@recipe.Title" />
+                                            <img class="img-fluid bsb-scale bsb-hover-scale-up" style="height: 410px" loading="lazy" src="@recipe.ImageUrl" alt="@recipe.Title" />
                                         </a>
                                         <figcaption>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-eye text-white bsb-hover-fadeInLeft" viewBox="0 0 16 16">
@@ -61,36 +126,12 @@
                                                     <a class="d-inline-flex px-2 py-1 link-accent text-accent-emphasis bg-accent-subtle border border-accent-subtle rounded-2 text-decoration-none fs-7" href="#!">Bữa chính</a>
                                                 </li>
                                             </ul>
-                                            <h2 class="card-title entry-title h4 m-0">
+                                            <h2 class="card-title entry-title h4 m-0" style="height: 120px">
                                                 <a class="link-dark text-decoration-none">@recipe.Title</a>
                                             </h2>
                                         </div>
                                     </div>
-                                    <div class="card-footer border-0 bg-transparent p-0 m-0">
-                                        <ul class="entry-meta list-unstyled d-flex align-items-center m-0">
-                                            <li>
-                                                <a class="fs-7 link-secondary text-decoration-none d-flex align-items-center" href="#!">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
-                                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
-                                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-                                                    </svg>
-                                                    <p class="card-text">Số nguyên liệu đã sử dụng: @recipe.UsedIngredientCount</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <span class="px-3">&bull;</span>
-                                            </li>
-                                            <li>
-                                                <a class="link-secondary text-decoration-none d-flex align-items-center" href="#!">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
-                                                        <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-                                                        <path d="M1.5 0a.5.5 0 0 1 .5.5v1h11V.5a.5.5 0 0 1 1 0v1h1a.5.5 0 0 1 .5.5v2a5.5 5.5 0 0 1-5.5 5.5H13v2.5l-2.5-2.5H4.5L1 13V6.5A5.5 5.5 0 0 1 6.5 1h.5V0h-1z" />
-                                                    </svg>
-
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                   
                                 </div>
                             </div>
                         </article>

@@ -5,8 +5,21 @@
       "PackagePath": "staticwebassets\\AI Cooking Guide Website.bundle.scp.css"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\Admin.css",
       "PackagePath": "staticwebassets\\css\\Admin.css"
+=======
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\Admin.css",
+      "PackagePath": "staticwebassets\\css\\Admin.css"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\back.jpg",
+      "PackagePath": "staticwebassets\\css\\back.jpg"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+>>>>>>> AIupdate
     },
     {
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\EditAdminList.css",
@@ -35785,6 +35798,7 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
@@ -35794,6 +35808,29 @@
     },
     {
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\about\\about-img-1.jpg",
+=======
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\data\\recipes.json",
+      "PackagePath": "staticwebassets\\data\\recipes.json"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\OIP.jpg",
+      "PackagePath": "staticwebassets\\images\\OIP.jpg"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg",
+      "PackagePath": "staticwebassets\\images\\kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\tao_pho_1.jpg",
+      "PackagePath": "staticwebassets\\images\\tao_pho_1.jpg"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\about\\about-img-1.jpg",
+>>>>>>> AIupdate
       "PackagePath": "staticwebassets\\img\\about\\about-img-1.jpg"
     },
     {
@@ -35857,6 +35894,7 @@
       "PackagePath": "staticwebassets\\img\\featured\\featured-img-1.jpg"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\hoc-nau-an.jpg",
       "PackagePath": "staticwebassets\\img\\hoc-nau-an.jpg"
     },
@@ -35870,6 +35908,17 @@
     },
     {
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\page\\page-img-1.jpg",
+=======
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\logo\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo\\logo.png"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\microphone.jpg",
+      "PackagePath": "staticwebassets\\img\\microphone.jpg"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\page\\page-img-1.jpg",
+>>>>>>> AIupdate
       "PackagePath": "staticwebassets\\img\\page\\page-img-1.jpg"
     },
     {
@@ -35905,11 +35954,19 @@
       "PackagePath": "staticwebassets\\img\\single\\single-img-3.jpg"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\js\\Admin.js",
       "PackagePath": "staticwebassets\\js\\Admin.js"
     },
     {
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\js\\site.js",
+=======
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\js\\Admin.js",
+      "PackagePath": "staticwebassets\\js\\Admin.js"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\Sửa đổi giao diện AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\js\\site.js",
+>>>>>>> AIupdate
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
