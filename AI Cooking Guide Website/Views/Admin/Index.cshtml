@@ -1,4 +1,4 @@
-﻿@{
+﻿﻿@{
 	Layout = null;
 }
 <!DOCTYPE html>
@@ -25,31 +25,31 @@
 
 		<ul class="side-menu top">
 			<li class="active">
-				<a href="@Url.Action("Index", "Admin")">
+				<a href="#">
 					<i class='bx bxs-dashboard'></i>
-					<span class="text"> add food</span>
+					<span class="text">Dashboard</span>
 				</a>
 			</li>
 			<li>
-				<a href="@Url.Action("Index", "ListAdmin")">
-					<i class='bx bxs-group'></i>
-					<span class="text">List food</span>
+				<a href="#">
+					<i class='bx bxs-shopping-bag-alt'></i>
+					<span class="text">My Store</span>
 				</a>
 			</li>
 			<li>
-				<a href="@Url.Action("Index", "Analytics")">
+				<a href="#">
 					<i class='bx bxs-doughnut-chart'></i>
 					<span class="text">Analytics</span>
 				</a>
 			</li>
 			<li>
-				<a href="@Url.Action("Index", "Messages")">
+				<a href="#">
 					<i class='bx bxs-message-dots'></i>
-					<span class="text">Messages</span>
+					<span class="text">Message</span>
 				</a>
 			</li>
 			<li>
-				<a href="@Url.Action("Index", "Team")">
+				<a href="#">
 					<i class='bx bxs-group'></i>
 					<span class="text">Team</span>
 				</a>
@@ -90,7 +90,7 @@
 				<span class="num">8</span>
 			</a>
 			<a href="#" class="profile">
-				<img src="<%= ResolveUrl(" ~/img/people.png") %>" alt="User Profile">
+				<img src="<%= ResolveUrl(" ~ /img/people.png") %>" alt="User Profile">
 			</a>
 		</nav>
 		<!-- NAVBAR -->
@@ -123,7 +123,6 @@
 				<link rel="stylesheet" href="styles.css"> <!-- Liên kết đến file CSS -->
 			</head>
 			<body>
-
 				<div class="form-container">
 					<h2>Thêm Món Ăn</h2>
 					<form id="recipe-form" onsubmit="saveRecipe(event)">
@@ -201,24 +200,7 @@
 
 						// Lấy giá trị từ các trường input
 						const name = document.getElementById('name').value;
-						const ingredients = document.getElementById('ingredients').value.split('\n');
 						const description = document.getElementById('description').value;
-						const steps = document.getElementById('steps').value.split('\n');
-						const image = document.getElementById('image').files[0];
-
-						const reader = new FileReader();
-						reader.onloadend = function () {
-							const recipe = {
-								name,
-								image: reader.result,
-								description,
-								ingredients,
-								steps,
-							};
-							displayRecipe(recipe);
-						};
-						reader.readAsDataURL(image);
-					});
 
 						// Lấy danh sách nguyên liệu và bước nấu từ các trường input
 						const ingredients = Array.from(document.getElementsByClassName('ingredient')).map(input => input.value);

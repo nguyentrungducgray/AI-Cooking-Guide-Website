@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
@@ -61,7 +62,7 @@ namespace AI_Cooking_Guide_Website.Controllers
 				return StatusCode(500, "Lỗi: " + ex.Message);
 			}
 		}
-		
+
 
 		public IActionResult Index()
 		{

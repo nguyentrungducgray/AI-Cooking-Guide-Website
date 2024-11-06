@@ -56,7 +56,25 @@
                                 <a class="nav-link" asp-controller="Contact" asp-action="Index">Liên hệ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-controller="Login" asp-action="Login">Đăng kí/Đăng nhập</a>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="@User.FindFirst("AvatarUrl")?.Value" alt="Avatar" class="rounded-circle" style="width: 30px; height: 30px; object-fit: cover;">
+                                            @User.Identity.Name
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" asp-controller="Profile" asp-action="Profile">Hồ sơ cá nhân</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Login" asp-action="Logout">Đăng xuất</a></li>
+                                    </ul>
+                                </li>
+                                }
+                                else
+                                {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Login" asp-action="Login">Đăng kí/Đăng nhập</a>
+                                </li>
+                                }
                             </li>
                         </ul>
                     </div>
@@ -169,42 +187,7 @@
             </div>
         </nav>
     </header>
-    <main role="main" class="container pb-3">
-        @RenderBody()
-    </main>
-    <footer class="footer bg-light py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 text-center">
-                    <a href="#">
-                        <img src="~/img/branding/planet-logo.svg" alt="AI Cooking Guide Logo" class="bsb-tpl-logo-footer">
-                    </a>
-                </div>
-                <div class="col-md-6">
-                    <ul class="nav justify-content-center">
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Advertise</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Terms</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Privacy</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 text-center">
-                    <ul class="nav justify-content-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#!"><i class="bi bi-facebook"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#!"><i class="bi bi-youtube"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#!"><i class="bi bi-twitter"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
