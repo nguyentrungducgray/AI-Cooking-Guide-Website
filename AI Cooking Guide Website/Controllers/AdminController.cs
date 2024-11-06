@@ -8,5 +8,6 @@ namespace AI_Cooking_Guide_Website.Controllers
         {
             return View();
         }
+
     }
 }
