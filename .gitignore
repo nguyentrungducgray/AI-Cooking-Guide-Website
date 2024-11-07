@@ -1,5 +1,5 @@
 # Bỏ qua thư mục .vs của Visual Studio
-.vs/
+.vs
 .vscode/
 
 # Bỏ qua tệp cấu hình người dùng của Visual Studio
