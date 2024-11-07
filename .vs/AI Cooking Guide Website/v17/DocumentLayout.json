@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -85,6 +85,10 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ListAdminController.cs",
@@ -94,8 +98,7 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Controllers\\ListAdminController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T08:59:00.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T08:59:00.608Z"
             },
             {
               "$type": "Document",
@@ -107,8 +110,7 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Controllers\\ListController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T08:58:55.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T08:58:55.525Z"
             },
             {
               "$type": "Document",
@@ -132,8 +134,7 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Controllers\\AboutController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T08:10:53.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T08:10:53.855Z"
             },
             {
               "$type": "Document",
@@ -145,8 +146,7 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Models\\AddModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T08:08:35.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T08:08:35.275Z"
             },
             {
               "$type": "Document",
@@ -171,8 +171,7 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Controllers\\AdminController.cs",
               "ViewState": "AQIAACUAAAAAAAAAAAAQwDMAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T08:03:31.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T08:03:31.862Z"
             },
             {
               "$type": "Document",
