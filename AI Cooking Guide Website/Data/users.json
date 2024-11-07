@@ -12,3 +12,4 @@
     "Password": "123"
   }
 ]
+[{"Id":"2","UserName":"KimDung","Email":"kimdungtran26@gmail.com","Password":"kimdung123","ProfileImageUrl":null,"PhoneNumber":"1234456677","Address":"London"},{"Id":"3","UserName":"Phuong Diem","Email":"phuongdiemtranthi23@gmail.com","Password":"diemmix123","ProfileImageUrl":null,"PhoneNumber":"0123456780","Address":"Nam Dinh"},{"Id":"4","UserName":"Kim Dung","Email":"kimdungtran26@gmail.com","Password":"kimdung123","ProfileImageUrl":null,"PhoneNumber":"1234456677","Address":"Nghia Hung"}]

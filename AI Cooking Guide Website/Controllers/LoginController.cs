@@ -33,30 +33,34 @@ namespace AI_Cooking_Guide_Website.Controllers
         public async Task<IActionResult> Login(Users users)
         {
             List<Users>? userList = LoadUsersFromFile("Data/users.json");
-            var matchedUser = userList?.FirstOrDefault(u => u.UserName == users.UserName
-                                                             && u.Password == users.Password);
+            var matchedUser = userList?.FirstOrDefault(u => u.UserName == users.UserName && u.Password == users.Password);
+
             if (matchedUser != null)
             {
+                // Determine role based on username or another condition
+                string role = matchedUser.UserName == "Admin" ? "Admin" : "User";
+
                 var claims = new List<Claim>
         {
             new Claim(ClaimTypes.Name, matchedUser.UserName),
-            new Claim("AvatarUrl", GetRandomImage()) // Lưu URL ảnh
+            new Claim("AvatarUrl", GetRandomImage()), // Add random profile image URL as a claim
+            new Claim(ClaimTypes.Role, role) // Assign role claim based on user
         };
 
                 var claimsIdentity = new ClaimsIdentity(claims, "YourCookieScheme");
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
-                // Tạo cookie xác thực
+                // Sign in user with cookie authentication
                 await HttpContext.SignInAsync("YourCookieScheme", claimsPrincipal);
 
-                // Kiểm tra quyền truy cập
-                if (matchedUser.UserName == "Admin")
+                // Redirect based on role
+                if (role == "Admin")
                 {
-                    return RedirectToAction("Index", "Admin");
+                    return RedirectToAction("Index", "Admin"); // Redirect to Admin dashboard
                 }
                 else
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Home"); // Redirect to Home for regular users
                 }
             }
             else
@@ -66,6 +70,16 @@ namespace AI_Cooking_Guide_Website.Controllers
             }
         }
 
+        // Method to get a random profile image URL
+        private string GetRandomImage()
+        {
+            string[] images = { "/img/avatar1.png", "/img/avatar2.png", "/img/avatar3.png" };
+            int randomIndex = new Random().Next(images.Length);
+            return images[randomIndex];
+        }
+
+
+
         // Phương thức tải danh sách người dùng từ file JSON
         public List<Users>? LoadUsersFromFile(string fileName)
         {
@@ -73,14 +87,7 @@ namespace AI_Cooking_Guide_Website.Controllers
             return JsonSerializer.Deserialize<List<Users>>(readText);
         }
 
-        // Phương thức lấy một ảnh ngẫu nhiên từ danh sách ảnh
-        private string GetRandomImage()
-        {
-            // Thêm URL ảnh vào mảng để chọn ngẫu nhiên
-            string[] images = { "/img/avatar1.png", "/img/avatar2.png", "/img/avatar3.png" };
-            int randomIndex = new Random().Next(images.Length);
-            return images[randomIndex];
-        }
+       
         [HttpGet]
         public IActionResult Forgot()
         {

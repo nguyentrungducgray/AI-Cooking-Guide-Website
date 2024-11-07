@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "KjR21XlkvVqqTjBTAOlkfrRiIhtlj/ymG9eYn2Pnl1zTCHYRAI6M9cLTbwHXxAVuO+hIKRJz03Dc2CK6eoswxw==",
   "success": true,
   "projectFilePath": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\AI Cooking Guide Website.csproj",
+=======
+  "dgSpecHash": "CqR4KeS2C3o=",
+  "success": true,
+  "projectFilePath": "E:\\Đồ án\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\AI Cooking Guide Website.csproj",
+>>>>>>> profile
   "expectedPackageFiles": [
     "C:\\Users\\trung\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.10\\microsoft.aspnetcore.cryptography.internal.8.0.10.nupkg.sha512",
     "C:\\Users\\trung\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.10\\microsoft.aspnetcore.cryptography.keyderivation.8.0.10.nupkg.sha512",
