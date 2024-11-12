@@ -6,7 +6,7 @@ namespace AI_Cooking_Guide_Website.Controllers
 {
     public class ProfileController : Controller
     {
-        public IActionResult Profile()
+        public IActionResult Index()
         {
             // Fetch username from session or claims (assuming it's set in the login process)
             var userName = User.Identity.Name;
