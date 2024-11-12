@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\hocki6\\Project\\S\u1EEDa \u0111\u1ED5i giao di\u1EC7n AI\\AI-Cooking-Guide-Website\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|d:\\hocki6\\project\\s\u1EEDa \u0111\u1ED5i giao di\u1EC7n ai\\ai-cooking-guide-website\\ai cooking guide website\\views\\home\\fooddetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\views\\home\\fooddetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|d:\\hocki6\\project\\s\u1EEDa \u0111\u1ED5i giao di\u1EC7n ai\\ai-cooking-guide-website\\ai cooking guide website\\views\\search\\recipedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\views\\search\\recipedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -39,32 +43,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FoodDetails.cshtml",
+              "DocumentMoniker": "D:\\hocki6\\Project\\S\u1EEDa \u0111\u1ED5i giao di\u1EC7n AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Home\\FoodDetails.cshtml",
+              "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Home\\FoodDetails.cshtml",
+              "ToolTip": "D:\\hocki6\\Project\\S\u1EEDa \u0111\u1ED5i giao di\u1EC7n AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Home\\FoodDetails.cshtml*",
+              "RelativeToolTip": "AI Cooking Guide Website\\Views\\Home\\FoodDetails.cshtml*",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAQwE0AAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-12T08:25:19.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "RecipeDetails.cshtml",
               "DocumentMoniker": "D:\\hocki6\\Project\\S\u1EEDa \u0111\u1ED5i giao di\u1EC7n AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Search\\RecipeDetails.cshtml",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Search\\RecipeDetails.cshtml",
               "ToolTip": "D:\\hocki6\\Project\\S\u1EEDa \u0111\u1ED5i giao di\u1EC7n AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Search\\RecipeDetails.cshtml",
               "RelativeToolTip": "AI Cooking Guide Website\\Views\\Search\\RecipeDetails.cshtml",
-              "ViewState": "AQIAAMMAAAAAAAAAAAAAANEAAAAAAAAA",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAAAJMAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-12T06:12:26.231Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "site.css",
               "DocumentMoniker": "D:\\hocki6\\Project\\S\u1EEDa \u0111\u1ED5i giao di\u1EC7n AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\wwwroot\\css\\site.css",
               "ToolTip": "D:\\hocki6\\Project\\S\u1EEDa \u0111\u1ED5i giao di\u1EC7n AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\site.css",
               "RelativeToolTip": "AI Cooking Guide Website\\wwwroot\\css\\site.css",
-              "ViewState": "AQIAAEZFAAAAAAAAAAAAAEpFAAAAAAAA",
+              "ViewState": "AQIAAChFAAAAAAAAAAAAAEpFAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-11-12T06:04:58.46Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\hocki6\\Project\\S\u1EEDa \u0111\u1ED5i giao di\u1EC7n AI\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Search\\Index.cshtml",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Search\\Index.cshtml",
