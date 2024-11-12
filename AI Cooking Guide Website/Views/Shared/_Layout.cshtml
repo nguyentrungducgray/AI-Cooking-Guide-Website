@@ -160,34 +160,6 @@
             </div>
         </div>
 
-
-                            </li>
-                            @if (User.Identity.IsAuthenticated)
-                            {
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="@User.FindFirst("AvatarUrl")?.Value" alt="Avatar" class="rounded-circle" style="width: 30px; height: 30px; object-fit: cover;">
-                                        @User.Identity.Name
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-end">
-                                        <li><a class="dropdown-item" asp-controller="Profile" asp-action="Profile">Hồ sơ cá nhân</a></li>
-                                        <li><a class="dropdown-item" asp-controller="Login" asp-action="Logout">Đăng xuất</a></li>
-                                    </ul>
-                                </li>
-                            }
-                            else
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="Login" asp-action="Login">Đăng kí/Đăng nhập</a>
-                                </li>
-                            }
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

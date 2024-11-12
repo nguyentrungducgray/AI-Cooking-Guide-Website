@@ -146,11 +146,10 @@
 
 
 
-                        <button type="s<label for="image">
-                            Chọn Ảnh:</label>
-                            <input type="file" id="image" name="Image" accept="image/*" required>
-                            <img id="imagePreview" style="display:none; max-width: 100%; margin-top: 10px;" alt="Image Preview" />ubmit">Thêm Món Ăn
-                        </button>
+						<label for="image">Chọn Ảnh:</label>
+						<input type="file" id="image" name="Image" accept="image/*" required onchange="previewImage(event)">
+						<img id="imagePreview" style="display: none; max-width: 100%; margin-top: 10px;" alt="Image Preview" />
+
 					</form>
 				</div>
 
