@@ -1,138 +1,219 @@
 ﻿@model AI_Cooking_Guide_Website.Models.RecipeDetailModel
 
-<section class="py-3 py-md-5 py-xl-8 bg-light">
-    <div class="container">
-        <div class="row gy-3 gy-lg-0 align-items-lg-center justify-content-lg-between">
-            <div class="col-12 col-lg-7 order-1 order-lg-0">
-                <div class="entry-header mb-3">
-                    <h2 class="display-3 fw-bold mb-4">@Model.Title</h2>
-                </div>
-                <div class="entry-footer">
-                    <ul class="entry-meta list-unstyled d-flex align-items-center m-0">
-                        <li>
-                            <a class="fs-7 link-secondary text-decoration-none d-flex align-items-center" href="#!">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
-                                    <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
-                                    <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-                                </svg>
-                                <span class="ms-2 fs-7">24/10/2004</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4">
-                <a class="d-block bsb-hover-image overflow-hidden rounded" href="#!">
-                    <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy" src="@Model.Image" alt="@Model.Title" />
-                </a>
-            </div>
-            <p class="mt-3"><strong>Thời gian chuẩn bị:</strong> @Model.ReadyInMinutes phút</p>
-            <p><strong>Khẩu phần ăn:</strong> @Model.Servings người</p>
 
-            <h3 class="mt-4">Information:</h3>
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+    <button id="read-content">Đọc nội dung</button>
+    <button id="read-again" ">Đọc lại từ đầu</button>
+    <section class="py-3 py-md-5 py-xl-8 bg-light">
 
-            <p>@Html.Raw(Model.Summary)</p>
-
-
-
-
-            <h3 class="mt-4">Instruct:</h3>
-            <p>@Model.Instructions</p>
-
-            <h3>Steps to follow:</h3>
-            <ol>
-                @if (Model.AnalyzedInstructions != null && Model.AnalyzedInstructions.Any())
-                {
-                    @foreach (var instruction in Model.AnalyzedInstructions)
-                    {
-                        @foreach (var step in instruction.Steps)
-                        {
+        <div id="container" class="container">
+            <div class="row gy-3 gy-lg-0 align-items-lg-center justify-content-lg-between">
+                <div class="col-12 col-lg-7 order-1 order-lg-0">
+                    <div class="entry-header mb-3">
+                        <h2 class="display-3 fw-bold mb-4">@Model.Title</h2>
+                    </div>
+                    <div class="entry-footer">
+                        <ul class="entry-meta list-unstyled d-flex align-items-center m-0">
                             <li>
-                                <h4><strong>Step @step.Number:</strong> @step.Step</h4>
-                                <ul>
-                                    <li>Ingredient:</li>
-                                    @foreach (var ingredient in step.Ingredients)
-                                    {
-                                        <li>@ingredient.LocalizedName</li>
-                                        @if (!string.IsNullOrEmpty(ingredient.Image))
-                                        {
-                                            <img src="@($"https://spoonacular.com/cdn/ingredients_100x100/{ingredient.Image}")" alt="@ingredient.LocalizedName" style="width: 30px; height: 30px; margin-left: 5px;" />
-                                        }
-                                    }
-                                </ul>
+                                <a class="fs-7 link-secondary text-decoration-none d-flex align-items-center" href="#!">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                    </svg>
+                                    <span class="ms-2 fs-7">24/10/2004</span>
+                                </a>
                             </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <a class="d-block bsb-hover-image overflow-hidden rounded" href="#!">
+                        <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy" src="@Model.Image" alt="@Model.Title" />
+                    </a>
+                </div>
+                <p class="mt-3"><strong>Thời gian chuẩn bị:</strong> @Model.ReadyInMinutes phút</p>
+                <p><strong>Khẩu phần ăn:</strong> @Model.Servings người</p>
+
+                <h3 class="mt-4">Information:</h3>
+
+                <p>@Html.Raw(Model.Summary)</p>
+
+
+
+
+                <h3 class="mt-4">Instruct:</h3>
+                <p>@Model.Instructions</p>
+
+                <h3>Steps to follow:</h3>
+                <ol>
+                    @if (Model.AnalyzedInstructions != null && Model.AnalyzedInstructions.Any())
+                    {
+                        @foreach (var instruction in Model.AnalyzedInstructions)
+                        {
+                            @foreach (var step in instruction.Steps)
+                            {
+                                <li>
+                                    <h4><strong>Step @step.Number:</strong> @step.Step</h4>
+                                    <ul>
+                                        <li>Ingredient:</li>
+                                        @foreach (var ingredient in step.Ingredients)
+                                        {
+                                            <li>@ingredient.LocalizedName</li>
+                                            @if (!string.IsNullOrEmpty(ingredient.Image))
+                                            {
+                                                <img src="@($"https://spoonacular.com/cdn/ingredients_100x100/{ingredient.Image}")" alt="@ingredient.LocalizedName" style="width: 30px; height: 30px; margin-left: 5px;" />
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+                            }
                         }
                     }
-                }
-                else
-                {
-                    <li><strong>There are no steps to take.</strong></li>
-                }
-            </ol>
-</section>
-<section class="py-3 ">
-    <div class="pb-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6">
-                    <span class="me-1 fw-bold">Category:</span>
-                    <ul class="entry-meta list-unstyled d-inline-flex align-items-center justify-content-center mb-3">
-                        @if (Model.DishTypes != null && Model.DishTypes.Any())
-                        {
-                            foreach (var dishType in Model.DishTypes)
+                    else
+                    {
+                        <li><strong>There are no steps to take.</strong></li>
+                    }
+                </ol>
+    </section>
+    <section class="py-3 ">
+        <div class="pb-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6">
+                        <span class="me-1 fw-bold">Category:</span>
+                        <ul class="entry-meta list-unstyled d-inline-flex align-items-center justify-content-center mb-3">
+                            @if (Model.DishTypes != null && Model.DishTypes.Any())
                             {
-                                <li>
-                                    <a class="link-secondary text-decoration-none" href="#!">@dishType</a>
-                                    @if (Model.DishTypes.Last() != dishType)
-                                    {
-                                        <span class="pe-2 text-secondary">,</span>
-                                    }
-                                </li>
+                                foreach (var dishType in Model.DishTypes)
+                                {
+                                    <li>
+                                        <a class="link-secondary text-decoration-none" href="#!">@dishType</a>
+                                        @if (Model.DishTypes.Last() != dishType)
+                                        {
+                                            <span class="pe-2 text-secondary">,</span>
+                                        }
+                                    </li>
+                                }
                             }
-                        }
-                        else
-                        {
-                            <li>No Category.</li>
-                        }
-                    </ul>
+                            else
+                            {
+                                <li>No Category.</li>
+                            }
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="pb-3 ">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6">
-                    <span class="me-1 fw-bold">Diet:</span>
-                    <ul class="entry-meta list-unstyled d-inline-flex align-items-center justify-content-center mb-3">
-                        @if (Model.Diets != null && Model.Diets.Any())
-                        {
-
-                            foreach (var diet in Model.Diets)
+        <div class="pb-3 ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6">
+                        <span class="me-1 fw-bold">Diet:</span>
+                        <ul class="entry-meta list-unstyled d-inline-flex align-items-center justify-content-center mb-3">
+                            @if (Model.Diets != null && Model.Diets.Any())
                             {
 
-                                <li>
-                                    <a class="link-secondary text-decoration-none" href="#!">@diet</a>
-                                    @if (Model.Diets.Last() != diet)
-                                    {
-                                        <span class="pe-2 text-secondary">,</span>
-                                    }
-                                </li>
+                                foreach (var diet in Model.Diets)
+                                {
+
+                                    <li>
+                                        <a class="link-secondary text-decoration-none" href="#!">@diet</a>
+                                        @if (Model.Diets.Last() != diet)
+                                        {
+                                            <span class="pe-2 text-secondary">,</span>
+                                        }
+                                    </li>
+                                }
                             }
-                        }
-                        else
-                        {
-                            <li>No diet.</li>
-                        }
-                    </ul>
+                            else
+                            {
+                                <li>No diet.</li>
+                            }
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <a href="@Model.SourceUrl" target="_blank" class="btn bsb-btn-2xl btn-primary rounded-pill ">View source</a>
-    </div>
-    </div>
-    </div>
+        <a href="@Model.SourceUrl" target="_blank" class="btn bsb-btn-2xl btn-primary rounded-pill ">View source</a>
+        </div>
+        </div>
+        </div>
+    </section>
+    <script>
+        // Lấy phần tử cần đọc
+        const readButton = document.getElementById("read-content");
+        const readAgainButton = document.getElementById("read-again");
+        const content = document.getElementById("container"); // Đảm bảo ID là 'container'
+        let isReading = false; // Biến trạng thái đọc
+        let isPaused = false; // Biến trạng thái tạm dừng
+        let speechInstance; // Thể hiện của SpeechSynthesisUtterance
+        let textToRead = ''; // Biến lưu trữ nội dung cần đọc
 
-</section>
+        // Hàm đọc nội dung bằng SpeechSynthesis API
+        function readText(text) {
+            if ('speechSynthesis' in window) {
+                speechInstance = new SpeechSynthesisUtterance();
+                speechInstance.text = text;
+                speechInstance.lang = 'en-US'; // Cài đặt ngôn ngữ mặc định là tiếng Anh
+                speechInstance.rate = 1;
+                speechInstance.pitch = 1;
+
+                // Hủy bỏ các bài đọc trước để không chồng lặp
+                window.speechSynthesis.cancel();
+
+                // Bắt đầu đọc
+                window.speechSynthesis.speak(speechInstance);
+                isReading = true; // Đặt trạng thái là đang đọc
+                isPaused = false; // Đặt trạng thái là không tạm dừng
+
+                // Cập nhật nội dung nút
+                readButton.textContent = "Tạm dừng"; // Khi bắt đầu đọc, nút chuyển thành "Tạm dừng"
+
+            } else {
+                alert("Trình duyệt của bạn không hỗ trợ đọc văn bản!");
+            }
+        }
+
+        // Hàm tạm dừng hoặc tiếp tục đọc
+        function togglePause() {
+            if (isPaused) {
+                window.speechSynthesis.resume(); // Tiếp tục đọc
+                isPaused = false;
+                readButton.textContent = "Tạm dừng"; // Khi tiếp tục, nút là "Tạm dừng"
+            } else {
+                window.speechSynthesis.pause(); // Tạm dừng đọc
+                isPaused = true;
+                readButton.textContent = "Đọc tiếp"; // Khi tạm dừng, nút là "Đọc tiếp"
+            }
+        }
+
+        // Hàm đọc lại từ đầu
+        function readAgain() {
+            readText(textToRead); // Đọc lại từ đầu
+
+            readButton.textContent = "Tạm dừng"; // Đổi lại nội dung nút khi bắt đầu đọc lại
+        }
+
+        // Lắng nghe sự kiện khi nhấn nút và điều khiển đọc/tạm dừng
+        readButton.addEventListener("click", () => {
+            if (isReading) {
+                togglePause(); // Nếu đang đọc, chuyển giữa tạm dừng và tiếp tục
+            } else {
+                textToRead = content.innerText; // Lưu lại nội dung cần đọc
+                readText(textToRead); // Bắt đầu đọc
+
+            }
+        });
+
+        // Lắng nghe sự kiện khi nhấn nút "Đọc lại từ đầu"
+        readAgainButton.addEventListener("click", readAgain);
+
+    </script>
+</body>
+    </html>

@@ -1,7 +1,8 @@
 ﻿@model AI_Cooking_Guide_Website.Models.AddModel.Recipe
-
+<button id="read-content">Đọc nội dung</button>
+<button id="read-again" ">Đọc lại từ đầu</button>
 <section class="py-3 py-md-5 py-xl-8 bg-light">
-    <div class="container">
+    <div id="container" class="container">
         <div class="row gy-3 gy-lg-0 align-items-lg-center justify-content-lg-between">
             <div class="col-12 col-lg-7 order-1 order-lg-0">
                 <div class="entry-header mb-3">
@@ -59,3 +60,73 @@
         </div>
     </div>
 </section>
+<script>
+    // Lấy phần tử cần đọc
+    const readButton = document.getElementById("read-content");
+    const readAgainButton = document.getElementById("read-again");
+    const content = document.getElementById("container"); // Đảm bảo ID là 'container'
+    let isReading = false; // Biến trạng thái đọc
+    let isPaused = false; // Biến trạng thái tạm dừng
+    let speechInstance; // Thể hiện của SpeechSynthesisUtterance
+    let textToRead = ''; // Biến lưu trữ nội dung cần đọc
+
+    // Hàm đọc nội dung bằng SpeechSynthesis API
+    function readText(text) {
+        if ('speechSynthesis' in window) {
+            speechInstance = new SpeechSynthesisUtterance();
+            speechInstance.text = text;
+            speechInstance.lang = 'vi-VN'; // Cài đặt ngôn ngữ mặc định là tiếng việt
+            speechInstance.rate = 1;
+            speechInstance.pitch = 1;
+
+            // Hủy bỏ các bài đọc trước để không chồng lặp
+            window.speechSynthesis.cancel();
+
+            // Bắt đầu đọc
+            window.speechSynthesis.speak(speechInstance);
+            isReading = true; // Đặt trạng thái là đang đọc
+            isPaused = false; // Đặt trạng thái là không tạm dừng
+
+            // Cập nhật nội dung nút
+            readButton.textContent = "Tạm dừng"; // Khi bắt đầu đọc, nút chuyển thành "Tạm dừng"
+
+        } else {
+            alert("Trình duyệt của bạn không hỗ trợ đọc văn bản!");
+        }
+    }
+
+    // Hàm tạm dừng hoặc tiếp tục đọc
+    function togglePause() {
+        if (isPaused) {
+            window.speechSynthesis.resume(); // Tiếp tục đọc
+            isPaused = false;
+            readButton.textContent = "Tạm dừng"; // Khi tiếp tục, nút là "Tạm dừng"
+        } else {
+            window.speechSynthesis.pause(); // Tạm dừng đọc
+            isPaused = true;
+            readButton.textContent = "Đọc tiếp"; // Khi tạm dừng, nút là "Đọc tiếp"
+        }
+    }
+
+    // Hàm đọc lại từ đầu
+    function readAgain() {
+        readText(textToRead); // Đọc lại từ đầu
+
+        readButton.textContent = "Tạm dừng"; // Đổi lại nội dung nút khi bắt đầu đọc lại
+    }
+
+    // Lắng nghe sự kiện khi nhấn nút và điều khiển đọc/tạm dừng
+    readButton.addEventListener("click", () => {
+        if (isReading) {
+            togglePause(); // Nếu đang đọc, chuyển giữa tạm dừng và tiếp tục
+        } else {
+            textToRead = content.innerText; // Lưu lại nội dung cần đọc
+            readText(textToRead); // Bắt đầu đọc
+
+        }
+    });
+
+    // Lắng nghe sự kiện khi nhấn nút "Đọc lại từ đầu"
+    readAgainButton.addEventListener("click", readAgain);
+
+</script>
