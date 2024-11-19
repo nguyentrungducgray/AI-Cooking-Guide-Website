@@ -1,31 +1,36 @@
-﻿using AI_Cooking_Guide_Website.ModelAI;
-using AI_Cooking_Guide_Website.Models;
+﻿using AI_Cooking_Guide_Website.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace AI_Cooking_Guide_Website.Controllers
 {
-    public class Search : Controller
+    public class SearchController : Controller
     {
-        private readonly RecipeApiService _recipeApiService;
+        private readonly HttpClient _httpClient;
 
-        public Search(RecipeApiService recipeApiService)
+        public SearchController(HttpClient httpClient)
         {
-            _recipeApiService = recipeApiService;
+            _httpClient = httpClient;
         }
 
         [HttpGet]
         public IActionResult Index()
         {
-            return View(); // Hiển thị trang tìm kiếm ban đầu
+            var model = new SearchResultModel
+            {
+                Organic = new List<RecipeModel>() // Default empty list
+            };
+            return View(model);
+           
         }
 
         [HttpPost]
-        public async Task<IActionResult> Index(string query, int maxReadyTime = 45, int number = 10)
+        public async Task<IActionResult> Index(string query)
         {
-            // Kiểm tra tham số đầu vào
             if (string.IsNullOrWhiteSpace(query))
             {
                 ModelState.AddModelError("", "Tên món ăn hoặc nguyên liệu không được để trống.");
@@ -34,35 +39,40 @@ namespace AI_Cooking_Guide_Website.Controllers
 
             try
             {
-                // Gọi RecipeApiService để lấy kết quả tìm kiếm
-                var jsonResponse = await _recipeApiService.GetRecipesAsync(query, null, null, null, maxReadyTime, number);
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://google.serper.dev/search");
+                request.Headers.Add("X-API-KEY", "8c10c44a0cbc789d18974590233c7f4a2610ab50");
 
-                // Parse kết quả JSON để lấy danh sách kết quả tìm kiếm
-                var searchResults = JObject.Parse(jsonResponse)["results"];
+                string refinedQuery = $"{query} công thức OR nấu ăn OR nguyên liệu OR ẩm thực";
+                string contentJson = $"{{\"q\":\"{refinedQuery}\",\"gl\":\"vn\",\"hl\":\"vi\"}}";
+                var content = new StringContent(contentJson, null, "application/json");
+                request.Content = content;
 
-                if (searchResults == null || !searchResults.HasValues)
+                var response = await _httpClient.SendAsync(request);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var searchResults = JObject.Parse(jsonResponse);
+
+                var model = new SearchResultModel();
+                // Handle Organic Results (if exists)
+                var organicResults = searchResults["organic"];
+                if (organicResults != null && organicResults.HasValues)
                 {
-                    ModelState.AddModelError("", "Không tìm thấy công thức nào phù hợp với yêu cầu.");
-                    return View();
-                }
-
-                // Tạo danh sách RecipeModel từ kết quả tìm kiếm
-                var recipes = new List<RecipeModel>();
-                foreach (var item in searchResults)
-                {
-                    var recipe = new RecipeModel
+                    foreach (var item in organicResults)
                     {
-                        Id = item["id"]?.ToObject<int>() ?? 0,  // Lấy ID
-                        Title = item["title"]?.ToString(),
-                        ImageUrl = item["image"]?.ToString(),
-                        UsedIngredientCount = item["usedIngredientCount"]?.ToObject<int>() ?? 0,
-                        MissedIngredientCount = item["missedIngredientCount"]?.ToObject<int>() ?? 0
-                    };
-                    recipes.Add(recipe);
+                        var recipe = new RecipeModel
+                        {
+                            Title = item["title"]?.ToString(),
+                            Snippet = item["snippet"]?.ToString(),
+                            Link = item["link"]?.ToString(),
+                            ImageUrl = item["imageUrl"]?.ToString() ?? "/images/placeholder.jpg"
+                        };
+
+                        model.Organic.Add(recipe);
+                    }
                 }
 
-                // Trả về danh sách công thức tới view
-                return View(recipes);
+                return View(model);
             }
             catch
             {
@@ -71,63 +81,66 @@ namespace AI_Cooking_Guide_Website.Controllers
             }
         }
 
-
         [HttpGet]
-        public async Task<IActionResult> RecipeDetails(int id)
+        public IActionResult RecipeDetails(string title)
         {
-            try
-            {
-                var jsonResponse = await _recipeApiService.GetRecipeDetailsAsync(id);
-                if (string.IsNullOrWhiteSpace(jsonResponse))
-                {
-                    // Nếu không có phản hồi từ API, trả về một view với thông báo lỗi
-                    ModelState.AddModelError("", "Không tìm thấy thông tin món ăn.");
-                    return View(new RecipeDetailModel());
-                }
-
-                var recipeDetails = JObject.Parse(jsonResponse);
-                var recipeModel = new RecipeDetailModel
-                {
-                    Id = recipeDetails["id"].Value<int>(),
-                    Title = recipeDetails["title"]?.ToString(),
-                    ReadyInMinutes = recipeDetails["readyInMinutes"]?.Value<int>() ?? 0,
-                    Servings = recipeDetails["servings"]?.Value<int>() ?? 0,
-                    SourceUrl = recipeDetails["sourceUrl"]?.ToString(),
-                    Image = recipeDetails["image"]?.ToString(),
-                    Summary = recipeDetails["summary"]?.ToString(),
-                    DishTypes = recipeDetails["dishTypes"]?.ToObject<List<string>>() ?? new List<string>(),
-                    Diets = recipeDetails["diets"]?.ToObject<List<string>>() ?? new List<string>(),
-                    Instructions = recipeDetails["instructions"]?.ToString(),
-                    SpoonacularScore = recipeDetails["spoonacularScore"]?.Value<double>() ?? 0.0,
-                    AnalyzedInstructions = recipeDetails["analyzedInstructions"]?.Select(ai => new AnalyzedInstructionModel
-                    {
-                        Name = ai["name"]?.ToString(),
-                        Steps = ai["steps"]?.Select(s => new StepModel
-                        {
-                            Number = s["number"]?.ToObject<int>() ?? 0,
-                            Step = s["step"]?.ToString(),
-                            Ingredients = s["ingredients"]?.Select(i => new IngredientModel
-                            {
-                                Id = i["id"]?.ToObject<int>() ?? 0,
-                                Name = i["name"]?.ToString(),
-                                LocalizedName = i["localizedName"]?.ToString(),
-                                Image = i["image"]?.ToString()
-                            }).ToList() ?? new List<IngredientModel>()
-                        }).ToList() ?? new List<StepModel>()
-                    }).ToList() ?? new List<AnalyzedInstructionModel>()
-
-                };
-
-                return View(recipeModel);
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", "Có lỗi xảy ra khi gọi API: " + ex.Message);
-                return View(new RecipeDetailModel());
-            }
+            ModelState.AddModelError("", "Chức năng xem chi tiết không khả dụng.");
+            return View(); // Trả về một thông báo cơ bản do không có API chi tiết.
         }
 
+        [HttpPost]
+        public async Task<IActionResult> SearchByImage(string imageQuery)
+        {
+            if (string.IsNullOrWhiteSpace(imageQuery))
+            {
+                ModelState.AddModelError("", "Vui lòng cung cấp từ khóa hoặc thông tin liên quan đến hình ảnh.");
+                return View("Index");
+            }
 
+            try
+            {
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://google.serper.dev/images");
+                request.Headers.Add("X-API-KEY", "8c10c44a0cbc789d18974590233c7f4a2610ab50");
+                
+                string contentJson = $"{{\"q\":\"{imageQuery}\",\"gl\":\"vn\",\"hl\":\"vi\"}}";
+                var content = new StringContent(contentJson, null, "application/json");
+                request.Content = content;
+
+                var response = await _httpClient.SendAsync(request);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var imageResults = JObject.Parse(jsonResponse);
+
+                var model = new List<ImageSearchResultModel>();
+
+                var imageItems = imageResults["images_results"];
+                if (imageItems != null && imageItems.HasValues)
+                {
+                    foreach (var item in imageItems)
+                    {
+                        model.Add(new ImageSearchResultModel
+                        {
+                            Title = item["title"]?.ToString(),
+                            ImageUrl = item["imageUrl"]?.ToString(),
+                            ThumbnailUrl = item["thumbnailUrl"]?.ToString(),
+                            Source = item["source"]?.ToString(),
+                            Domain = item["domain"]?.ToString(),
+                            Link = item["link"]?.ToString(),
+                            GoogleUrl = item["googleUrl"]?.ToString(),
+                            Position = item["position"]?.ToObject<int>() ?? 0
+                        });
+                    }
+                }
+
+                return View("ImageResults", model); // Hiển thị kết quả tìm kiếm hình ảnh
+            }
+            catch
+            {
+                ModelState.AddModelError("", "Có lỗi xảy ra khi gọi API tìm kiếm hình ảnh.");
+                return View("Index");
+            }
+        }
 
     }
 }
