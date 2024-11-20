@@ -4,6 +4,7 @@ using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.IO;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace AI_Cooking_Guide_Website.Controllers
@@ -18,22 +19,22 @@ namespace AI_Cooking_Guide_Website.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index(string query)
+        public IActionResult Index()
         {
+            
             var model = new SearchResultModel
             {
                 Organic = new List<RecipeModel>() // Danh sách mặc định trống
             };
 
-            ViewBag.LastQuery = query;
-
             return View(model);
-
         }
 
         [HttpPost]
-        public async Task<IActionResult> Index(string query, bool isPost true)
+        public async Task<IActionResult> Index(string query)
         {
+            // Lưu query vào ViewBag để hiển thị lại
+            ViewBag.Query = query;
             if (string.IsNullOrWhiteSpace(query))
             {
                 ModelState.AddModelError("", "Tên món ăn hoặc nguyên liệu không được để trống.");
@@ -124,7 +125,6 @@ namespace AI_Cooking_Guide_Website.Controllers
             }
         }
 
-
         [HttpGet]
         public IActionResult RecipeDetails(string title)
         {
@@ -132,52 +132,60 @@ namespace AI_Cooking_Guide_Website.Controllers
             return View(); // Trả về một thông báo cơ bản do không có API chi tiết.
         }
 
+        // Xử lý tìm kiếm theo hình ảnh
         [HttpPost]
-        public async Task<IActionResult> SearchByImage(string imageQuery)
+        public async Task<IActionResult> SearchByImage(IFormFile imageQuery)
         {
-            if (string.IsNullOrWhiteSpace(imageQuery))
+            if (imageQuery == null || imageQuery.Length == 0)
             {
-                ModelState.AddModelError("", "Vui lòng cung cấp từ khóa hoặc thông tin liên quan đến hình ảnh.");
+                ModelState.AddModelError("", "Vui lòng cung cấp hình ảnh để tìm kiếm.");
                 return View("Index");
             }
 
             try
             {
-                var request = new HttpRequestMessage(HttpMethod.Post, "https://google.serper.dev/images");
-                request.Headers.Add("X-API-KEY", "8c10c44a0cbc789d18974590233c7f4a2610ab50");
-                
-                string contentJson = $"{{\"q\":\"{imageQuery}\",\"gl\":\"vn\",\"hl\":\"vi\"}}";
-                var content = new StringContent(contentJson, null, "application/json");
-                request.Content = content;
-
-                var response = await _httpClient.SendAsync(request);
-                response.EnsureSuccessStatusCode();
-
-                var jsonResponse = await response.Content.ReadAsStringAsync();
-                var imageResults = JObject.Parse(jsonResponse);
-
-                var model = new List<ImageSearchResultModel>();
-
-                var imageItems = imageResults["images_results"];
-                if (imageItems != null && imageItems.HasValues)
+                // Chuyển hình ảnh thành chuỗi base64 để gửi qua API
+                using (var memoryStream = new MemoryStream())
                 {
-                    foreach (var item in imageItems)
-                    {
-                        model.Add(new ImageSearchResultModel
-                        {
-                            Title = item["title"]?.ToString(),
-                            ImageUrl = item["imageUrl"]?.ToString(),
-                            ThumbnailUrl = item["thumbnailUrl"]?.ToString(),
-                            Source = item["source"]?.ToString(),
-                            Domain = item["domain"]?.ToString(),
-                            Link = item["link"]?.ToString(),
-                            GoogleUrl = item["googleUrl"]?.ToString(),
-                            Position = item["position"]?.ToObject<int>() ?? 0
-                        });
-                    }
-                }
+                    await imageQuery.CopyToAsync(memoryStream);
+                    var imageBase64 = Convert.ToBase64String(memoryStream.ToArray());
 
-                return View("ImageResults", model); // Hiển thị kết quả tìm kiếm hình ảnh
+                    var request = new HttpRequestMessage(HttpMethod.Post, "https://google.serper.dev/images");
+                    request.Headers.Add("X-API-KEY", "8c10c44a0cbc789d18974590233c7f4a2610ab50");
+
+                    string contentJson = $"{{\"q\":\"{imageBase64}\",\"gl\":\"vn\",\"hl\":\"vi\"}}";
+                    var content = new StringContent(contentJson, null, "application/json");
+                    request.Content = content;
+
+                    var response = await _httpClient.SendAsync(request);
+                    response.EnsureSuccessStatusCode();
+
+                    var jsonResponse = await response.Content.ReadAsStringAsync();
+                    var imageResults = JObject.Parse(jsonResponse);
+
+                    var model = new List<ImageSearchResultModel>();
+
+                    var imageItems = imageResults["images_results"];
+                    if (imageItems != null && imageItems.HasValues)
+                    {
+                        foreach (var item in imageItems)
+                        {
+                            model.Add(new ImageSearchResultModel
+                            {
+                                Title = item["title"]?.ToString(),
+                                ImageUrl = item["imageUrl"]?.ToString(),
+                                ThumbnailUrl = item["thumbnailUrl"]?.ToString(),
+                                Source = item["source"]?.ToString(),
+                                Domain = item["domain"]?.ToString(),
+                                Link = item["link"]?.ToString(),
+                                GoogleUrl = item["googleUrl"]?.ToString(),
+                                Position = item["position"]?.ToObject<int>() ?? 0
+                            });
+                        }
+                    }
+
+                    return View("ImageResults", model); // Hiển thị kết quả tìm kiếm hình ảnh
+                }
             }
             catch
             {
@@ -185,6 +193,5 @@ namespace AI_Cooking_Guide_Website.Controllers
                 return View("Index");
             }
         }
-
     }
 }

@@ -15,7 +15,7 @@
                 <form id="search-form" asp-controller="Search" asp-action="Index" method="post" enctype="multipart/form-data" class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center">
                     <div class="col-12 col-lg-7">
                         <label for="search-query" class="visually-hidden">Tìm kiếm món ăn hoặc nguyên liệu</label>
-                        <input id="search-query" name="query" class="form-control bsb-form-control-3xl" value="@ViewBag.LastQuery"
+                        <input id="search-query" name="query" class="form-control bsb-form-control-3xl" value="@ViewBag.Query" 
                                placeholder="Nhập tên món ăn hoặc nguyên liệu..." aria-label="search-query"
                                aria-describedby="email-newsletter-help">
                         <input type="file" id="image-input" name="imageQuery" class="form-control mt-3" accept="image/*">
@@ -35,6 +35,7 @@
 </section>
 
 <script>
+    // Speech recognition setup
     const searchInput = document.getElementById('search-query');
     const voiceSearchBtn = document.getElementById('voice-search-btn');
     const searchForm = document.getElementById('search-form');
@@ -80,11 +81,14 @@
             isRecognizing = false;
             voiceSearchBtn.classList.remove('voice-active');
         };
+
+       
     } else {
         alert('Trình duyệt của bạn không hỗ trợ tìm kiếm bằng giọng nói');
         voiceSearchBtn.disabled = true;
     }
 </script>
+
 
 <!-- Search Results Section -->
 <section class="bsb-blog-5 py-3 py-md-5 py-xl-8 bsb-section-py-xxl-1">
@@ -148,9 +152,6 @@
                                                 @result.Source (@result.Domain)
                                             </p>
                                         </figure>
-                                      
-                                         
-                                       
                                    </div>
                               
                             </div>
