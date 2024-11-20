@@ -15,10 +15,10 @@
                 <form id="search-form" asp-controller="Search" asp-action="Index" method="post" enctype="multipart/form-data" class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center">
                     <div class="col-12 col-lg-7">
                         <label for="search-query" class="visually-hidden">Tìm kiếm món ăn hoặc nguyên liệu</label>
-                        <input id="search-query" name="query" class="form-control bsb-form-control-3xl"
+                        <input id="search-query" name="query" class="form-control bsb-form-control-3xl" value="@ViewBag.LastQuery"
                                placeholder="Nhập tên món ăn hoặc nguyên liệu..." aria-label="search-query"
                                aria-describedby="email-newsletter-help">
-                        <input type="file" id="image-input" name="image" class="form-control mt-3" accept="image/*">
+                        <input type="file" id="image-input" name="imageQuery" class="form-control mt-3" accept="image/*">
                     </div>
                     <div class="col-2 col-lg-1 d-flex align-items-center">
                         <a type="button" id="voice-search-btn">
@@ -126,7 +126,7 @@
                     </div>
                 </div>
             }
-            else if (Model is List<AI_Cooking_Guide_Website.Models.ImageSearchResultModel> imageResults)
+            @if (Model is List<AI_Cooking_Guide_Website.Models.ImageSearchResultModel> imageResults)
             {
                 <!-- Image Search Results -->
                 <div class="col-12">
@@ -134,21 +134,25 @@
                         @foreach (var result in imageResults)
                         {
                             <div class="col-12 col-lg-4">
-                                <article>
-                                    <div class="card border-0 bg-transparent">
+
+                                   <div class="card border-0 bg-transparent">
+                                        <!-- Image Section -->
                                         <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
-                                            <a href="@result.Link">
-                                                <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy" src="@result.ImageUrl" alt="@result.Title" />
+                                            <a href="@result.Link" target="_blank" rel="noopener noreferrer">
+                                                <img class="img-fluid bsb-scale bsb-hover-scale-up"
+                                                     loading="lazy"
+                                                     src="@result.ImageUrl"
+                                                     alt="@result.Title" />
                                             </a>
+                                            <p class="small text-muted">
+                                                @result.Source (@result.Domain)
+                                            </p>
                                         </figure>
-                                        <div class="card-body m-0 p-0">
-                                            <h2 class="card-title h5">
-                                                <a class="link-dark text-decoration-none" href="@result.Link">@result.Title</a>
-                                            </h2>
-                                            <p class="small text-muted">@result.Source (@result.Domain)</p>
-                                        </div>
-                                    </div>
-                                </article>
+                                      
+                                         
+                                       
+                                   </div>
+                              
                             </div>
                         }
                     </div>

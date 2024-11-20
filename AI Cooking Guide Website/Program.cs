@@ -13,6 +13,8 @@ namespace AI_Cooking_Guide_Website
             builder.Services.AddScoped<RecipeApiService>();
             builder.Services.AddHttpClient<RecipeApiService>();
 
+       
+
             // Thêm dịch vụ xác thực
             builder.Services.AddAuthentication("YourCookieScheme")
                 .AddCookie("YourCookieScheme", options =>
@@ -32,6 +34,8 @@ namespace AI_Cooking_Guide_Website
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+           
+
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

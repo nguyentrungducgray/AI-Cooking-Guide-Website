@@ -18,23 +18,27 @@ namespace AI_Cooking_Guide_Website.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(string query)
         {
             var model = new SearchResultModel
             {
-                Organic = new List<RecipeModel>() // Default empty list
+                Organic = new List<RecipeModel>() // Danh sách mặc định trống
             };
+
+            ViewBag.LastQuery = query;
+
             return View(model);
-           
+
         }
 
         [HttpPost]
-        public async Task<IActionResult> Index(string query)
+        public async Task<IActionResult> Index(string query, bool isPost true)
         {
             if (string.IsNullOrWhiteSpace(query))
             {
                 ModelState.AddModelError("", "Tên món ăn hoặc nguyên liệu không được để trống.");
-                return View();
+                // Chuyển hướng tới GET method với từ khóa trong Query String
+                return RedirectToAction("Index", new { query });
             }
 
             try
@@ -54,18 +58,57 @@ namespace AI_Cooking_Guide_Website.Controllers
                 var searchResults = JObject.Parse(jsonResponse);
 
                 var model = new SearchResultModel();
-                // Handle Organic Results (if exists)
+
+                // Danh sách các ảnh mặc định
+                var placeholderImages = new List<string>
+                {
+                    "/imgUser/image1.jpg",
+                    "/imgUser/image2.jpg",
+                    "/imgUser/image3.jpg",
+                    "/imgUser/image4.jpg",
+                    "/imgUser/image5.jpg",
+                    "/imgUser/image6.jpg",
+                    "/imgUser/image7.jpg",
+                    "/imgUser/image8.jpg",
+                    "/imgUser/image9.jpg",
+                    "/imgUser/image10.jpg",
+                    "/imgUser/image11.jpg",
+                    "/imgUser/image12.jpg",
+                    "/imgUser/image13.jpg",
+                    "/imgUser/image14.jpg",
+                    "/imgUser/image15.jpg",
+                    "/imgUser/image16.jpg",
+                    "/imgUser/image17.jpg",
+                    "/imgUser/image18.jpg",
+                    "/imgUser/image19.jpg",
+                    "/imgUser/image20.jpg",
+                };
+
+                // Tạo danh sách ảnh ngẫu nhiên
+                var random = new Random();
+                var shuffledImages = placeholderImages.OrderBy(_ => random.Next()).ToList();
+                int currentIndex = 0;
+
+                // Xử lý kết quả Organic (nếu có)
                 var organicResults = searchResults["organic"];
                 if (organicResults != null && organicResults.HasValues)
                 {
                     foreach (var item in organicResults)
                     {
+                        // Lấy ảnh tiếp theo
+                        var imageUrl = item["imageUrl"]?.ToString();
+                        if (string.IsNullOrWhiteSpace(imageUrl))
+                        {
+                            imageUrl = shuffledImages[currentIndex];
+                            currentIndex = (currentIndex + 1) % shuffledImages.Count; // Quay vòng ảnh
+                        }
+
                         var recipe = new RecipeModel
                         {
                             Title = item["title"]?.ToString(),
                             Snippet = item["snippet"]?.ToString(),
                             Link = item["link"]?.ToString(),
-                            ImageUrl = item["imageUrl"]?.ToString() ?? "/images/placeholder.jpg"
+                            ImageUrl = imageUrl
                         };
 
                         model.Organic.Add(recipe);
@@ -80,6 +123,7 @@ namespace AI_Cooking_Guide_Website.Controllers
                 return View();
             }
         }
+
 
         [HttpGet]
         public IActionResult RecipeDetails(string title)
