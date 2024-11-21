@@ -35989,7 +35989,23 @@
       "PackagePath": "staticwebassets\\img\\page\\page-img-3.jpg"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\single\\author-img-1.jpg",
+=======
+      "Id": "E:\\du an cuoi nam\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\pay\\app.jpg",
+      "PackagePath": "staticwebassets\\img\\pay\\app.jpg"
+    },
+    {
+      "Id": "E:\\du an cuoi nam\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\pay\\pay.png",
+      "PackagePath": "staticwebassets\\img\\pay\\pay.png"
+    },
+    {
+      "Id": "E:\\du an cuoi nam\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\pay\\play.jpg",
+      "PackagePath": "staticwebassets\\img\\pay\\play.jpg"
+    },
+    {
+      "Id": "E:\\du an cuoi nam\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\single\\author-img-1.jpg",
+>>>>>>> origin/themgiaodien
       "PackagePath": "staticwebassets\\img\\single\\author-img-1.jpg"
     },
     {

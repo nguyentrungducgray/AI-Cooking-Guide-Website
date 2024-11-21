@@ -1320,8 +1320,8 @@ body {
 
 body {
     font-family: 'Arial', sans-serif;
-    margin: 20px;
-    background-color: #f7f7f7;
+   
+    background-color: #AAAAAAA;
 }
 
 .form-container {
@@ -1367,7 +1367,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 15px;
+    margin-top: 0px;
     transition: background-color 0.3s;
 }
 
@@ -1398,7 +1398,7 @@ h4 {
 }
 
 ul, ol {
-    margin-left: 20px;
+    margin-left: 0px;
 }
 /* Các CSS khác đã có trước đó */
 
@@ -1411,8 +1411,8 @@ ul, ol {
 }
 
 .icon {
-    width: 150px; /* Giảm chiều rộng hình ảnh */
+    width: 90px; /* Giảm chiều rộng hình ảnh */
     height: auto; /* Giữ tỷ lệ chiều cao */
-    margin-right: -30px; /* Thêm khoảng cách giữa hình ảnh và văn bản */
+    margin-right: 5px; /* Thêm khoảng cách giữa hình ảnh và văn bản */
     vertical-align: middle; /* Căn giữa hình ảnh với văn bản */
 }
