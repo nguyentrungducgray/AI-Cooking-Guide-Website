@@ -1,99 +1,11 @@
-﻿﻿@{
-	Layout = null;
+﻿@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- Boxicons -->
-	<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
-	<!-- My CSS -->
-	<link href="~/css/admin.css" rel="stylesheet" />
-
-	<title>AdminHub</title>
-</head>
 <body>
 
-	<!-- SIDEBAR -->
-	<section id="sidebar">
-		<a href="#" class="brand">
-			<img src="~/img/logo/logo.png" alt="Logo AdminHub" class="icon" />
-			<span class="text">Michelin Btec</span>
-		</a>
 
-		<ul class="side-menu top">
-			<li class="active">
-				<a href="#">
-					<i class='bx bxs-dashboard'></i>
-					<span class="text">Dashboard</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-shopping-bag-alt'></i>
-					<span class="text">My Store</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-doughnut-chart'></i>
-					<span class="text">Analytics</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-message-dots'></i>
-					<span class="text">Message</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-group'></i>
-					<span class="text">Team</span>
-				</a>
-			</li>
-		</ul>
-		<ul class="side-menu">
-			<li>
-				<a href="#">
-					<i class='bx bxs-cog'></i>
-					<span class="text">Settings</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="logout">
-					<i class='bx bxs-log-out-circle'></i>
-					<span class="text">Logout</span>
-				</a>
-			</li>
-		</ul>
-	</section>
-	<!-- SIDEBAR -->
-	<!-- CONTENT -->
-	<section id="content">
-		<!-- NAVBAR -->
-		<nav>
-			<i class='bx bx-menu'></i>
-			<a href="#" class="nav-link">Categories</a>
-			<form action="#">
-				<div class="form-input">
-					<input type="search" placeholder="Search...">
-					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
-				</div>
-			</form>
-			<input type="checkbox" id="switch-mode" hidden>
-
-			<a href="#" class="notification">
-				<i class='bx bxs-bell'></i>
-				<span class="num">8</span>
-			</a>
-			<a href="#" class="profile">
-                <img src="~/img/blog/blog-img-1.jpg" />
-			</a>
-		</nav>
-		<!-- NAVBAR -->
+		
 		<!-- MAIN -->
 		<main>
 			<div class="head-title">
@@ -109,6 +21,10 @@
 						</li>
 					</ul>
 				</div>
+				<a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download'></i>
+					<span class="text">Download PDF</span>
+				</a>
 			</div>
 			<!DOCTYPE html>
 			<html lang="en">
@@ -140,12 +56,11 @@
 						</div>
 						<button type="button" onclick="addStep()">Thêm Bước Nấu</button>
 
-
-
 						<label for="image">Chọn Ảnh:</label>
-						<input type="file" id="image" name="Image" accept="image/*" required onchange="previewImage(event)">
-						<img id="imagePreview" style="display: none; max-width: 100%; margin-top: 10px;" alt="Image Preview" />
+						<input type="file" id="image" name="Image" accept="image/*" required>
+						<img id="imagePreview" style="display:none; max-width: 100%; margin-top: 10px;" alt="Image Preview" />
 
+						<button type="submit">Thêm Món Ăn</button>
 					</form>
 				</div>
 
@@ -241,9 +156,7 @@
 
 	</main>
 	<!-- MAIN -->
-</section>
-<!-- CONTENT -->
 
-<script src="~/js/admin.js"></script>
+
 </body>
-</html>
+
