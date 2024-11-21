@@ -32,7 +32,7 @@ namespace AI_Cooking_Guide_Website.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Index(string query, bool isPost true)
+        public async Task<IActionResult> Index(string query, bool isPost = true)
         {
             if (string.IsNullOrWhiteSpace(query))
             {

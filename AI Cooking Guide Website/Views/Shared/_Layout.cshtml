@@ -36,15 +36,8 @@
                             <li class="nav-item">
                                 <a class="nav-link" asp-action="Index" asp-controller="Home" style="color: black;">Trang chủ</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#!" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Danh mục</a>
-                                <ul class="dropdown-menu border-0 shadow bsb-zoomIn" aria-labelledby="categoryDropdown">
-                                    <li><a class="dropdown-item" asp-controller="List" asp-action="Index">Tất cả</a></li>
-                                    <li><a class="dropdown-item" asp-controller="List" asp-action="Index">Sáng</a></li>
-                                    <li><a class="dropdown-item" asp-controller="List" asp-action="Index">Trưa</a></li>
-                                    <li><a class="dropdown-item" asp-controller="List" asp-action="Index">Tối</a></li>
-                                    <li><a class="dropdown-item" asp-controller="List" asp-action="Index">Ăn vặt</a></li>
-                                </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="MyRecipe" asp-action="Index">Công thức của tôi</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" asp-controller="Search" asp-action="Index">Tìm kiếm</a>
