@@ -9,6 +9,8 @@
         public string ProfileImageUrl { get; set; } // For the random profile image
         public string PhoneNumber { get; set; }
         public string Address { get; set; }
+        public List<MyRecipeModel> Recipes { get; set; }
+
 
     }
 }

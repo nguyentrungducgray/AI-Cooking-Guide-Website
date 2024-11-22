@@ -8,41 +8,48 @@ namespace AI_Cooking_Guide_Website
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Cấu hình HttpClient
-            // Add services to the DI container.
+            // Configure HttpClient
             builder.Services.AddScoped<RecipeApiService>();
             builder.Services.AddHttpClient<RecipeApiService>();
 
-       
-
-            // Thêm dịch vụ xác thực
+            // Add authentication service
             builder.Services.AddAuthentication("YourCookieScheme")
                 .AddCookie("YourCookieScheme", options =>
                 {
-                    options.LoginPath = "/Login"; // Đường dẫn đến trang đăng nhập
-                    options.LogoutPath = "/Logout"; // Đường dẫn đến trang đăng xuất
+                    options.LoginPath = "/Login"; // Path to the login page
+                    options.LogoutPath = "/Logout"; // Path to the logout page
                 });
-            // Add services to the container.
+
+            // Add session services
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // Session timeout
+                options.Cookie.HttpOnly = true; // Ensure cookies are accessible only via the server
+                options.Cookie.IsEssential = true; // Mark the session cookie as essential
+            });
+
+            // Add controllers with views
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            // Configure the HTTP request pipeline
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
+                app.UseHsts(); // Default HSTS value
             }
-           
-
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
+
+            // Add session middleware to the request pipeline
+            app.UseSession();
 
             app.MapControllerRoute(
                 name: "default",
@@ -50,6 +57,5 @@ namespace AI_Cooking_Guide_Website
 
             app.Run();
         }
-      
     }
 }

@@ -15,9 +15,9 @@
 
   <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
   <ItemGroup>
-    <Folder Include="data\" />
     <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\data\" />
+    <Folder Include="wwwroot\mrimages\" />
   </ItemGroup>
 
 </Project>

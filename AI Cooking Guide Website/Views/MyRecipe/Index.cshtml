@@ -1,0 +1,168 @@
+﻿@{
+    var successMessage = TempData["Success"] as string;
+    var errorMessage = TempData["Error"] as string;
+    var loginStatus = TempData["LoginStatus"] as bool?; // Kiểm tra trạng thái đăng nhập
+}
+
+<!-- Liên kết Boxicons và CSS -->
+<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+<link href="~/css/admin.css" rel="stylesheet" />
+
+<style>
+    .alert {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+
+    .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+
+    .alert-warning {
+        background-color: #fff3cd;
+        color: #856404;
+        border: 1px solid #ffeeba;
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+
+        /* Style for buttons */
+        .form-container button {
+            background-color: #e23062;
+            color: white; /* White text */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+            /* Hover effect for buttons */
+            .form-container button:hover {
+                background-color: #9d0933; /* Darker pink on hover */
+            }
+
+    #imagePreview {
+        display: none;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+</style>
+
+
+<!-- Hiển thị thông báo -->
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div class="alert alert-success">
+        @successMessage
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">
+        @errorMessage
+    </div>
+}
+
+@if (loginStatus == false)
+{
+    <div class="alert alert-warning">
+        Bạn cần đăng nhập để thêm công thức!
+    </div>
+}
+
+<div class="form-container">
+    <button class="download-btn">
+        <span>⬇️ Download PDF</span>
+    </button>
+
+    <h2>Thêm Công Thức</h2>
+    <form method="post" enctype="multipart/form-data">
+        <!-- Tên món ăn -->
+        <label for="Name">Tên món ăn:</label>
+        <input type="text" id="Name" name="Name" required />
+
+        <!-- Nguyên liệu -->
+        <label for="Ingredients">Nguyên liệu:</label>
+        <div id="ingredients-container">
+            <input type="text" name="Ingredients" class="ingredient" required />
+        </div>
+        <button type="button" onclick="addIngredient()">Thêm Nguyên Liệu</button>
+
+        <!-- Mô tả -->
+        <label for="Description">Mô tả:</label>
+        <textarea id="Description" name="Description" required></textarea>
+
+        <!-- Các bước thực hiện -->
+        <label for="Steps">Các bước thực hiện:</label>
+        <div id="steps-container">
+            <input type="text" name="Steps" class="step" required />
+        </div>
+        <button type="button" onclick="addStep()">Thêm Bước Nấu</button>
+
+        <!-- Hình ảnh -->
+        <label for="Image">Ảnh:</label>
+        <input type="file" id="Image" name="Image" required onchange="previewImage(event)" />
+        <img id="imagePreview" alt="Image Preview" />
+
+        <!-- Nút lưu -->
+        <button type="submit" @(loginStatus == false ? "disabled" : "")>Lưu</button>
+    </form>
+</div>
+
+<script>
+    // Thêm nguyên liệu mới
+    function addIngredient() {
+        const container = document.getElementById('ingredients-container');
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.name = 'Ingredients';
+        input.classList.add('ingredient');
+        container.appendChild(input);
+    }
+
+    // Thêm bước nấu mới
+    function addStep() {
+        const container = document.getElementById('steps-container');
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.name = 'Steps';
+        input.classList.add('step');
+        container.appendChild(input);
+    }
+
+    // Hiển thị hình ảnh đã chọn
+    function previewImage(event) {
+        const imagePreview = document.getElementById('imagePreview');
+        const file = event.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            imagePreview.src = e.target.result;
+            imagePreview.style.display = 'block';
+        };
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    }
+</script>

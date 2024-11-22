@@ -5,8 +5,9 @@
     "Email": "ducntbh00465@gmail.com",
     "Password": "123",
     "ProfileImageUrl": null,
-    "PhoneNumber": "0966778386",
-    "Address": "Y\u00EAn B\u00E1i "
+    "PhoneNumber": null,
+    "Address": null,
+    "Recipes": null
   },
   {
     "Id": "BH00556",
@@ -15,6 +16,17 @@
     "Password": "123",
     "ProfileImageUrl": null,
     "PhoneNumber": null,
-    "Address": null
+    "Address": null,
+    "Recipes": null
+  },
+  {
+    "Id": "3487d497-2840-42d6-9776-e10be28e745c",
+    "UserName": "Phuong Diem",
+    "Email": "phuongdiemtranthi23@gmail.com",
+    "Password": "diem123",
+    "ProfileImageUrl": null,
+    "PhoneNumber": "1234567899",
+    "Address": "Nam Dinh",
+    "Recipes": null
   }
 ]

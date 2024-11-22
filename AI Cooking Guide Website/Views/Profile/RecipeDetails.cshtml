@@ -1,0 +1,129 @@
+﻿@model AI_Cooking_Guide_Website.Models.MyRecipeModel
+<style>
+    ul, ol {
+        list-style-position: inside; /* Đảm bảo dấu đầu dòng hiển thị bên trong danh sách */
+        margin: 10px 0; /* Khoảng cách giữa các dòng */
+        padding-left: 20px; /* Căn chỉnh lề cho danh sách */
+    }
+
+    li {
+        margin-bottom: 5px; /* Tách dòng giữa các phần tử danh sách */
+    }
+
+</style>
+
+<section class="py-3 py-md-5 py-xl-8 bg-light">
+    <div id="container" class="container">
+        <!-- Nút điều khiển đọc nội dung -->
+        <div class="mt-4">
+            <button id="read-content" class="btn btn-primary">Đọc nội dung</button>
+            <button id="read-again" class="btn btn-secondary">Đọc lại từ đầu</button>
+        </div>
+        <div class="row gy-3 gy-lg-0 align-items-lg-center justify-content-lg-between">
+            <!-- Tiêu đề và hình ảnh -->
+            <div class="col-12 col-lg-7">
+                <div class="entry-header mb-3">
+                    <h2 class="display-3 fw-bold mb-4">@Model.Name</h2>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <img class="img-fluid rounded" loading="lazy" src="@Model.Image" alt="@Model.Name" />
+            </div>
+        </div>
+
+        <!-- Mô tả -->
+        <h3 class="mt-4">Mô tả:</h3>
+        <p>@Model.Description</p>
+
+        <!-- Nguyên liệu -->
+        <h3 class="mt-4">Nguyên liệu:</h3>
+        <ul>
+            @foreach (var ingredient in Model.Ingredients)
+            {
+                <li>@ingredient</li> <!-- Hiển thị mỗi nguyên liệu trên một dòng -->
+            }
+        </ul>
+
+
+        <!-- Các bước nấu -->
+        <h3 class="mt-4">Các bước thực hiện:</h3>
+        <ol>
+            @foreach (var step in Model.Steps)
+            {
+                <li>@step</li> <!-- Hiển thị mỗi bước thực hiện trên một dòng -->
+            }
+        </ol>
+
+
+        
+    </div>
+</section>
+
+<script>
+    // Lấy phần tử DOM cần thao tác
+    const readButton = document.getElementById("read-content");
+    const readAgainButton = document.getElementById("read-again");
+    const content = document.getElementById("container");
+
+    // Biến trạng thái
+    let isReading = false;
+    let isPaused = false;
+    let speechInstance;
+
+    // Hàm đọc nội dung bằng SpeechSynthesis API
+    function readText(text) {
+        if ('speechSynthesis' in window) {
+            // Tạo đối tượng SpeechSynthesisUtterance
+            speechInstance = new SpeechSynthesisUtterance(text);
+            speechInstance.lang = 'vi-VN'; // Tiếng Việt
+            speechInstance.rate = 1; // Tốc độ đọc
+            speechInstance.pitch = 1; // Tông giọng
+
+            // Hủy bài đọc cũ và bắt đầu bài đọc mới
+            window.speechSynthesis.cancel();
+            window.speechSynthesis.speak(speechInstance);
+
+            // Cập nhật trạng thái
+            isReading = true;
+            isPaused = false;
+            readButton.textContent = "Tạm dừng";
+        } else {
+            alert("Trình duyệt của bạn không hỗ trợ đọc văn bản!");
+        }
+    }
+
+    // Hàm tạm dừng hoặc tiếp tục đọc
+    function togglePause() {
+        if (isPaused) {
+            window.speechSynthesis.resume();
+            isPaused = false;
+            readButton.textContent = "Tạm dừng";
+        } else {
+            window.speechSynthesis.pause();
+            isPaused = true;
+            readButton.textContent = "Đọc tiếp";
+        }
+    }
+
+    // Hàm đọc lại từ đầu
+    function readAgain() {
+        const textToRead = content.innerText; // Lấy nội dung cần đọc
+        readText(textToRead);
+    }
+
+    // Sự kiện khi nhấn nút đọc nội dung
+    readButton.addEventListener("click", () => {
+        if (isReading) {
+            togglePause(); // Nếu đang đọc, chuyển giữa tạm dừng và tiếp tục
+        } else {
+            const textToRead = content.innerText; // Lấy nội dung cần đọc
+            readText(textToRead);
+        }
+    });
+
+    // Sự kiện khi nhấn nút "Đọc lại từ đầu"
+    readAgainButton.addEventListener("click", () => {
+        window.speechSynthesis.cancel(); // Hủy bài đọc hiện tại
+        readAgain(); // Bắt đầu đọc lại
+    });
+</script>
