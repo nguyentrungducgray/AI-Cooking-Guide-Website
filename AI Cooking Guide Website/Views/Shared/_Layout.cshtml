@@ -40,18 +40,10 @@
                                     <i class="fas fa-home"></i> Trang chủ
                                 </a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#!" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fas fa-list"></i> Danh mục
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" asp-controller="List" asp-action="Index">Tất cả</a></li>
-                                    <li><a class="dropdown-item" asp-controller="List" asp-action="Index">Sáng</a></li>
-                                    <li><a class="dropdown-item" asp-controller="List" asp-action="Index">Trưa</a></li>
-                                    <li><a class="dropdown-item" asp-controller="List" asp-action="Index">Tối</a></li>
-                                    <li><a class="dropdown-item" asp-controller="List" asp-action="Index">Ăn vặt</a></li>
-                                </ul>
-                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="MyRecipe" asp-action="Index">Công thức của tôi</a>
+                            </li> 
+                           
                             <li class="nav-item">
                                 <a class="nav-link" asp-controller="Search" asp-action="Index">
                                     <i class="fas fa-search"></i> Tìm kiếm
