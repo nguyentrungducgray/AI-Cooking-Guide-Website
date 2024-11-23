@@ -1,0 +1,69 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<body>
+    <!-- MAIN -->
+    <main>
+        <div class="head-title">
+            <div class="left">
+                <h1>Add Food</h1>
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li><i class='bx bx-chevron-right'></i></li>
+                    <li>
+                        <a class="active" href="#">Add Food</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="btn-add">
+                <i class='bx bx-plus-circle'></i>
+                <span class="text">Add New Food</span>
+            </a>
+        </div>
+
+        <!-- TABLE -->
+        <div class="table-container">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Serial Number</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td><img src="~/img/food1.png" alt="Food 1" class="food-image"></td>
+                        <td>Food Item 1</td>
+                        <td>
+                            <a href="@Url.Action("Index", "EditAdminList", new { id = 1 })" class="btn btn-edit">
+                                <i class='bx bx-edit-alt'></i>Edit
+                            </a>
+                            <a href="@Url.Action("Delete", "Admin", new { id = 1 })" class="btn btn-delete">
+                                <i class='bx bx-trash'></i>Delete
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td><img src="~/img/food2.png" alt="Food 2" class="food-image"></td>
+                        <td>Food Item 2</td>
+                        <td>
+                            <a href="@Url.Action("Index", "EditAdminList", new { id = 2 })" class="btn btn-edit">
+                                <i class='bx bx-edit-alt'></i>Edit
+                            </a>
+                            <a href="@Url.Action("Delete", "Admin", new { id = 2 })" class="btn btn-delete">
+                                <i class='bx bx-trash'></i>Delete
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- TABLE -->
+    </main>
+</body>

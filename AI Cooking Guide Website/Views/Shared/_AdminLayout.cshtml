@@ -1,0 +1,115 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+	<!-- My CSS -->
+	<link href="~/css/admin.css" rel="stylesheet" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="~/css/editadminlist.css" rel="stylesheet" />
+    <link href="~/css/listadmin.css" rel="stylesheet" />
+			
+	<title>AdminHub</title>
+</head>
+<body>
+<!-- SIDEBAR -->
+<section id="sidebar">
+	<a href="#" class="brand">
+		<img src="~/img/logo/logo.png" alt="Logo AdminHub" class="icon" />
+		<span class="text">Michelin Btec</span>
+	</a>
+
+		<ul class="side-menu top">
+			<li class="@((ViewContext.RouteData.Values["controller"]?.ToString() == "Admin" && ViewContext.RouteData.Values["action"]?.ToString() == "Index") ? "active" : "")">
+				<a asp-controller="Admin" asp-action="Index">
+					<i class='bx bxs-dashboard'></i>
+					<span class="text">Add food</span>
+				</a>
+			</li>
+
+			<li class="@((ViewContext.RouteData.Values["controller"]?.ToString() == "ListAdmin") ? "active" : "")">
+				<a asp-controller="ListAdmin" asp-action="Index">
+					<i class='bx bxs-shopping-bag-alt'></i>
+					<span class="text">List food</span>
+				</a>
+			</li>
+			<li class="@((ViewContext.RouteData.Values["controller"]?.ToString() == "Analytics") ? "active" : "")">
+				<a asp-controller="Analytics" asp-action="Index">
+					<i class='bx bxs-doughnut-chart'></i>
+					<span class="text">Analytics</span>
+				</a>
+			</li>
+			<li class="@((ViewContext.RouteData.Values["controller"]?.ToString() == "Message") ? "active" : "")">
+				<a asp-controller="Message" asp-action="Index">
+					<i class='bx bxs-message-dots'></i>
+					<span class="text">Message</span>
+				</a>
+			</li>
+			<li class="@((ViewContext.RouteData.Values["controller"]?.ToString() == "Team") ? "active" : "")">
+				<a asp-controller="Team" asp-action="Index">
+					<i class='bx bxs-group'></i>
+					<span class="text">Team</span>
+				</a>
+			</li>
+		</ul>
+
+</section>
+<!-- SIDEBAR -->
+<!-- CONTENT -->
+<section id="content">
+	<!-- NAVBAR -->
+	<nav>
+		
+		<a href="#" class="nav-link">Categories</a>
+		<form action="#">
+			<div class="form-input">
+				<input type="search" placeholder="Search...">
+				<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+			</div>
+		</form>
+		<input type="checkbox" id="switch-mode" hidden>
+
+		<a href="#" class="notification">
+			<i class='bx bxs-bell'></i>
+			<span class="num">8</span>
+		</a>
+		<a href="#" class="profile">
+			<li class="nav-item">
+				@if (User.Identity.IsAuthenticated)
+				{
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<img src="@User.FindFirst("AvatarUrl")?.Value" alt="Avatar" class="rounded-circle" style="width: 30px; height: 30px; object-fit: cover;">
+							@User.Identity.Name
+					</a>
+					<ul class="dropdown-menu dropdown-menu-end">
+						<li><a class="dropdown-item" asp-controller="Profile" asp-action="Profile">Hồ sơ cá nhân</a></li>
+						<li><a class="dropdown-item" asp-controller="Login" asp-action="Logout">Đăng xuất</a></li>
+					</ul>
+				</li>
+				}
+				else
+				{
+				<li class="nav-item">
+					<a class="nav-link" asp-controller="Login" asp-action="Login">Đăng kí/Đăng nhập</a>
+				</li>
+				}
+			</li>
+		</a>
+	</nav>
+	<!-- NAVBAR -->
+		<div class="container">
+			<main role="main" class="pb-3">
+				@RenderBody()
+			</main>
+		</div>
+</section>
+
+<script src="~/js/admin.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

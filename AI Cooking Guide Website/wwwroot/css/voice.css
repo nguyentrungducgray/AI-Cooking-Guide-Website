@@ -1,0 +1,148 @@
+﻿/* Biểu tượng microphone (icon-only) */
+.icon-only-mic {
+    color: #00B8D8; /* Màu biểu tượng */
+    font-size: 2rem; /* Kích thước biểu tượng */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động */
+    cursor: pointer; /* Hiển thị như nút */
+    position: relative; /* Cho phép tạo hiệu ứng ánh sáng */
+}
+
+    /* Hiệu ứng hover */
+    .icon-only-mic:hover {
+        color: #007799; /* Màu biểu tượng khi hover */
+        transform: scale(1.2); /* Phóng to khi hover */
+        text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+    }
+
+    /* Tăng cảm giác khi bấm vào */
+    .icon-only-mic:active {
+        transform: scale(1); /* Quay lại kích thước ban đầu khi nhấn */
+        text-shadow: none; /* Loại bỏ bóng khi nhấn */
+    }
+
+        /* Hiệu ứng ánh sáng khi nhấn */
+        .icon-only-mic:active::after {
+            content: ''; /* Pseudo-element cho ánh sáng */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px; /* Kích thước ánh sáng */
+            height: 50px; /* Kích thước ánh sáng */
+            background: radial-gradient(circle, rgba(0, 184, 216, 0.4), transparent);
+            border-radius: 50%; /* Tròn */
+            opacity: 0;
+            animation: mic-click-effect 0.5s ease-out;
+        }
+.custom-mic-icon {
+    font-size: 100px; /* Tăng kích thước icon */
+    color: #007bff; /* Màu sắc (tùy chỉnh theo nhu cầu) */
+}
+#voice-search-btn {
+    position: relative; /* Để sử dụng left/right */
+    left: 10px; /* Dịch sang bên phải 20px */
+}
+
+/* Animation ánh sáng */
+@keyframes mic-click-effect {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.5); /* Bắt đầu nhỏ */
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2); /* Lan tỏa */
+    }
+}
+/* Tùy chỉnh nút microphone */
+.icon-only-mic {
+    color: #007BFF;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+    .icon-only-mic:hover {
+        color: #0056b3;
+        transform: scale(1.2);
+    }
+
+/* Điều chỉnh khoảng cách và viền cho input file */
+#image-input {
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+    #image-input:hover {
+        box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5);
+    }
+/* Nút tùy chỉnh */
+.custom-search-btn {
+    background: linear-gradient(135deg, #007BFF, #0056b3); /* Hiệu ứng gradient */
+    color: #fff; /* Màu chữ */
+    font-size: 1rem; /* Kích thước chữ nhỏ hơn */
+    font-weight: bold;
+    padding: 0.5rem 1.5rem; /* Giảm padding */
+    border-radius: 30px; /* Bo góc nhỏ hơn */
+    border: none; /* Loại bỏ viền */
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.2); /* Giảm bóng */
+    transition: transform 0.2s ease, box-shadow 0.3s ease; /* Hiệu ứng khi tương tác */
+    text-transform: uppercase; /* Chữ in hoa */
+    letter-spacing: 1px; /* Khoảng cách chữ */
+}
+
+    /* Hiệu ứng hover */
+    .custom-search-btn:hover {
+        background: linear-gradient(135deg, #0056b3, #003f8a); /* Tông gradient đậm hơn */
+        transform: translateY(-2px); /* Nâng nút nhẹ */
+        box-shadow: 0px 8px 15px rgba(0, 56, 168, 0.4), 0px 4px 8px rgba(0, 0, 0, 0.2); /* Tăng bóng nhẹ */
+        cursor: pointer;
+    }
+
+    /* Hiệu ứng khi bấm vào nút */
+    .custom-search-btn:active {
+        transform: translateY(1px); /* Hiệu ứng nhấn xuống */
+        box-shadow: 0px 4px 6px rgba(0, 56, 168, 0.4), 0px 2px 4px rgba(0, 0, 0, 0.2); /* Giảm bóng */
+    }
+
+    /* Hiệu ứng focus */
+    .custom-search-btn:focus {
+        outline: none; /* Loại bỏ viền mặc định */
+        box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.7); /* Hiệu ứng ánh sáng nhẹ */
+    }
+/* Căn chỉnh nút sang phải */
+.custom-search-btn {
+    margin-left: 20px; /* Dịch chuyển nút sang phải 50px */
+}
+
+/* Thiết lập kiểu chữ đẹp và làm cho tiêu đề nổi bật */
+.text-accent-emphasis {
+    font-family: 'Poppins', sans-serif; /* Chọn phông chữ sang trọng */
+    color: #333; /* Màu chữ tối để dễ đọc */
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Nền gradient cho tiêu đề */
+    -webkit-background-clip: text; /* Nền gradient chỉ áp dụng cho chữ */
+    color: transparent; /* Lọc màu chữ bằng nền gradient */
+    font-size: 2.5rem; /* Kích thước chữ lớn để thu hút sự chú ý */
+    line-height: 1.4; /* Đảm bảo khoảng cách dòng hợp lý */
+    font-weight: 700; /* Làm cho chữ đậm và sang trọng */
+    letter-spacing: 1px; /* Khoảng cách giữa các chữ */
+    text-transform: uppercase; /* Chữ in hoa cho thêm phần mạnh mẽ */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng cho chữ để nổi bật */
+}
+
+/* Thêm hiệu ứng hoạt hình cho tiêu đề */
+.text-accent-emphasis {
+    animation: fadeInUp 2s ease-in-out forwards; /* Hiệu ứng từ dưới lên */
+}
+
+/* Định nghĩa hiệu ứng fadeInUp */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

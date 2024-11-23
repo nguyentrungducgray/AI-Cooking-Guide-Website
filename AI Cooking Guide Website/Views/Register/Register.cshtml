@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "Đăng Ký";
+    Layout = null;
+}
+
+@model AI_Cooking_Guide_Website.Models.Users
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Mama Kitchen</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/assets/css/bootstrap-datetimepicker.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/assets/css/ckeditor.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/assets/css/feather.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/assets/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/School.styles.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/09a5fdf6ba.js"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="main-wrapper login-body">
+        <div class="login-wrapper">
+            <div class="container">
+                <div class="loginbox">
+                    <div class="login-left">
+                        <img class="img-fluid full-width" src="~/img/hoc-nau-an.jpg" alt="Logo" style="object-fit: cover; width: 100%; height: 100%;">
+                    </div>
+                    <div class="login-right">
+                        <div class="login-right-wrap">
+                            <h1>Đăng Ký</h1>
+                            <p class="account-subtitle">Nhập thông tin chi tiết để tạo tài khoản của bạn</p>
+
+                            @using (Html.BeginForm("Register", "Register", FormMethod.Post))
+                            {
+                                <!-- Username Field -->
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.UserName, new { Class = "control-label" })
+                                    @Html.TextBoxFor(m => m.UserName, new { placeholder = "Tên đăng nhập", Class = "form-control" })
+                                </div>
+
+                                <!-- Email Field -->
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Email, new { Class = "control-label" })
+                                    @Html.TextBoxFor(m => m.Email, new { placeholder = "Email", Class = "form-control" })
+                                </div>
+
+                                <!-- Password Field -->
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Password, new { Class = "control-label" })
+                                    @Html.PasswordFor(m => m.Password, new { placeholder = "Mật khẩu", Class = "form-control" })
+                                </div>
+
+                                <div class="dont-have">
+                                    Đã có tài khoản? <a asp-controller="Login" asp-action="Login">Đăng Nhập</a>
+                                </div>
+                                <div class="form-group mb-0">
+                                    <button class="btn btn-primary btn-block" type="submit">Đăng Ký</button>
+                                </div>
+                            }
+
+                            <div class="login-or">
+                                <span class="or-line"></span>
+                                <span class="span-or">hoặc</span>
+                            </div>
+
+                            <div class="social-login">
+                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/feather.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

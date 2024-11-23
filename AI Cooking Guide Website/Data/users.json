@@ -1,0 +1,20 @@
+[
+  {
+    "Id": "BH00465",
+    "UserName": "Gray",
+    "Email": "ducntbh00465@gmail.com",
+    "Password": "123",
+    "ProfileImageUrl": null,
+    "PhoneNumber": "0357340724",
+    "Address": "KTX M\u1EF9 \u0110\u00ECnh"
+  },
+  {
+    "Id": "BH00556",
+    "UserName": "Admin",
+    "Email": "ducntbh00465@gmail.com",
+    "Password": "123",
+    "ProfileImageUrl": null,
+    "PhoneNumber": null,
+    "Address": null
+  }
+]

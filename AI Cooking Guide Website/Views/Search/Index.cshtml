@@ -1,0 +1,181 @@
+﻿@model dynamic
+
+<!-- Newsletter Section -->
+<section class="py-3 py-md-5 py-xl-10 bsb-section-py-xxl-1 bg-accent">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-9 col-lg-8 col-xl-8 col-xxl-7">
+                <h2 class="display-4 fw-bold mb-4 mb-md-5 mb-xxl-6 text-center text-accent-emphasis">
+                    Tìm kiếm với công cụ AI tuyệt vời của chúng tôi
+                </h2>
+            </div>
+        </div>
+    </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7">
+                <form id="search-form" asp-controller="Search" asp-action="Index" method="post" enctype="multipart/form-data"
+                      class="d-flex flex-column align-items-stretch">
+                    <!-- Hàng chứa Input tìm kiếm và nút microphone -->
+                    <div class="d-flex align-items-center justify-content-between flex-wrap">
+                        <!-- Input tìm kiếm -->
+                        <div class="flex-grow-1 me-2">
+                            <label for="search-query" class="visually-hidden">Tìm kiếm món ăn hoặc nguyên liệu</label>
+                            <input id="search-query" name="query" class="form-control bsb-form-control-3xl" value="@ViewBag.Query"
+                                   placeholder="Nhập tên món ăn hoặc nguyên liệu..." aria-label="search-query"
+                                   aria-describedby="email-newsletter-help">
+                        </div>
+
+                        <!-- Nút microphone -->
+                        <div class="col-auto">
+                            <a type="button" id="voice-search-btn" class="icon-only-mic">
+                                <i class="fas fa-microphone"></i>
+                            </a>
+                        </div>
+
+                        <!-- Nút tìm kiếm -->
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary custom-search-btn">Tìm kiếm</button>
+                        </div>
+
+
+                    <!-- Input file nằm ở dòng riêng -->
+                    <div class="mt-3">
+                        <label for="image-input" class="form-label">Tải lên hình ảnh</label>
+                        <input type="file" id="image-input" name="imageQuery" class="form-control" accept="image/*">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    // Speech recognition setup
+    const searchInput = document.getElementById('search-query');
+    const voiceSearchBtn = document.getElementById('voice-search-btn');
+    const searchForm = document.getElementById('search-form');
+
+    if ('webkitSpeechRecognition' in window) {
+        const recognition = new webkitSpeechRecognition();
+        recognition.lang = 'vi-VN';
+        recognition.continuous = false;
+        recognition.interimResults = false;
+
+        let isRecognizing = false;
+
+        voiceSearchBtn.addEventListener('click', () => {
+            if (isRecognizing) {
+                recognition.stop();
+            } else {
+                recognition.start();
+            }
+        });
+
+        recognition.onstart = () => {
+            isRecognizing = true;
+            voiceSearchBtn.classList.add('voice-active');
+        };
+
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            searchInput.value = transcript;
+        };
+
+        recognition.onspeechend = () => {
+            recognition.stop();
+            searchForm.submit();
+        };
+
+        recognition.onend = () => {
+            isRecognizing = false;
+            voiceSearchBtn.classList.remove('voice-active');
+        };
+
+        recognition.onerror = (event) => {
+            console.error('Lỗi nhận dạng giọng nói:', event.error);
+            isRecognizing = false;
+            voiceSearchBtn.classList.remove('voice-active');
+        };
+
+       
+    } else {
+        alert('Trình duyệt của bạn không hỗ trợ tìm kiếm bằng giọng nói');
+        voiceSearchBtn.disabled = true;
+    }
+</script>
+
+
+<!-- Search Results Section -->
+<section class="bsb-blog-5 py-3 py-md-5 py-xl-8 bsb-section-py-xxl-1">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-12">
+                <h2 class="h4 mb-4 mb-md-5">Kết quả tìm kiếm</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container overflow-hidden">
+        <div class="row">
+            @if (Model is AI_Cooking_Guide_Website.Models.SearchResultModel searchResults)
+            {
+                <!-- Text Search Results -->
+                <div class="col-12">
+                    <div class="row gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9">
+                        @foreach (var recipe in searchResults.Organic)
+                        {
+                            <div class="col-12 col-lg-4">
+                                <article>
+                                    <div class="card border-0 bg-transparent">
+                                        <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
+                                            <a href="@recipe.Link">
+                                                <img class="img-fluid bsb-scale bsb-hover-scale-up" style="height: 410px" loading="lazy" src="@recipe.ImageUrl" alt="@recipe.Title" />
+                                            </a>
+                                        </figure>
+                                        <div class="card-body m-0 p-0">
+                                            <h2 class="card-title h5">
+                                                <a class="link-dark text-decoration-none" href="@recipe.Link">@recipe.Title</a>
+                                            </h2>
+                                            <p class="small text-muted">@recipe.Snippet</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+            @if (Model is List<AI_Cooking_Guide_Website.Models.ImageSearchResultModel> imageResults)
+            {
+                <!-- Image Search Results -->
+                <div class="col-12">
+                    <div class="row gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9">
+                        @foreach (var result in imageResults)
+                        {
+                            <div class="col-12 col-lg-4">
+
+                                   <div class="card border-0 bg-transparent">
+                                        <!-- Image Section -->
+                                        <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
+                                            <a href="@result.Link" target="_blank" rel="noopener noreferrer">
+                                                <img class="img-fluid bsb-scale bsb-hover-scale-up"
+                                                     loading="lazy"
+                                                     src="@result.ImageUrl"
+                                                     alt="@result.Title" />
+                                            </a>
+                                            <p class="small text-muted">
+                                                @result.Source (@result.Domain)
+                                            </p>
+                                        </figure>
+                                   </div>
+                              
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

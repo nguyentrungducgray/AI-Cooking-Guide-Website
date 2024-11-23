@@ -1,0 +1,62 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<body>
+    <section id="content">
+        <main>
+            <div class="head-title-edit">
+                <div class="left">
+                    <h1>Edit Food List</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="#">List Food</a></li>
+                        <li><i class='bx bx-chevron-right'></i></li>
+                        <li><a class="active" href="#">Edit Food</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-edit">
+                <h2 class="form-title">Update Food Details</h2>
+                <form id="recipe-form" class="neumorphic-form">
+                    <div class="form-group">
+                        <label for="serial-number">Số Thứ Tự:</label>
+                        <input type="number" id="serial-number" placeholder="Nhập số thứ tự" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Tên Món Ăn:</label>
+                        <input type="text" id="name" placeholder="Nhập tên món ăn" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ingredients">Nguyên Liệu (mỗi nguyên liệu một dòng):</label>
+                        <textarea id="ingredients" rows="5" placeholder="Ví dụ: 200g thịt bò..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Mô Tả:</label>
+                        <textarea id="description" rows="5" placeholder="Nhập mô tả món ăn..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="steps">Các Bước Nấu (mỗi bước một dòng):</label>
+                        <textarea id="steps" rows="5" placeholder="Nhập từng bước nấu ăn..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="image">Chọn Ảnh:</label>
+                        <input type="file" id="image" accept="image/*" required>
+                        <img id="image-preview" src="" alt="Ảnh món ăn" class="image-preview">
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-save">Lưu Thay Đổi</button>
+                        <button type="button" onclick="window.location.href='@Url.Action("Index", "ListAdmin")'" class="btn-back">Quay Lại</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="recipe-list" class="recipe-list"></div>
+        </main>
+    </section>
+</body>

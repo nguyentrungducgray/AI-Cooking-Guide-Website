@@ -1,0 +1,148 @@
+﻿@model AI_Cooking_Guide_Website.Models.Users
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin cá nhân</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Profile Container with Light Pink Background */
+        .profile-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #f8d7e0; /* Light pink color */
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        /* Underline for the heading */
+        h2::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ff69b4; /* Pink color for underline */
+        }
+
+        /* Profile Details */
+        .profile-details {
+            margin-bottom: 20px;
+        }
+
+        .profile-details p {
+            font-size: 1.1em;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        /* Form Group for Inputs */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 1.1em;
+            color: #333;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        /* Success Message */
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 12px 20px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto; /* This centers the button */
+        }
+
+        .btn-primary {
+            background-color: #ff69b4; /* Pink color */
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff3385; /* Darker pink on hover */
+        }
+
+        
+    </style>
+</head>
+<body>
+
+<div class="profile-container">
+    <h2>Thông tin cá nhân</h2>
+    <div class="profile-details">
+        <p><strong>Username:</strong> @Model.UserName</p>
+        <p><strong>Email:</strong> @Model.Email</p>
+        <div class="form-group">
+            <label for="PhoneNumber"><strong>Số điện thoại:</strong></label>
+            <input type="text" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber" form="updateForm">
+        </div>
+        <div class="form-group">
+            <label for="Address"><strong>Địa chỉ:</strong></label>
+            <input type="text" id="Address" name="Address" value="@Model.Address" form="updateForm">
+        </div>
+    </div>
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+    <form id="updateForm" asp-action="UpdateProfile" method="post">
+        <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+    </form>
+</div>
+
+</body>
+</html>
