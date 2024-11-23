@@ -1,4 +1,6 @@
-﻿@{
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     var successMessage = TempData["Success"] as string;
     var errorMessage = TempData["Error"] as string;
     var loginStatus = TempData["LoginStatus"] as bool?; // Kiểm tra trạng thái đăng nhập
@@ -6,9 +8,138 @@
 
 <!-- Liên kết Boxicons và CSS -->
 <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
-<link href="~/css/admin.css" rel="stylesheet" />
 
 <style>
+    /* Reset mặc định */
+    body, h2, label, input, textarea, button {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+
+    /* Toàn bộ trang */
+    
+    /* Form container */
+    .form-container {
+        padding: 20px;
+        background-color: #f7f7f7;
+        border-radius: 8px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    input, textarea, button {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    input, textarea {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    button {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    /* Nút download PDF */
+    .download-btn {
+        display: inline-block;
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        border: none;
+    }
+
+        .download-btn:hover {
+            background-color: #218838;
+        }
+
+    /* Nguyên liệu và bước nấu */
+    #ingredients-container, #steps-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button[type="button"] {
+        background-color: #6c757d;
+        color: #fff;
+        margin-top: 10px;
+    }
+
+        button[type="button"]:hover {
+            background-color: #5a6268;
+        }
+
+    /* Hình ảnh */
+    #Image {
+        margin-top: 10px;
+    }
+
+    #imagePreview {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+        display: none;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+    }
+
+    /* Alert styles */
+    .alert {
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+
+    .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+
+    .alert-warning {
+        background-color: #fff3cd;
+        color: #856404;
+        border: 1px solid #ffeeba;
+    }
+
     .alert {
         padding: 15px;
         margin-bottom: 20px;
@@ -67,7 +198,7 @@
     }
 </style>
 
-
+<section class="py-3 py-md-5 py-xl-8 bg-light">
 <!-- Hiển thị thông báo -->
 @if (!string.IsNullOrEmpty(successMessage))
 {
@@ -89,6 +220,7 @@
         Bạn cần đăng nhập để thêm công thức!
     </div>
 }
+
 
 <div class="form-container">
     <button class="download-btn">
@@ -128,7 +260,7 @@
         <button type="submit" @(loginStatus == false ? "disabled" : "")>Lưu</button>
     </form>
 </div>
-
+</section>
 <script>
     // Thêm nguyên liệu mới
     function addIngredient() {
