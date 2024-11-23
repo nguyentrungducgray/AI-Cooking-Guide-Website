@@ -166,13 +166,13 @@
                     <div class="recipe-item">
                         <img src="@recipe.Image" alt="@recipe.Name" />
                         <a href="@Url.Action("RecipeDetails", "Profile", new { id = recipe.Id })">@recipe.Name</a>
-                        <p><strong>Ingredients:</strong> @recipe.Ingredients</p>
+                        <p><strong>Ingredients:</strong> @string.Join(", ", recipe.Ingredients)</p>
                         <p><strong>Description:</strong> @recipe.Description</p>
 
                         <!-- Status: Approved, Pending, Rejected -->
                         <div class="status
-                            @(recipe.Status == "Approved" ? "status-approved" :
-                              recipe.Status == "Pending" ? "status-pending" : "status-rejected")">
+                @(recipe.Status == "Approved" ? "status-approved" :
+                  recipe.Status == "Pending" ? "status-pending" : "status-rejected")">
                             @recipe.Status
                         </div>
                     </div>

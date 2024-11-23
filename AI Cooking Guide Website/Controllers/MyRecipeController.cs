@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using System.IO;
 using System.Linq;
+using System.Security.Principal;
 
 namespace AI_Cooking_Guide_Website.Controllers
 {
@@ -17,17 +18,24 @@ namespace AI_Cooking_Guide_Website.Controllers
         [HttpPost]
         public IActionResult Index([FromForm] MyRecipeModel recipe, IFormFile image)
         {
-            // Kiểm tra trạng thái đăng nhập khi nhấn nút lưu công thức
-            if (HttpContext.Session.GetString("UserLoggedIn") == null)
+            // Kiểm tra trạng thái đăng nhập qua Identity
+            if (!User.Identity?.IsAuthenticated ?? true)
             {
                 TempData["ErrorMessage"] = "Bạn cần phải đăng nhập để lưu công thức.";
-                return RedirectToAction("Login", "Login"); // Chuyển hướng tới trang đăng nhập
+                return RedirectToAction("Login", "Login");
             }
+
             try
             {
-                var userName = User.Identity.Name;
+                // Lấy tên người dùng từ Identity
+                var userName = User.Identity?.Name;
+                if (string.IsNullOrEmpty(userName))
+                {
+                    TempData["ErrorMessage"] = "Tên người dùng không xác định. Vui lòng đăng nhập lại.";
+                    return RedirectToAction("Login", "Login");
+                }
 
-                
+                recipe.UserName = userName;
 
                 // Check if image is provided and has valid extension
                 if (image == null || image.Length == 0)
