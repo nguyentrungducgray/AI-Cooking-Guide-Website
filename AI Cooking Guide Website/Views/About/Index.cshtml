@@ -1,52 +1,121 @@
-﻿    <!-- About 4 - Bootstrap Brain Component -->
-<section class="py-3 py-md-5 py-xl-8 bg-light">
-    <div class="container">
-        <div class="row justify-content-md-center">
-            <div class="col-12">
-                <h2 class="display-3 fw-bold mb-4">Về chúng tôi</h2>
-                <div class="row">
-                    <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6 d-flex gap-3">
-                        <p class="lead m-0">—</p>
-                        <p class="lead text-secondary m-0">Chúng tôi là một nhóm lập trình viên hoạt đông độc lập cố gắng hoàn thiện trang web của mình</p>
+﻿<!-- Hero Section with Dynamic Text Effect -->
+<section class="hero py-5 text-center position-relative">
+    <div class="hero-overlay position-absolute w-100 h-100 top-0 left-0 bg-dark opacity-75"></div>
+    <div class="container text-white position-relative z-index-1">
+        <h1 class="display-3 fw-bold mb-4 animated slideInUp">Chào Mừng Bạn Đến Với  Michelin Btec</h1>
+        <p class="lead mb-4 animated fadeIn" style="animation-delay: 0.5s;">Khám Phá Hương Vị Mới, Chinh Phục Mọi Công Thức – Michelin Btec, Nơi Mỗi Bữa Ăn Đều Là Kiệt Tác!</p>
+        <!-- Content Carousel Section -->
+        <a href="#features" class="btn btn-lg btn-light btn-artistic">Khám Phá Tính Năng</a>
+    </div>
+</section>
+
+
+<!-- About the Website -->
+<section class="about py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="display-4 text-primary mb-4">Về Michelin Btec</h2>
+        <p class="lead mb-5">Trang web của chúng tôi giúp bạn dễ dàng tìm kiếm, chia sẻ và tối ưu hóa công thức nấu ăn thông qua trí tuệ nhân tạo, mang lại cho bạn trải nghiệm nấu ăn tuyệt vời nhất.</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-6 mb-4">
+                <div class="card shadow-lg border-0 rounded">
+                    <img src="~/img/branding/8beef1a7494f0a05918df8ce3e6d8c7a.jpg" class="card-img-top rounded-top" alt="Feature 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Tìm kiếm công thức thông minh</h5>
+                        <p class="card-text">Sử dụng AI để tìm kiếm công thức nấu ăn phù hợp với sở thích và nguyên liệu có sẵn của bạn.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-6 mb-4">
+                <div class="card shadow-lg border-0 rounded">
+                    <img src="~/img/branding/7ca7b3e9b7475163b9c926e8b00933d2.jpg" class="card-img-top rounded-top" alt="Feature 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Chia sẻ công thức sáng tạo</h5>
+                        <p class="card-text">Chia sẻ công thức độc đáo của bạn với cộng đồng và nhận các công thức sáng tạo từ người dùng khác.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="py-3 py-md-5 py-xl-10">
+
+
+
+<!-- Features Section -->
+<section id="features" class="content-carousel py-5">
     <div class="container">
-        <div class="row gy-3 gy-md-4 gy-lg-0">
-            <div class="col-12 col-lg-6">
-                <div class="card bg-accent-subtle border-accent-subtle p-3 m-0">
-                    <div class="row gy-3 gy-md-0 align-items-md-center">
-                        <div class="col-md-5">
-                            <img src="~/img/about/about-img-2.jpg" class="img-fluid rounded-start" alt="...">
+        <h2 class="display-4 text-center text-primary mb-5">Những Tính Năng Nổi Bật</h2>
+        <div id="contentCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 text-center">
+                            <h4 class="mb-4">Tính Năng Tìm Kiếm Công Thức</h4>
+                            <p class="lead text-muted">Tìm kiếm công thức dễ dàng chỉ với một vài cú nhấp chuột hoặc theo nguyên liệu bạn có sẵn.</p>
                         </div>
-                        <div class="col-md-7">
-                            <div class="card-body p-0">
-                                <h2 class="card-title h4 mb-3">Tại sao nên sử dụng trang web này?</h2>
-                                <p class="card-text">Ở đây có vô vàn công thức nấu ăn, đa dạng sự lựa chọn và trên hết có 1 giao diện thân thiện dễ dùng để bạn sử dụng.</p>
-                            </div>
+                        <div class="col-md-6 text-center">
+                            <img src="~/img/branding/search.jpg" class="img-fluid rounded" alt="Feature 1">
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="card bg-primary-subtle border-primary-subtle p-3 m-0">
-                    <div class="row gy-3 gy-md-0 align-items-md-center">
-                        <div class="col-md-5">
-                            <img src="~/img/about/about-img-1.jpg" class="img-fluid rounded-start" alt="...">
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 text-center">
+                            <h4 class="mb-4">Chia Sẻ Công Thức</h4>
+                            <p class="lead text-muted">Chia sẻ những công thức tuyệt vời mà bạn đã thử nghiệm với cộng đồng.</p>
                         </div>
-                        <div class="col-md-7">
-                            <div class="card-body p-0">
-                                <h2 class="card-title h4 mb-3">Đội ngũ</h2>
-                                <p class="card-text">Với tư cách là một nhóm lập trình viên độc lập, chúng tôi sẽ cố gắng hết sức để giải quyết các vấn đề của trang web và các vấn đề được yêu cầu giải quyết của các bạn.</p>
-                            </div>
+                        <div class="col-md-6 text-center">
+                            <img src="~/img/branding/share.jpg" class="img-fluid rounded" alt="Feature 2">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 text-center">
+                            <h4 class="mb-4">Hướng Dẫn Từng Bước</h4>
+                            <p class="lead text-muted">Mỗi công thức đều có hướng dẫn chi tiết từng bước, giúp bạn dễ dàng thực hiện.</p>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <img src="~/img/branding/illustrated.jpg" class="img-fluid rounded" alt="Feature 3">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- How it Works Section -->
+<section class="how-it-works py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="display-4 text-primary mb-5">Cách Hoạt Động</h2>
+        <div class="row">
+            <div class="col-md-4 step">
+                <i class="fas fa-search fa-3x mb-4"></i>
+                <h5>Bước 1: Tìm Kiếm Công Thức</h5>
+                <p>Tìm kiếm công thức nấu ăn với các nguyên liệu có sẵn hoặc theo sở thích cá nhân.</p>
+            </div>
+            <div class="col-md-4 step">
+                <i class="fas fa-cogs fa-3x mb-4"></i>
+                <h5>Bước 2: Tối Ưu Hóa Với AI</h5>
+                <p>AI sẽ đề xuất công thức và tối ưu hóa bữa ăn của bạn, giúp bạn tiết kiệm thời gian và nguyên liệu.</p>
+            </div>
+            <div class="col-md-4 step">
+                <i class="fas fa-utensils fa-3x mb-4"></i>
+                <h5>Bước 3: Thưởng Thức</h5>
+                <p>Thực hiện công thức và thưởng thức những bữa ăn ngon miệng, đầy đủ dinh dưỡng.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Parallax Section for Visual Impact -->
+<section class="parallax-effect py-5 text-center" style="background-image: url('~/img/parallax-bg.jpg'); background-attachment: fixed; background-size: cover;">
+    <div class="container text-white">
+        <h2 class="display-4 fw-bold mb-4">Trải Nghiệm Nấu Ăn Tương Lai</h2>
+        <p class="lead mb-4 text-center slogan">
+            Kết Nối Đam Mê, Tạo Nên Những Bữa Ăn Tuyệt Vời – AI Cooking Guide, Sáng Tạo Trong Mỗi Món Ăn!
+        </p>
+
     </div>
 </section>

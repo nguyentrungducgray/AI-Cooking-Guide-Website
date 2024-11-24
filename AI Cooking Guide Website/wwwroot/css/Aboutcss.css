@@ -1,0 +1,376 @@
+﻿/* Hero Section */
+/* Hero Section with Parallax Effect */
+.hero {
+    background-image: url('../img/branding/48201934f3b4698b78e52859288f66e4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Làm nền di chuyển khi cuộn trang */
+    height: 100vh; /* Chiều cao của Hero section */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero Overlay with Darkening Effect */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Màu nền tối với độ mờ */
+}
+
+/* Styling for Title and Content */
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Parallax Image Transition */
+@keyframes parallaxTransition {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 50%; /* Tạo hiệu ứng di chuyển nền */
+    }
+}
+
+.hero {
+    animation: parallaxTransition 10s linear infinite; /* Di chuyển ảnh nền qua lại */
+}
+
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    animation: slideInUp 1s ease-out;
+}
+
+.hero p {
+    animation: fadeIn 2s ease-out;
+    animation-delay: 0.5s;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* About Section */
+.about .card {
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .about .card:hover {
+        transform: translateY(-10px);
+    }
+
+/* Features Section */
+.features .feature-card {
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .features .feature-card:hover {
+        transform: scale(1.05);
+    }
+
+/* How It Works Section */
+.how-it-works .step {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+    .how-it-works .step:hover {
+        transform: translateY(-10px);
+    }
+
+/* Parallax Effect */
+.parallax-effect {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+/* Custom Buttons */
+.btn-light {
+    background-color: #fff;
+    color: #007bff;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 15px 30px;
+    transition: all 0.3s ease;
+}
+
+    .btn-light:hover {
+        background-color: #007bff;
+        color: #fff;
+    }
+/* Carousel Styles */
+.carousel {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+    .carousel .carousel-item {
+        transition: transform 1s ease-in-out;
+    }
+
+.carousel-item img {
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+/* Hover Effect on Carousel Items */
+.carousel-item:hover img {
+    opacity: 0.8;
+}
+
+/* Custom Navigation Buttons */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #007bff;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Content Carousel Styles */
+.content-carousel .carousel-item {
+    transition: transform 1s ease-in-out;
+    padding: 50px 0;
+}
+
+    .content-carousel .carousel-item img {
+        border-radius: 10px;
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+.content-carousel .carousel-control-prev-icon, .content-carousel .carousel-control-next-icon {
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* Custom Button Style */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+/* Artistic Button Styling */
+.btn-artistic {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none; /* Bỏ gạch chân */
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    background-size: 200% 200%; /* Tạo hiệu ứng động */
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(255, 75, 43, 0.6);
+    transition: all 0.4s ease-out; /* Mượt mà khi hover */
+    cursor: pointer;
+    animation: gradientMove 3s ease-in-out infinite; /* Gradient động */
+}
+
+    /* Hover Effects */
+    .btn-artistic:hover {
+        background-position: right center; /* Chuyển gradient */
+        transform: scale(1.1); /* Phóng to nhẹ */
+        box-shadow: 0 15px 30px rgba(255, 75, 43, 0.8);
+    }
+
+/* Gradient Animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* Phần Cách Hoạt Động */
+.how-it-works {
+    background-color: #f8f9fa; /* Màu nền sáng */
+    padding: 80px 0; /* Giãn cách top và bottom */
+}
+
+.step {
+    background-color: #fff; /* Nền trắng cho mỗi bước */
+    padding: 30px;
+    border-radius: 15px; /* Bo góc các box */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+    transition: all 0.3s ease-in-out; /* Hiệu ứng chuyển động mượt */
+}
+
+    .step:hover {
+        transform: translateY(-10px); /* Di chuyển nhẹ khi hover */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Bóng đổ mạnh hơn khi hover */
+    }
+
+    .step i {
+        color: #007bff; /* Màu icon */
+        transition: all 0.3s ease-in-out;
+    }
+
+    .step:hover i {
+        color: #ff6f61; /* Thay đổi màu icon khi hover */
+        transform: rotate(360deg); /* Quay icon một vòng */
+    }
+
+    /* Hiệu ứng hiện thị các bước */
+    .step h5, .step p {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .step.visible h5, .step.visible p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Các bước sẽ xuất hiện khi cuộn đến */
+    .step:nth-child(1) {
+        transition-delay: 0.2s;
+    }
+
+    .step:nth-child(2) {
+        transition-delay: 0.4s;
+    }
+
+    .step:nth-child(3) {
+        transition-delay: 0.6s;
+    }
+
+.elegant-slogan {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #333; /* Màu tối để tạo độ tương phản đẹp trên nền trắng */
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Georgia', serif; /* Phông chữ serif mang lại cảm giác sang trọng */
+    line-height: 1.4;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Bóng đổ mờ nhẹ giúp nổi bật văn bản */
+    transition: all 0.3s ease-in-out;
+}
+
+    /* Hiệu ứng khi hover để làm chữ sáng lên */
+    .elegant-slogan:hover {
+        color: #ff6600; /* Màu cam nhẹ khi hover để tạo sự nổi bật */
+        text-shadow: 0 2px 10px rgba(255, 102, 0, 0.6); /* Thêm bóng nhẹ khi hover */
+    }
+
+    /* Tạo hiệu ứng mờ dần */
+    .elegant-slogan:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.1); /* Màn che nhẹ làm nền cho văn bản */
+        z-index: -1; /* Đảm bảo văn bản nổi bật */
+        border-radius: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .elegant-slogan:hover:before {
+        opacity: 1; /* Mở màn che khi hover */
+    }
+
+.elegant-slogan {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #333; /* Màu tối để tạo độ tương phản đẹp trên nền trắng */
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Georgia', serif; /* Phông chữ serif mang lại cảm giác sang trọng */
+    line-height: 1.4;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Bóng đổ mờ nhẹ giúp nổi bật văn bản */
+    transition: all 0.3s ease-in-out;
+}
+
+    /* Hiệu ứng khi hover để làm chữ sáng lên */
+    .elegant-slogan:hover {
+        color: #ff6600; /* Màu cam nhẹ khi hover để tạo sự nổi bật */
+        text-shadow: 0 2px 10px rgba(255, 102, 0, 0.6); /* Thêm bóng nhẹ khi hover */
+    }
+
+    /* Tạo hiệu ứng mờ dần */
+    .elegant-slogan:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.1); /* Màn che nhẹ làm nền cho văn bản */
+        z-index: -1; /* Đảm bảo văn bản nổi bật */
+        border-radius: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .elegant-slogan:hover:before {
+        opacity: 1; /* Mở màn che khi hover */
+    }

@@ -1,124 +1,165 @@
-﻿.form-container {
-    position: relative; /* Set the position to relative for absolute positioning */
-}
-
-.form-actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.back-button {
-    position: absolute; /* Position it absolutely */
-    bottom: 20px; /* Distance from the bottom */
-    right: 20px; /* Distance from the right */
-    background-color: #5cd45c;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    color: #fff; /* Change text color to white */
-}
-
-    .back-button:hover {
-        background-color: #4cae4c;
-    }
-
-.hidden {
-    display: none;
-}
-
+﻿/* Font và reset cơ bản */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
+    background-color: #eeee;
+    color: #333;
 }
 
-.form-container {
-    background: white;
+h1, h2 {
+    color: #2c3e50;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+/* Tiêu đề */
+.head-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+}
+
+.breadcrumb {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+    .breadcrumb li i {
+        color: #7f8c8d;
+    }
+
+/* Container form */
+.form-container {
+    max-width: 800px;
     margin: 30px auto;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-    .form-container h2 {
-        margin-bottom: 20px;
-        color: #333;
-    }
-
-    .form-container label {
-        display: block;
-        margin-bottom: 5px;
-        color: #555;
-    }
-
-    .form-container input[type="text"],
-    .form-container input[type="number"],
-    .form-container input[type="file"],
-    .form-container textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        font-size: 16px;
-    }
-
-    .form-container button {
-        background-color: #28a745;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background-color 0.3s;
-    }
-
-        .form-container button:hover {
-            background-color: #218838;
-        }
-
-.back-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 15px;
+.form-edit {
+    max-width: 800px;
+    position: relative;
+    left: -100px; /* Dịch container sang trái */
+    margin-top: 30px;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-    .back-button:hover {
-        background-color: #0056b3;
-    }
-
-.hidden {
-    display: none;
+#content main .head-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 16px;
+    flex-wrap: wrap;
 }
 
-#image-preview {
-    margin-top: 10px;
-    max-width: 100%;
-    border-radius: 4px;
+.form-title {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2980b9;
+    font-size: 24px;
 }
 
-.recipe {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="file"] {
     padding: 10px;
-    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-    .recipe img {
-        max-width: 100%;
-        border-radius: 4px;
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    textarea:focus {
+        border-color: #3498db;
+        outline: none;
+        box-shadow: 0 0 5px
+    }
+/* Styling for buttons */
+button {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Button Save */
+.btn-save {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 128, 0, 0.3); /* Shadow for depth */
+}
+
+    .btn-save:hover {
+        background-color: #45a049;
+        box-shadow: 0 6px 12px rgba(0, 128, 0, 0.4);
+        transform: translateY(-2px); /* Lift the button on hover */
     }
 
+    .btn-save:active {
+        background-color: #388e3c;
+        box-shadow: 0 2px 4px rgba(0, 128, 0, 0.3); /* Slightly lower shadow when clicked */
+        transform: translateY(2px); /* Button presses down */
+    }
+
+/* Button Back */
+.btn-back {
+    background-color: #FF9800; /* Orange */
+    color: white;
+    box-shadow: 0 4px 6px rgba(255, 140, 0, 0.3); /* Shadow for depth */
+}
+
+    .btn-back:hover {
+        background-color: #fb8c00;
+        box-shadow: 0 6px 12px rgba(255, 140, 0, 0.4);
+        transform: translateY(-2px); /* Lift the button on hover */
+    }
+
+    .btn-back:active {
+        background-color: #f57c00;
+        box-shadow: 0 2px 4px rgba(255, 140, 0, 0.3); /* Slightly lower shadow when clicked */
+        transform: translateY(2px); /* Button presses down */
+    }
+
+/* Optional: Space buttons evenly */
+button + button {
+    margin-left: 10px;
+}
