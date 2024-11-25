@@ -13,24 +13,41 @@
         <div class="row justify-content-md-center">
             <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7">
                 <form id="search-form" asp-controller="Search" asp-action="Index" method="post" enctype="multipart/form-data" class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center">
+                    <!-- Input Text for Search -->
                     <div class="col-12 col-lg-7">
                         <label for="search-query" class="visually-hidden">Tìm kiếm món ăn hoặc nguyên liệu</label>
-                        <input id="search-query" name="query" class="form-control bsb-form-control-3xl" value="@ViewBag.Query" 
+                        <input id="search-query" name="query" class="form-control bsb-form-control-3xl" value="@ViewBag.Query"
                                placeholder="Nhập tên món ăn hoặc nguyên liệu..." aria-label="search-query"
                                aria-describedby="email-newsletter-help">
-                        <input type="file" id="image-input" name="imageQuery" class="form-control mt-3" accept="image/*">
                     </div>
-                    <div class="col-2 col-lg-1 d-flex align-items-center">
-                        <a type="button" id="voice-search-btn">
+
+                    <!-- Input for Image Search -->
+                    <div class="col-12 col-lg-3 d-flex flex-column align-items-center align-items-lg-start">
+                        <label for="image-input" class="form-label visually-hidden">Tìm kiếm bằng hình ảnh</label>
+                        <div class="input-group">
+                            <input type="file" id="image-input" name="imageQuery" class="form-control" accept="image/*">
+                            <button type="submit" class="btn btn-secondary">
+                                <i class="bi bi-camera"></i> Tìm kiếm bằng hình ảnh
+                            </button>
+                        </div>
+                        <small class="text-muted mt-1">Hỗ trợ tệp ảnh (jpg, png)</small>
+                    </div>
+
+                    <!-- Voice Search Button -->
+                    <div class="col-2 col-lg-1 d-flex align-items-center justify-content-center">
+                        <a type="button" id="voice-search-btn" class="btn btn-outline-secondary p-2">
                             <img src="~/img/microphone.jpg" alt="Tìm kiếm bằng giọng nói" class="img-fluid mx-auto" />
                         </a>
                     </div>
-                    <div class="col-12 col-lg-3 text-center text-lg-start">
-                        <button type="submit" class="btn btn-primary bsb-btn-3xl">Tìm kiếm</button>
+
+                    <!-- Standard Search Button -->
+                    <div class="col-12 col-lg-3 text-center text-lg-start mt-3 mt-lg-0">
+                        <button type="submit" class="btn btn-primary bsb-btn-3xl w-100">Tìm kiếm</button>
                     </div>
                 </form>
             </div>
         </div>
+
     </div>
 </section>
 
@@ -134,31 +151,59 @@
             {
                 <!-- Image Search Results -->
                 <div class="col-12">
-                    <div class="row gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9">
-                        @foreach (var result in imageResults)
+                    <h3 class="text-center mb-5">Kết quả tìm kiếm hình ảnh</h3>
+                    <div class="row gy-4 gy-md-5 gx-lg-5">
+                        @if (imageResults.Count > 0)
                         {
-                            <div class="col-12 col-lg-4">
-
-                                   <div class="card border-0 bg-transparent">
+                            @foreach (var result in imageResults)
+                            {
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="card h-100 border-0 shadow-sm">
                                         <!-- Image Section -->
-                                        <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
+                                        <figure class="card-img-top overflow-hidden">
                                             <a href="@result.Link" target="_blank" rel="noopener noreferrer">
                                                 <img class="img-fluid bsb-scale bsb-hover-scale-up"
                                                      loading="lazy"
                                                      src="@result.ImageUrl"
                                                      alt="@result.Title" />
                                             </a>
-                                            <p class="small text-muted">
-                                                @result.Source (@result.Domain)
-                                            </p>
                                         </figure>
-                                   </div>
-                              
+                                        <!-- Content Section -->
+                                        <div class="card-body">
+                                            <h5 class="card-title text-truncate">
+                                                <a href="@result.Link" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                                                    @result.Title
+                                                </a>
+                                            </h5>
+                                            <p class="card-text small text-muted">
+                                                Nguồn: <strong>@result.Source</strong> (@result.Domain)
+                                            </p>
+                                        </div>
+                                        <div class="card-footer bg-transparent border-0 text-end">
+                                            <a href="@result.GoogleUrl" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                                                Tìm trên Google
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <div class="col-12 text-center">
+                                <p class="text-muted">Không tìm thấy kết quả nào. Vui lòng thử lại!</p>
                             </div>
                         }
                     </div>
                 </div>
             }
+            else
+            {
+                <div class="col-12 text-center">
+                    <p class="text-danger">Dữ liệu không hợp lệ. Vui lòng kiểm tra lại.</p>
+                </div>
+            }
+
         </div>
     </div>
 </section>

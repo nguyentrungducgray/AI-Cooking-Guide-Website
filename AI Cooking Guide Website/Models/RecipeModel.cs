@@ -21,13 +21,45 @@
 
     public class ImageSearchResultModel
     {
-        public string Title { get; set; }          // Tiêu đề của kết quả
-        public string ImageUrl { get; set; }       // URL ảnh gốc
-        public string ThumbnailUrl { get; set; }   // URL ảnh thu nhỏ
-        public string Source { get; set; }         // Nguồn bài viết
-        public string Domain { get; set; }         // Tên miền
-        public string Link { get; set; }           // Link đến bài viết
-        public string GoogleUrl { get; set; }      // Google URL gốc
-        public int Position { get; set; }          // Vị trí trong danh sách kết quả
+        /// <summary>
+        /// Tiêu đề của kết quả tìm kiếm hình ảnh
+        /// </summary>
+        public string Title { get; set; }
+
+        /// <summary>
+        /// URL của hình ảnh lớn (kích thước gốc)
+        /// </summary>
+        public string ImageUrl { get; set; }
+
+        /// <summary>
+        /// URL của hình ảnh thumbnail
+        /// </summary>
+        public string ThumbnailUrl { get; set; }
+
+        /// <summary>
+        /// Nguồn cung cấp hình ảnh (vd: tên trang web)
+        /// </summary>
+        public string Source { get; set; }
+
+        /// <summary>
+        /// Domain của trang web (vd: "example.com")
+        /// </summary>
+        public string Domain { get; set; }
+
+        /// <summary>
+        /// Liên kết đến bài viết hoặc trang chứa hình ảnh
+        /// </summary>
+        public string Link { get; set; }
+
+        /// <summary>
+        /// Liên kết Google tìm kiếm liên quan đến hình ảnh
+        /// </summary>
+        public string GoogleUrl { get; set; }
+
+        /// <summary>
+        /// Vị trí của hình ảnh trong kết quả tìm kiếm
+        /// </summary>
+        public int Position { get; set; }
     }
+
 }

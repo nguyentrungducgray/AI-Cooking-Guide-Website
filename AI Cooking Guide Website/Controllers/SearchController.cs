@@ -6,6 +6,8 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.IO;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace AI_Cooking_Guide_Website.Controllers
 {
@@ -125,73 +127,81 @@ namespace AI_Cooking_Guide_Website.Controllers
             }
         }
 
-        [HttpGet]
-        public IActionResult RecipeDetails(string title)
-        {
-            ModelState.AddModelError("", "Chức năng xem chi tiết không khả dụng.");
-            return View(); // Trả về một thông báo cơ bản do không có API chi tiết.
-        }
+
 
         // Xử lý tìm kiếm theo hình ảnh
+
         [HttpPost]
-        public async Task<IActionResult> SearchByImage(IFormFile imageQuery)
+        public async Task<IActionResult> SearchByImageAI(IFormFile imageQuery)
         {
             if (imageQuery == null || imageQuery.Length == 0)
             {
                 ModelState.AddModelError("", "Vui lòng cung cấp hình ảnh để tìm kiếm.");
-                return View("Index");
+                return View("Index", new SearchResultModel());
             }
 
             try
             {
-                // Chuyển hình ảnh thành chuỗi base64 để gửi qua API
+                // Chuyển hình ảnh thành chuỗi base64
+                string imageBase64;
                 using (var memoryStream = new MemoryStream())
                 {
                     await imageQuery.CopyToAsync(memoryStream);
-                    var imageBase64 = Convert.ToBase64String(memoryStream.ToArray());
-
-                    var request = new HttpRequestMessage(HttpMethod.Post, "https://google.serper.dev/images");
-                    request.Headers.Add("X-API-KEY", "8c10c44a0cbc789d18974590233c7f4a2610ab50");
-
-                    string contentJson = $"{{\"q\":\"{imageBase64}\",\"gl\":\"vn\",\"hl\":\"vi\"}}";
-                    var content = new StringContent(contentJson, null, "application/json");
-                    request.Content = content;
-
-                    var response = await _httpClient.SendAsync(request);
-                    response.EnsureSuccessStatusCode();
-
-                    var jsonResponse = await response.Content.ReadAsStringAsync();
-                    var imageResults = JObject.Parse(jsonResponse);
-
-                    var model = new List<ImageSearchResultModel>();
-
-                    var imageItems = imageResults["images_results"];
-                    if (imageItems != null && imageItems.HasValues)
-                    {
-                        foreach (var item in imageItems)
-                        {
-                            model.Add(new ImageSearchResultModel
-                            {
-                                Title = item["title"]?.ToString(),
-                                ImageUrl = item["imageUrl"]?.ToString(),
-                                ThumbnailUrl = item["thumbnailUrl"]?.ToString(),
-                                Source = item["source"]?.ToString(),
-                                Domain = item["domain"]?.ToString(),
-                                Link = item["link"]?.ToString(),
-                                GoogleUrl = item["googleUrl"]?.ToString(),
-                                Position = item["position"]?.ToObject<int>() ?? 0
-                            });
-                        }
-                    }
-
-                    return View("ImageResults", model); // Hiển thị kết quả tìm kiếm hình ảnh
+                    imageBase64 = Convert.ToBase64String(memoryStream.ToArray());
                 }
+
+                // Gửi yêu cầu đến API tìm kiếm hình ảnh
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://your-ai-service.com/api/search");
+                request.Headers.Add("Authorization", "Bearer YOUR_API_KEY");
+
+                var payload = new
+                {
+                    image = imageBase64,
+                    options = new { gl = "vn", hl = "vi" }
+                };
+                string contentJson = JsonConvert.SerializeObject(payload);
+                request.Content = new StringContent(contentJson, Encoding.UTF8, "application/json");
+
+                var response = await _httpClient.SendAsync(request);
+                response.EnsureSuccessStatusCode();
+
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var searchResults = JObject.Parse(jsonResponse);
+
+                // Xử lý kết quả trả về
+                var imageResults = new List<ImageSearchResultModel>();
+                var imageItems = searchResults["results"];
+                foreach (var item in imageItems)
+                {
+                    imageResults.Add(new ImageSearchResultModel
+                    {
+                        Title = item["title"]?.ToString(),
+                        ImageUrl = item["imageUrl"]?.ToString(),
+                        ThumbnailUrl = item["thumbnailUrl"]?.ToString(),
+                        Source = item["source"]?.ToString(),
+                        Domain = item["domain"]?.ToString(),
+                        Link = item["link"]?.ToString(),
+                        GoogleUrl = item["googleUrl"]?.ToString(),
+                        Position = item["position"]?.ToObject<int>() ?? 0
+                    });
+                }
+
+                // Truyền kết quả vào mô hình và trả về view Index
+                var model = new SearchResultModel
+                {
+                    Organic = new List<RecipeModel>(), // Giữ danh sách Organic trống nếu không tìm kiếm văn bản
+                };
+
+                ViewBag.ImageResults = imageResults; // Đặt kết quả hình ảnh vào ViewBag
+                return View("Index", model);
             }
-            catch
+            catch (Exception ex)
             {
-                ModelState.AddModelError("", "Có lỗi xảy ra khi gọi API tìm kiếm hình ảnh.");
-                return View("Index");
+                ModelState.AddModelError("", $"Có lỗi xảy ra khi tìm kiếm bằng AI: {ex.Message}");
+                return View("Index", new SearchResultModel());
             }
         }
+
+
     }
 }
