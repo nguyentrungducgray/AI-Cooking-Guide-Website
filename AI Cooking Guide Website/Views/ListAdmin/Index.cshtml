@@ -1,6 +1,9 @@
-﻿@{
+﻿@model List<AI_Cooking_Guide_Website.Models.AddModel.Recipe>
+
+@{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
 <body>
     <!-- MAIN -->
     <main>
@@ -9,7 +12,7 @@
                 <h1>Add Food</h1>
                 <ul class="breadcrumb">
                     <li>
-                        <a href="#">Dashboard</a>
+                        <a href="@Url.Action("Index", "Dashboard")">Dashboard</a>
                     </li>
                     <li><i class='bx bx-chevron-right'></i></li>
                     <li>
@@ -17,7 +20,7 @@
                     </li>
                 </ul>
             </div>
-            <a href="#" class="btn-add">
+            <a href="@Url.Action("Add", "Admin")" class="btn-add">
                 <i class='bx bx-plus-circle'></i>
                 <span class="text">Add New Food</span>
             </a>
@@ -35,32 +38,37 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>001</td>
-                        <td><img src="~/img/food1.png" alt="Food 1" class="food-image"></td>
-                        <td>Food Item 1</td>
-                        <td>
-                            <a href="@Url.Action("Index", "EditAdminList", new { id = 1 })" class="btn btn-edit">
-                                <i class='bx bx-edit-alt'></i>Edit
-                            </a>
-                            <a href="@Url.Action("Delete", "Admin", new { id = 1 })" class="btn btn-delete">
-                                <i class='bx bx-trash'></i>Delete
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>002</td>
-                        <td><img src="~/img/food2.png" alt="Food 2" class="food-image"></td>
-                        <td>Food Item 2</td>
-                        <td>
-                            <a href="@Url.Action("Index", "EditAdminList", new { id = 2 })" class="btn btn-edit">
-                                <i class='bx bx-edit-alt'></i>Edit
-                            </a>
-                            <a href="@Url.Action("Delete", "Admin", new { id = 2 })" class="btn btn-delete">
-                                <i class='bx bx-trash'></i>Delete
-                            </a>
-                        </td>
-                    </tr>
+                    @if (Model != null )
+                    {
+                        //int serialNumber = 1;
+                        foreach (var recipe in Model)
+                        {
+                            <tr>
+                               @* <td>@serialNumber</td>  *@
+                                <td>
+                                    <img src="@recipe.Image" alt="@recipe.Name" class="food-image" style="width: 100px; height: auto;" />
+                                </td>
+                                <td>@recipe.Name</td>
+                                <td>
+                                    <a href="@Url.Action("Index", "EditAdminList" @* new { id = serialNumber } *@)" class="btn btn-edit">
+                                        <i class='bx bx-edit-alt'></i>Edit
+                                    </a>
+                                    <a href="@Url.Action("Delete", "Admin" @* new { id = serialNumber } *@)" class="btn btn-delete">
+                                        <i class='bx bx-trash'></i>Delete
+                                    </a>
+                                </td>
+                            </tr>
+                            @* serialNumber++; *@
+                        }
+
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="3">No recipes found.</td>
+                        </tr>
+                    }
+                   
                 </tbody>
             </table>
         </div>
