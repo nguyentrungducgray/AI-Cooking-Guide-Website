@@ -1,4 +1,4 @@
-﻿@model List<AI_Cooking_Guide_Website.Models.AddModel.Recipe>
+﻿@model AI_Cooking_Guide_Website.Models.AddModel
 
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -9,14 +9,14 @@
     <main>
         <div class="head-title">
             <div class="left">
-                <h1>Add Food</h1>
+                <h1>Food List</h1>
                 <ul class="breadcrumb">
                     <li>
                         <a href="@Url.Action("Index", "Dashboard")">Dashboard</a>
                     </li>
                     <li><i class='bx bx-chevron-right'></i></li>
                     <li>
-                        <a class="active" href="#">Add Food</a>
+                        <a class="active" href="#">Food List</a>
                     </li>
                 </ul>
             </div>
@@ -38,37 +38,38 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @if (Model != null )
+                    @if (Model.Recipes != null && Model.Recipes.Any())
                     {
-                        //int serialNumber = 1;
-                        foreach (var recipe in Model)
+                        foreach (var recipe in Model.Recipes)
                         {
                             <tr>
-                               @* <td>@serialNumber</td>  *@
+                                <td>@recipe.Id</td>
                                 <td>
                                     <img src="@recipe.Image" alt="@recipe.Name" class="food-image" style="width: 100px; height: auto;" />
                                 </td>
                                 <td>@recipe.Name</td>
                                 <td>
-                                    <a href="@Url.Action("Index", "EditAdminList" @* new { id = serialNumber } *@)" class="btn btn-edit">
+                                    <a href="@Url.Action("Index", "EditAdminList", new { id = recipe.Id })" class="btn btn-edit">
                                         <i class='bx bx-edit-alt'></i>Edit
                                     </a>
-                                    <a href="@Url.Action("Delete", "Admin" @* new { id = serialNumber } *@)" class="btn btn-delete">
-                                        <i class='bx bx-trash'></i>Delete
-                                    </a>
+                                    <!-- Delete Button -->
+                                    <form action="@Url.Action("Delete", "ListAdmin", new { id = recipe.Id })" method="post" style="display:inline;">
+                                        @Html.AntiForgeryToken() <!-- CSRF Token for security -->
+                                        <input type="hidden" name="_method" value="DELETE" /> <!-- Simulate DELETE method -->
+                                        <button type="submit" class="btn btn-delete" onclick="return confirm('Are you sure you want to delete this recipe?');">
+                                            <i class='bx bx-trash'></i>Delete
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
-                            @* serialNumber++; *@
                         }
-
                     }
                     else
                     {
                         <tr>
-                            <td colspan="3">No recipes found.</td>
+                            <td colspan="4">No recipes found.</td>
                         </tr>
                     }
-                   
                 </tbody>
             </table>
         </div>

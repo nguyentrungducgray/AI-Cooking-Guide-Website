@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AI Cooking Guide Website")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee1a6500ed079a66ca089d5b43f9a428fe74e161")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0aff53cc9c66da2deebe66cdea0baf5d53610018")]
 [assembly: System.Reflection.AssemblyProductAttribute("AI Cooking Guide Website")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AI Cooking Guide Website")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
