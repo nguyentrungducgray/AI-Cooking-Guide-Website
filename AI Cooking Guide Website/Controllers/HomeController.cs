@@ -4,8 +4,7 @@ using System.Diagnostics;
 using System.Text.Json;
 using System.Collections.Generic; // Để sử dụng List<T>
 using System.IO; // Để sử dụng Path
-
-
+using System.Linq; // Để sử dụng phương thức FirstOrDefault
 
 namespace AI_Cooking_Guide_Website.Controllers
 {
@@ -55,9 +54,9 @@ namespace AI_Cooking_Guide_Website.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-
-        [HttpGet("FoodDetails")]
-        public IActionResult FoodDetails(string name)
+        // Đã sửa phương thức FoodDetails để tìm món ăn theo id
+        [HttpGet("FoodDetails/{id}")]
+        public IActionResult FoodDetails(int id)
         {
             var filePath = Path.Combine("wwwroot", "data", "recipes.json");
             List<AddModel.Recipe> recipes = new List<AddModel.Recipe>();
@@ -69,8 +68,8 @@ namespace AI_Cooking_Guide_Website.Controllers
                 recipes = JsonSerializer.Deserialize<List<AddModel.Recipe>>(jsonData) ?? new List<AddModel.Recipe>();
             }
 
-            // Tìm món ăn theo tên
-            var recipeDetail = recipes.FirstOrDefault(r => r.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+            // Tìm món ăn theo id
+            var recipeDetail = recipes.FirstOrDefault(r => r.Id == id);
             if (recipeDetail == null)
             {
                 return NotFound(); // Trả về 404 nếu không tìm thấy món ăn

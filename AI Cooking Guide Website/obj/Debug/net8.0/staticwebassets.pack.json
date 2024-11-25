@@ -36333,6 +36333,14 @@
       "PackagePath": "staticwebassets\\mrimages\\0_qZ1JOnVpPokvnr69.jpg"
     },
     {
+      "Id": "D:\\hocki6\\Project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\mrimages\\MEGUMI~1.JPG",
+      "PackagePath": "staticwebassets\\mrimages\\MEGUMI~1.JPG"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\mrimages\\OIP.jpg",
+      "PackagePath": "staticwebassets\\mrimages\\OIP.jpg"
+    },
+    {
       "Id": "D:\\hocki6\\Project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\mrimages\\Screenshot 2023-07-23 092906.png",
       "PackagePath": "staticwebassets\\mrimages\\Screenshot 2023-07-23 092906.png"
     },
@@ -36355,6 +36363,14 @@
     {
       "Id": "D:\\hocki6\\Project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\mrimages\\ga-xao-sa-ot-1-1671.jpg",
       "PackagePath": "staticwebassets\\mrimages\\ga-xao-sa-ot-1-1671.jpg"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\mrimages\\kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg",
+      "PackagePath": "staticwebassets\\mrimages\\kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\mrimages\\tao_pho_1.jpg",
+      "PackagePath": "staticwebassets\\mrimages\\tao_pho_1.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AI Cooking Guide Website.Microsoft.AspNetCore.StaticWebAssets.props",

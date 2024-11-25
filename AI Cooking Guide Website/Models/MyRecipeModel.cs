@@ -14,6 +14,9 @@
         public string IngredientsText { get; set; }
         public string StepsText { get; set; }
 
+
+        public bool IsAccepted { get; set; }
+
         // These will hold the parsed lists
         public List<string> Ingredients { get; set; }
         public List<string> Steps { get; set; }

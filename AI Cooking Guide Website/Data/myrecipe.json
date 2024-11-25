@@ -1,40 +1,19 @@
 [
   {
     "Id": 1,
-    "Name": "B\u00E1nh M\u00EC N\u01B0\u1EDBng",
-    "Description": "B\u00E1nh m\u00EC Vi\u1EC7t",
-    "Image": "/mrimages/banh-mi-nuong-muoi-ot-thumbnail.jpg",
-    "UserName": "Phuong Diem",
+    "Name": "Bún đậu",
+    "Description": "de",
+    "Image": "/mrimages/kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg",
+    "UserName": "Gray",
     "Status": null,
     "IngredientsText": null,
     "StepsText": null,
+    "IsAccepted": true,
     "Ingredients": [
-      "B\u00E1nh m\u00EC 1 c\u00E1i",
-      "X\u00FAc x\u00EDch 1 c\u00E1i",
-      "Sa t\u1EBF 1 mu\u1ED7ng c\u00E0 ph\u00EA",
-      "Mu\u1ED1i \u1EDBt 1 mu\u1ED7ng c\u00E0 ph\u00EA"
+      "edde"
     ],
     "Steps": [
-      "1.S\u01A1 ch\u1EBF nguy\u00EAn li\u1EC7u",
-      "B\u00E1nh m\u00EC sau khi mua v\u1EC1 b\u1EA1n d\u00F9ng c\u00E2y l\u0103n c\u00E1n b\u1ED9t c\u00E1n cho d\u1EB9t, ch\u00FA \u00FD c\u00E1n \u0111\u1EC1u tay \u0111\u1EC3 b\u00E1nh n\u01B0\u1EDBng \u0111\u01B0\u1EE3c gi\u00F2n, ngon h\u01A1n.",
-      "2. N\u01B0\u1EDBng b\u00E1nh m\u00EC",
-      "B\u1EA1n pha 1 mu\u1ED7ng c\u00E0 ph\u00EA sa t\u1EBF, 1/2 mu\u1ED7ng c\u00E0 ph\u00EA \u0111\u01B0\u1EDDng c\u00F9ng 1 mu\u1ED7ng c\u00E0 ph\u00EA mu\u1ED1i \u1EDBt, khu\u1EA5y \u0111\u1EC1u \u0111\u1EC3 h\u1ED7n h\u1EE3p h\u00F2a quy\u1EC7n nhau, sau \u0111\u00F3 s\u1EED d\u1EE5ng ch\u1ED5i qu\u00E9t d\u1EA7u ph\u1EBFt h\u1ED7n h\u1EE3p sa t\u1EBF \u0111\u00F3 l\u00EAn b\u1EC1 m\u1EB7t b\u00E1nh m\u00EC.  B\u1EADt l\u00F2 \u1EDF m\u1EE9c 100 \u0111\u1ED9 trong 5 ph\u00FAt \u0111\u1EC3 l\u00E0m n\u00F3ng l\u00F2 tr\u01B0\u1EDBc r\u1ED3i cho b\u00E1nh m\u00EC v\u00E0 x\u00FAc x\u00EDch v\u00E0o n\u01B0\u1EDBng kho\u1EA3ng 10 ph\u00FAt \u0111\u1EBFn khi b\u00E1nh gi\u00F2n v\u00E0 d\u1EADy m\u00F9i th\u01A1m th\u00EC mang b\u00E0y ra \u0111\u0129a, r\u1EAFc th\u00EAm 1 \u00EDt ch\u00E0 b\u00F4ng l\u00EAn b\u1EC1 m\u1EB7t.  B\u1EA1n c\u1EAFt x\u00FAc x\u00EDch th\u00E0nh t\u1EEBng mi\u1EBFng v\u1EEBa \u0103n v\u00E0 b\u00E0y l\u00EAn b\u1EC1 m\u1EB7t b\u00E1nh, r\u01B0\u1EDBi th\u00EAm 1 \u00EDt t\u01B0\u01A1ng \u1EDBt, 1 \u00EDt t\u01B0\u01A1ng c\u00E0 v\u00E0 1 \u00EDt s\u1ED1t mayonaise \u0111\u1EC3 th\u01B0\u1EDFng th\u1EE9c."
-    ]
-  },
-  {
-    "Id": 2,
-    "Name": "G\u00E0 x\u00E0o x\u1EA3 \u1EDBt",
-    "Description": "fces",
-    "Image": "/mrimages/banh-mi-nuong-muoi-ot-thumbnail.jpg",
-    "UserName": "Phuong Diem",
-    "Status": null,
-    "IngredientsText": null,
-    "StepsText": null,
-    "Ingredients": [
-      "vcs"
-    ],
-    "Steps": [
-      "vsde"
+      "de"
     ]
   }
 ]
