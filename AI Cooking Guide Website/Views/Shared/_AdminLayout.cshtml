@@ -39,8 +39,8 @@
 				</a>
 			</li>
 
-			<li class="@((ViewContext.RouteData.Values["controller"]?.ToString() == "Analytics") ? "active" : "")">
-				<a asp-controller="Analytics" asp-action="Index">
+			<li class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Accept" && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")">
+				<a asp-controller="Accept" asp-action="Index">
 					<i class='bx bxs-doughnut-chart'></i>
 					<span class="text">Analytics</span>
 				</a>
