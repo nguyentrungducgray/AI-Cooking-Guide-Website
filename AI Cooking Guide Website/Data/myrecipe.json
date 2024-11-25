@@ -1,1 +1,19 @@
-[{"Id":1,"Name":"pho ","Description":"\u0111\u1EB7c s\u1EA3n h\u00E0 n\u1ED9i ","Image":"/mrimages/pho-o-my-2.jpg","UserName":"Gray","Status":null,"IngredientsText":null,"StepsText":null,"Ingredients":["b\u00F2"],"Steps":["n\u1EA5u m\u00EC"]}]
+[
+  {
+    "Id": 1,
+    "Name": "Bún đậu",
+    "Description": "de",
+    "Image": "/mrimages/kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg",
+    "UserName": "Gray",
+    "Status": null,
+    "IngredientsText": null,
+    "StepsText": null,
+    "IsAccepted": true,
+    "Ingredients": [
+      "edde"
+    ],
+    "Steps": [
+      "de"
+    ]
+  }
+]

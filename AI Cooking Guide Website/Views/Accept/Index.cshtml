@@ -1,6 +1,8 @@
 ﻿@{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+@model List<AI_Cooking_Guide_Website.Models.MyRecipeModel>
+
 <body>
     <!-- MAIN -->
     <main>
@@ -17,7 +19,6 @@
                     </li>
                 </ul>
             </div>
-           
         </div>
 
         <!-- TABLE -->
@@ -32,17 +33,31 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>001</td>
-                        <td><img src="~/img/food1.png" alt="Food 1" class="food-image"></td>
-                        <td>Food Item 1</td>
-                        <td>
-                            <a href="@Url.Action("Index", "EditAdminList", new { id = 1 })" class="btn btn-edit">
-                                <i class="fas fa-check-circle"></i>Accept
-                            </a>
-                        </td>
-                    </tr>
-                   
+                    @foreach (var recipe in Model)
+                    {
+                        <tr>
+                            <td>@recipe.Id</td>
+                            <td>
+                                <img src="@Url.Content(recipe.Image)" alt="@recipe.Name" class="food-image">
+                            </td>
+                            <td>@recipe.Name</td>
+                            <td>
+                                @if (recipe.IsAccepted)
+                                {
+                                    <span class="btn btn-success">Đã duyệt</span>
+                                }
+                                else
+                                {
+                                    <a href="@Url.Action("AcceptRecipe", "Accept", new { id = recipe.Id })" class="btn btn-edit">
+                                        <i class="fas fa-check-circle"></i> Duyệt
+                                    </a>
+                                }
+                            </td>
+                        </tr>
+                    }
+
+
+
                 </tbody>
             </table>
         </div>
