@@ -37,92 +37,124 @@
 			<body>
 				<div class="form-container">
 					<h2>Thêm Món Ăn</h2>
-					<form id="recipe-form" onsubmit="saveRecipe(event)">
-						<label for="name">Tên Món Ăn:</label>
-						<input type="text" id="name" required>
+                <form id="recipe-form" onsubmit="saveRecipe(event)">
+                    <label for="name">Tên Món Ăn:</label>
+                    <input type="text" id="name" required>
 
-						<label for="ingredients">Nguyên Liệu:</label>
-						<div id="ingredients-container">
-							<input type="text" name="ingredients" class="ingredient" required>
-						</div>
-						<button type="button" onclick="addIngredient()">Thêm Nguyên Liệu</button>
+                    <label for="ingredients">Nguyên Liệu:</label>
+                    <div id="ingredients-container">
+                        <input type="text" name="ingredients" class="ingredient" required>
+                        
+                    </div>
+                    <button type="button" onclick="addIngredient()">Thêm Nguyên Liệu</button>
 
-						<label for="description">Mô Tả:</label>
-						<input type="text" id="description" required>
+                    <label for="description">Mô Tả:</label>
+                    <input type="text" id="description" required>
 
-						<label for="steps">Các Bước Nấu:</label>
-						<div id="steps-container">
-							<input type="text" name="steps" class="step" required>
-						</div>
-						<button type="button" onclick="addStep()">Thêm Bước Nấu</button>
+                    <label for="steps">Các Bước Nấu:</label>
+                    <div id="steps-container">
+                        <input type="text" name="steps" class="step" required>
+                    </div>
+                    <button type="button" onclick="addStep()">Thêm Bước Nấu</button>
 
-						<label for="image">Chọn Ảnh:</label>
-						<input type="file" id="image" name="Image" accept="image/*" required>
-						<img id="imagePreview" style="display:none; max-width: 100%; margin-top: 10px;" alt="Image Preview" />
+                    <label for="image">Chọn Ảnh:</label>
+                    <input type="file" id="image" name="Image" accept="image/*" required>
+                    <img id="imagePreview" style="display:none; max-width: 100%; margin-top: 10px;" alt="Image Preview" />
 
-						<button type="submit">Thêm Món Ăn</button>
-					</form>
+                    <button type="submit">Thêm Món Ăn</button>
+                </form>
+
 				</div>
 
 				<div id="recipe-list"></div>
 
             <script>
-                function previewImage(event) {
-                    const imagePreview = document.getElementById('imagePreview');
-                    const file = event.target.files[0]; // Lấy tệp đầu tiên từ danh sách tệp
-
-                    if (file) {
-                        const reader = new FileReader();
-
-                        reader.onload = function (e) {
-                            imagePreview.src = e.target.result; // Gán URL tạm thời cho thẻ img
-                            imagePreview.style.display = 'block'; // Hiển thị thẻ img
-                        }
-
-                        reader.readAsDataURL(file); // Đọc tệp dưới dạng URL
-                    } else {
-                        imagePreview.src = ""; // Nếu không có tệp, xóa src
-                        imagePreview.style.display = 'none'; // Ẩn thẻ img
-                    }
-                }
-
-                document.getElementById('image').addEventListener('change', previewImage);
-
                 function addIngredient() {
                     const ingredientsContainer = document.getElementById('ingredients-container');
+                    const inputWrapper = document.createElement('div');
                     const input = document.createElement('input');
                     input.type = 'text';
                     input.name = 'ingredients';
                     input.className = 'ingredient';
-                    ingredientsContainer.appendChild(input);
+
+                    const deleteButton = document.createElement('button');
+                    deleteButton.type = 'button';
+                    deleteButton.textContent = 'Xóa';
+                    deleteButton.onclick = function () {
+                        ingredientsContainer.removeChild(inputWrapper); // Xóa nguyên liệu
+                    };
+
+                    inputWrapper.appendChild(input);
+                    inputWrapper.appendChild(deleteButton);
+                    ingredientsContainer.appendChild(inputWrapper);
                 }
 
                 function addStep() {
                     const stepsContainer = document.getElementById('steps-container');
+                    const inputWrapper = document.createElement('div');
                     const input = document.createElement('input');
                     input.type = 'text';
                     input.name = 'steps';
                     input.className = 'step';
-                    stepsContainer.appendChild(input);
+
+                    const deleteButton = document.createElement('button');
+                    deleteButton.type = 'button';
+                    deleteButton.textContent = 'Xóa';
+                    deleteButton.onclick = function () {
+                        stepsContainer.removeChild(inputWrapper); // Xóa bước nấu
+                    };
+
+                    inputWrapper.appendChild(input);
+                    inputWrapper.appendChild(deleteButton);
+                    stepsContainer.appendChild(inputWrapper);
                 }
 
                 async function saveRecipe(event) {
-                    event.preventDefault(); // Ngăn chặn form gửi mặc định
+                    event.preventDefault(); // Ngăn chặn gửi form mặc định
+
+                    // Kiểm tra các trường bắt buộc
+                    const name = document.getElementById('name').value.trim();
+                    const description = document.getElementById('description').value.trim();
+                    const ingredients = Array.from(document.getElementsByClassName('ingredient')).map(input => input.value.trim());
+                    const steps = Array.from(document.getElementsByClassName('step')).map(input => input.value.trim());
+                    const imageInput = document.getElementById('image');
+                    const image = imageInput.files[0];
+
+                    // Kiểm tra nếu tên món ăn hoặc mô tả trống
+                    if (!name) {
+                        alert("Tên món ăn không được để trống.");
+                        return;
+                    }
+
+                    if (!description) {
+                        alert("Mô tả không được để trống.");
+                        return;
+                    }
+
+                    // Kiểm tra danh sách nguyên liệu
+                    if (ingredients.some(ingredient => !ingredient)) {
+                        alert("Không được để trống nguyên liệu.");
+                        return;
+                    }
+
+                    // Kiểm tra danh sách bước nấu
+                    if (steps.some(step => !step)) {
+                        alert("Không được để trống các bước nấu.");
+                        return;
+                    }
+
+                    // Kiểm tra nếu ảnh chưa được chọn
+                    if (!image) {
+                        alert("Hãy chọn một ảnh.");
+                        return;
+                    }
+
+                    // Gửi dữ liệu nếu tất cả các trường hợp lệ
                     const formData = new FormData(document.getElementById("recipe-form"));
-
-                    // Lấy giá trị từ các trường input
-                    const name = document.getElementById('name').value;
-                    const description = document.getElementById('description').value;
-
-                    // Lấy danh sách nguyên liệu và bước nấu từ các trường input
-                    const ingredients = Array.from(document.getElementsByClassName('ingredient')).map(input => input.value);
-                    const steps = Array.from(document.getElementsByClassName('step')).map(input => input.value);
-
-                    // Thêm name và description vào formData
                     formData.append('Name', name);
                     formData.append('Description', description);
-                    formData.append('Ingredients', JSON.stringify(ingredients)); // Chuyển đổi thành chuỗi JSON
-                    formData.append('Steps', JSON.stringify(steps)); // Chuyển đổi thành chuỗi JSON
+                    formData.append('Ingredients', JSON.stringify(ingredients)); // Chuyển đổi danh sách thành chuỗi JSON
+                    formData.append('Steps', JSON.stringify(steps)); // Chuyển đổi danh sách thành chuỗi JSON
 
                     const response = await fetch('https://localhost:7149/Admin/SaveRecipe', {
                         method: 'POST',
@@ -131,35 +163,14 @@
 
                     if (response.ok) {
                         alert("Thêm món ăn thành công!");
-                        const recipe = await response.json(); // Nếu server trả về thông tin món ăn
-                        
                         location.reload();
                     } else {
                         const errorMessage = await response.text();
                         alert("Không thể lưu món ăn: " + errorMessage);
                     }
                 }
-
-                function displayRecipe(recipe) {
-                    const recipeList = document.getElementById("recipe-list");
-
-                    const recipeDiv = document.createElement("div");
-                    recipeDiv.className = "recipe-item";
-
-                    recipeDiv.innerHTML = `
-                                    <h3>${recipe.Id}: ${recipe.Name}</h3>
-                                    <p><strong>Mô tả:</strong> ${recipe.Description}</p>
-                                    <p><strong>Nguyên liệu:</strong></p>
-                                    <ul>${recipe.Ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}</ul>
-                                    <p><strong>Các bước:</strong></p>
-                                    <ol>${recipe.Steps.map(step => `<li>${step}</li>`).join("")}</ol>
-                                    <img src="${recipe.Image}" alt="Hình ảnh món ăn" style="max-width: 200px; margin-top: 10px;">
-                                    <hr>
-                                `;
-
-                    recipeList.appendChild(recipeDiv);
-                }
             </script>
+
 
 
 				<style>
