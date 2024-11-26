@@ -1,68 +1,55 @@
-﻿document.addEventListener('DOMContentLoaded', function () {
-    // Lấy phần tử cần đọc
-    const readButton = document.getElementById("read-content");
-    const readAgainButton = document.getElementById("read-again");
-    const content = document.getElementById("container"); // Đảm bảo ID là 'container'
-    let isReading = false; // Biến trạng thái đọc
-    let isPaused = false; // Biến trạng thái tạm dừng
-    let speechInstance; // Thể hiện của SpeechSynthesisUtterance
-    let textToRead = ''; // Biến lưu trữ nội dung cần đọc
+﻿@model AI_Cooking_Guide_Website.Models.ProfileViewModel
 
-    // Hàm đọc nội dung bằng SpeechSynthesis API
-    function readText(text) {
-        if ('speechSynthesis' in window) {
-            speechInstance = new SpeechSynthesisUtterance();
-            speechInstance.text = text;
-            speechInstance.lang = 'vi-VN'; // Cài đặt ngôn ngữ mặc định là tiếng việt
-            speechInstance.rate = 1;
-            speechInstance.pitch = 1;
+    < body >
+    <div class="profile-container">
+        <div class="profile-card">
+            <h2 class="section-title">Thông tin cá nhân</h2>
+            <div class="profile-details">
+                <p><strong>Username:</strong> @Model.User.UserName</p>
+                <p><strong>Email:</strong> @Model.User.Email</p>
+                <div class="form-group">
+                    <label for="PhoneNumber"><strong>Số điện thoại:</strong></label>
+                    <input type="text" id="PhoneNumber" name="PhoneNumber" value="@Model.User.PhoneNumber" form="updateForm" class="input-field">
+                </div>
+                <div class="form-group">
+                    <label for="Address"><strong>Địa chỉ:</strong></label>
+                    <input type="text" id="Address" name="Address" value="@Model.User.Address" form="updateForm" class="input-field">
+                </div>
+            </div>
 
-            // Hủy bỏ các bài đọc trước để không chồng lặp
-            window.speechSynthesis.cancel();
+            <form id="updateForm" asp-action="UpdateProfile" method="post">
+                <button type="submit" class="btn btn-primary custom-button">Lưu thay đổi</button>
+            </form>
 
-            // Bắt đầu đọc
-            window.speechSynthesis.speak(speechInstance);
-            isReading = true; // Đặt trạng thái là đang đọc
-            isPaused = false; // Đặt trạng thái là không tạm dừng
+            <h2 class="section-title">Công thức của bạn:</h2>
+            <div class="recipe-list">
+                @if (Model.Recipes.Any())
+                {
+                    foreach(var recipe in Model.Recipes)
+                {
+                        <div class="recipe-item">
+                            <img src="@recipe.Image" alt="@recipe.Name" class="recipe-image" />
+                            <a href="@Url.Action("RecipeDetails", "Profile", new { id = recipe.Id })" class="recipe-name">@recipe.Name</a>
+                            <p><strong>Ingredients:</strong> @string.Join(", ", recipe.Ingredients)</p>
+                            <p><strong>Description:</strong> @recipe.Description</p>
 
-            // Cập nhật nội dung nút
-            readButton.textContent = "Tạm dừng"; // Khi bắt đầu đọc, nút chuyển thành "Tạm dừng"
-            readButton.classList.add('reading'); // Thêm lớp để thay đổi kiểu dáng khi đang đọc
-
-        } else {
-            alert("Trình duyệt của bạn không hỗ trợ đọc văn bản!");
+                            <div class="status @(recipe.Status == "Approved" ? "status-approved" : recipe.Status == "Pending" ? "status-pending" : "status-rejected")">
+                @recipe.Status
+            </div>
+        </div>
+                    }
+                }
+        else
+        {
+            <p>Bạn chưa có công thức nào.</p>
         }
-    }
+    </div>
 
-    // Hàm tạm dừng hoặc tiếp tục đọc
-    function togglePause() {
-        if (isPaused) {
-            window.speechSynthesis.resume(); // Tiếp tục đọc
-            isPaused = false;
-            readButton.textContent = "Tạm dừng"; // Khi tiếp tục, nút là "Tạm dừng"
-        } else {
-            window.speechSynthesis.pause(); // Tạm dừng đọc
-            isPaused = true;
-            readButton.textContent = "Đọc tiếp"; // Khi tạm dừng, nút là "Đọc tiếp"
-        }
-    }
-
-    // Hàm đọc lại từ đầu
-    function readAgain() {
-        readText(textToRead); // Đọc lại từ đầu
-        readButton.textContent = "Tạm dừng"; // Đổi lại nội dung nút khi bắt đầu đọc lại
-    }
-
-    // Lắng nghe sự kiện khi nhấn nút và điều khiển đọc/tạm dừng
-    readButton.addEventListener("click", () => {
-        if (isReading) {
-            togglePause(); // Nếu đang đọc, chuyển giữa tạm dừng và tiếp tục
-        } else {
-            textToRead = content.innerText; // Lưu lại nội dung cần đọc
-            readText(textToRead); // Bắt đầu đọc
-        }
-    });
-
-    // Lắng nghe sự kiện khi nhấn nút "Đọc lại từ đầu"
-    readAgainButton.addEventListener("click", readAgain);
-});
+@if (TempData["SuccessMessage"] != null) {
+    <div class="success-message">
+        @TempData["SuccessMessage"]
+    </div>
+}
+        </div >
+    </div >
+</body >

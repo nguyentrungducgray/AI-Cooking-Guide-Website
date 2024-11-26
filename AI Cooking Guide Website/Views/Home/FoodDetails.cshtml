@@ -31,7 +31,7 @@
                 @if (Model.Ingredients.Count > 0)
                 {
                     // Lấy tất cả nguyên liệu ngoại trừ phần tử cuối
-                    foreach (var ingredient in Model.Ingredients)
+                    foreach (var ingredient in Model.Ingredients.Take(Model.Ingredients.Count - 1))
                     {
                         <li>@ingredient</li>
                     }
@@ -46,7 +46,7 @@
                 @if (Model.Steps.Count > 0)
                 {
                     // Lấy tất cả các bước nấu ngoại trừ phần tử cuối
-                    foreach (var step in Model.Steps)
+                    foreach (var step in Model.Steps.Take(Model.Steps.Count - 1))
                     {
                         <li>@step</li>
                     }

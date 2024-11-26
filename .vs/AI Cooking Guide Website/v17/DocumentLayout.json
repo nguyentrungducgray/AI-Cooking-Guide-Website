@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "E:\\du an 2\\AI-Cooking-Guide-Website\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\wwwroot\\css\\detailfood.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\wwwroot\\css\\detailfood.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\wwwroot\\css\\profile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\wwwroot\\css\\profile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\views\\profile\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\views\\profile\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\views\\profile\\recipedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\views\\profile\\recipedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\views\\home\\fooddetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\views\\home\\fooddetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\wwwroot\\js\\detailfood.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -19,6 +39,22 @@
       "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\views\\listadmin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\views\\listadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\views\\listadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\wwwroot\\css\\detailfood.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\wwwroot\\css\\detailfood.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\wwwroot\\css\\editadminlist.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\wwwroot\\css\\editadminlist.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\wwwroot\\css\\admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\wwwroot\\css\\admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,28 +63,12 @@
       "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\wwwroot\\data\\recipes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\views\\listadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\views\\listadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\controllers\\listadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\controllers\\listadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\wwwroot\\css\\editadminlist.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\wwwroot\\css\\editadminlist.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\views\\home\\fooddetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|solutionrelative:ai cooking guide website\\views\\home\\fooddetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10C6D1A7-5BA3-4A3E-A090-57692D5DC226}|AI Cooking Guide Website\\AI Cooking Guide Website.csproj|e:\\du an 2\\ai-cooking-guide-website\\ai cooking guide website\\models\\addmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,37 +126,64 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Detailfood.js",
-              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\js\\Detailfood.js",
-              "RelativeDocumentMoniker": "AI Cooking Guide Website\\wwwroot\\js\\Detailfood.js",
-              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\js\\Detailfood.js",
-              "RelativeToolTip": "AI Cooking Guide Website\\wwwroot\\js\\Detailfood.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-26T06:42:43.809Z",
+              "DocumentIndex": 0,
+              "Title": "Profile.css",
+              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\Profile.css",
+              "RelativeDocumentMoniker": "AI Cooking Guide Website\\wwwroot\\css\\Profile.css",
+              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\Profile.css*",
+              "RelativeToolTip": "AI Cooking Guide Website\\wwwroot\\css\\Profile.css*",
+              "ViewState": "AQIAAA8BAAAAAAAAAAAAAD8BAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-26T08:08:50.86Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "AI Cooking Guide Website\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFsAAAB8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T05:59:54.69Z",
+              "DocumentIndex": 1,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "AI Cooking Guide Website\\Controllers\\ProfileController.cs",
+              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "AI Cooking Guide Website\\Controllers\\ProfileController.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAA3wIAAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T08:33:52.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "RecipeDetails.cshtml",
+              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Profile\\RecipeDetails.cshtml",
+              "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Profile\\RecipeDetails.cshtml",
+              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Profile\\RecipeDetails.cshtml",
+              "RelativeToolTip": "AI Cooking Guide Website\\Views\\Profile\\RecipeDetails.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAC8AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T07:03:42.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Profile\\Profile.cshtml",
+              "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Profile\\Profile.cshtml",
+              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Profile\\Profile.cshtml",
+              "RelativeToolTip": "AI Cooking Guide Website\\Views\\Profile\\Profile.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAC4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T07:03:38.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\ListAdmin\\Edit.cshtml",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\ListAdmin\\Edit.cshtml",
@@ -149,20 +196,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ListAdminController.cs",
-              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Controllers\\ListAdminController.cs",
-              "RelativeDocumentMoniker": "AI Cooking Guide Website\\Controllers\\ListAdminController.cs",
-              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Controllers\\ListAdminController.cs",
-              "RelativeToolTip": "AI Cooking Guide Website\\Controllers\\ListAdminController.cs",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAAAI4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T09:58:59.492Z",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "AI Cooking Guide Website\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFsAAACIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T05:59:54.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "AI Cooking Guide Website\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEQAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T05:19:23.119Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "FoodDetails.cshtml",
+              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Home\\FoodDetails.cshtml",
+              "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Home\\FoodDetails.cshtml",
+              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Home\\FoodDetails.cshtml",
+              "RelativeToolTip": "AI Cooking Guide Website\\Views\\Home\\FoodDetails.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAACEAAABiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T11:16:06.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\ListAdmin\\Index.cshtml",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\ListAdmin\\Index.cshtml",
@@ -175,46 +248,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "recipes.json",
-              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\data\\recipes.json",
-              "RelativeDocumentMoniker": "AI Cooking Guide Website\\wwwroot\\data\\recipes.json",
-              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\data\\recipes.json",
-              "RelativeToolTip": "AI Cooking Guide Website\\wwwroot\\data\\recipes.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-26T05:31:57.752Z",
+              "DocumentIndex": 12,
+              "Title": "Admin.css",
+              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\Admin.css",
+              "RelativeDocumentMoniker": "AI Cooking Guide Website\\wwwroot\\css\\Admin.css",
+              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\Admin.css",
+              "RelativeToolTip": "AI Cooking Guide Website\\wwwroot\\css\\Admin.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-26T07:11:38.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Detailfood.js",
+              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\js\\Detailfood.js",
+              "RelativeDocumentMoniker": "AI Cooking Guide Website\\wwwroot\\js\\Detailfood.js",
+              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\js\\Detailfood.js",
+              "RelativeToolTip": "AI Cooking Guide Website\\wwwroot\\js\\Detailfood.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAowDcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-26T06:42:43.809Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "AI Cooking Guide Website\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T05:19:23.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
               "Title": "Detailfood.css",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\Detailfood.css",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\wwwroot\\css\\Detailfood.css",
-              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\Detailfood.css*",
-              "RelativeToolTip": "AI Cooking Guide Website\\wwwroot\\css\\Detailfood.css*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAgwAIAAAAAAAAA",
+              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\Detailfood.css",
+              "RelativeToolTip": "AI Cooking Guide Website\\wwwroot\\css\\Detailfood.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-11-26T06:40:32.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "EditAdminList.css",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\EditAdminList.css",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\wwwroot\\css\\EditAdminList.css",
@@ -222,12 +294,35 @@
               "RelativeToolTip": "AI Cooking Guide Website\\wwwroot\\css\\EditAdminList.css",
               "ViewState": "AQIAAHkAAAAAAAAAAAAgwKUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-26T06:25:15.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:25:15.577Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
+              "Title": "recipes.json",
+              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\data\\recipes.json",
+              "RelativeDocumentMoniker": "AI Cooking Guide Website\\wwwroot\\data\\recipes.json",
+              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\data\\recipes.json",
+              "RelativeToolTip": "AI Cooking Guide Website\\wwwroot\\data\\recipes.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-26T05:31:57.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ListAdminController.cs",
+              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Controllers\\ListAdminController.cs",
+              "RelativeDocumentMoniker": "AI Cooking Guide Website\\Controllers\\ListAdminController.cs",
+              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Controllers\\ListAdminController.cs",
+              "RelativeToolTip": "AI Cooking Guide Website\\Controllers\\ListAdminController.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAAAI4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T09:58:59.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "site.css",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\wwwroot\\css\\site.css",
@@ -235,12 +330,11 @@
               "RelativeToolTip": "AI Cooking Guide Website\\wwwroot\\css\\site.css",
               "ViewState": "AQIAAK5LAAAAAAAAAAAAAMZLAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-26T06:39:44.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:39:44.42Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "HomeController.cs",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Controllers\\HomeController.cs",
@@ -248,25 +342,11 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Controllers\\HomeController.cs",
               "ViewState": "AQIAAC8AAAAAAAAAAAAgwEgAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T11:34:15.301Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T11:34:15.301Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FoodDetails.cshtml",
-              "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Home\\FoodDetails.cshtml",
-              "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Home\\FoodDetails.cshtml",
-              "ToolTip": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Home\\FoodDetails.cshtml",
-              "RelativeToolTip": "AI Cooking Guide Website\\Views\\Home\\FoodDetails.cshtml",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAAIMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T11:16:06.023Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "AddModel.cs",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Models\\AddModel.cs",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Models\\AddModel.cs",
@@ -274,12 +354,11 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Models\\AddModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T05:23:58.36Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T05:23:58.36Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Admin\\Index.cshtml",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Admin\\Index.cshtml",
@@ -287,12 +366,11 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Views\\Admin\\Index.cshtml",
               "ViewState": "AQIAAH4AAAAAAAAAAAAAAAAAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T11:22:00.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T11:22:00.674Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Contact\\Index.cshtml",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Contact\\Index.cshtml",
@@ -300,12 +378,11 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Views\\Contact\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T10:22:50.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T10:22:50.167Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "ListController.cs",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Controllers\\ListController.cs",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Controllers\\ListController.cs",
@@ -313,12 +390,11 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Controllers\\ListController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T11:34:25.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T11:34:25.975Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "RecipeApiService.cs",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\ModelAI\\RecipeApiService.cs",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\ModelAI\\RecipeApiService.cs",
@@ -326,12 +402,11 @@
               "RelativeToolTip": "AI Cooking Guide Website\\ModelAI\\RecipeApiService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T05:07:47.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T05:07:47.618Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "_AdminLayout.cshtml",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Shared\\_AdminLayout.cshtml",
@@ -339,12 +414,11 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Views\\Shared\\_AdminLayout.cshtml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T05:19:32.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T05:19:32.7Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "RecipeModel.cs",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Models\\RecipeModel.cs",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Models\\RecipeModel.cs",
@@ -352,12 +426,11 @@
               "RelativeToolTip": "AI Cooking Guide Website\\Models\\RecipeModel.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAxwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T05:08:02.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T05:08:02.056Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "LoginController.cs",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Controllers\\LoginController.cs",
@@ -369,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "AdminController.cs",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Controllers\\AdminController.cs",
@@ -381,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Search\\Index.cshtml",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Search\\Index.cshtml",
@@ -393,7 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "Register.cshtml",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Views\\Register\\Register.cshtml",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Views\\Register\\Register.cshtml",
@@ -405,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "myrecipe.json",
               "DocumentMoniker": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\Data\\myrecipe.json",
               "RelativeDocumentMoniker": "AI Cooking Guide Website\\Data\\myrecipe.json",
