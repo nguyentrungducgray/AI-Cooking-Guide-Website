@@ -57,7 +57,7 @@ namespace AI_Cooking_Guide_Website.Controllers
 
 
         [HttpGet("FoodDetails")]
-        public IActionResult FoodDetails(string name)
+        public IActionResult FoodDetails(int id)
         {
             var filePath = Path.Combine("wwwroot", "data", "recipes.json");
             List<AddModel.Recipe> recipes = new List<AddModel.Recipe>();
@@ -70,7 +70,7 @@ namespace AI_Cooking_Guide_Website.Controllers
             }
 
             // Tìm món ăn theo tên
-            var recipeDetail = recipes.FirstOrDefault(r => r.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+            var recipeDetail = recipes.FirstOrDefault(r => r.Id == id);
             if (recipeDetail == null)
             {
                 return NotFound(); // Trả về 404 nếu không tìm thấy món ăn

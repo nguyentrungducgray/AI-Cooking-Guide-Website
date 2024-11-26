@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\CongThuc.css"
     },
     {
+      "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\Detailfood.css",
+      "PackagePath": "staticwebassets\\css\\Detailfood.css"
+    },
+    {
       "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\EditAdminList.css",
       "PackagePath": "staticwebassets\\css\\EditAdminList.css"
     },
@@ -35821,12 +35825,32 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\462540685_509611018603413_3825466364173806727_n.jpg",
+      "PackagePath": "staticwebassets\\images\\462540685_509611018603413_3825466364173806727_n.jpg"
+    },
+    {
+      "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\Jamie Chastain.png",
+      "PackagePath": "staticwebassets\\images\\Jamie Chastain.png"
+    },
+    {
       "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\OIP.jpg",
       "PackagePath": "staticwebassets\\images\\OIP.jpg"
     },
     {
+      "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\Remove-bg.ai_1731132245057.png",
+      "PackagePath": "staticwebassets\\images\\Remove-bg.ai_1731132245057.png"
+    },
+    {
+      "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\activity_diagram_registration_login_v2.png",
+      "PackagePath": "staticwebassets\\images\\activity_diagram_registration_login_v2.png"
+    },
+    {
       "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\e3ced5a4-b20c-4efb-9e1f-dfc2b4303597.jpg",
       "PackagePath": "staticwebassets\\images\\e3ced5a4-b20c-4efb-9e1f-dfc2b4303597.jpg"
+    },
+    {
+      "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\fbd44f369213294d7002.jpg",
+      "PackagePath": "staticwebassets\\images\\fbd44f369213294d7002.jpg"
     },
     {
       "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg",
@@ -35843,6 +35867,10 @@
     {
       "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\patio (2).png",
       "PackagePath": "staticwebassets\\images\\patio (2).png"
+    },
+    {
+      "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\patio (3).png",
+      "PackagePath": "staticwebassets\\images\\patio (3).png"
     },
     {
       "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\pho-o-my-2.jpg",
@@ -36111,6 +36139,10 @@
     {
       "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\js\\Admin.js",
       "PackagePath": "staticwebassets\\js\\Admin.js"
+    },
+    {
+      "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\js\\Detailfood.js",
+      "PackagePath": "staticwebassets\\js\\Detailfood.js"
     },
     {
       "Id": "E:\\du an 2\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\js\\Loading.js",
