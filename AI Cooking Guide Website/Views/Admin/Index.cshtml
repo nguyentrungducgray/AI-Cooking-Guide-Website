@@ -154,7 +154,7 @@
 					if (response.ok) {
 						alert("Thêm món ăn thành công!");
 						const recipe = await response.json(); // Nếu server trả về thông tin món ăn
-						displayRecipe(recipe); // Hiển thị món ăn mới
+						location.reload(); // Hiển thị món ăn mới
 					} else {
 						const errorMessage = await response.text();
 						alert("Không thể lưu món ăn: " + errorMessage);
