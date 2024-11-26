@@ -21,19 +21,31 @@ namespace AI_Cooking_Guide_Website.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(string query)
         {
-            
             var model = new SearchResultModel
             {
-                Organic = new List<RecipeModel>() // Danh sách mặc định trống
+                Organic = new List<RecipeModel>()
             };
 
+            if (!string.IsNullOrEmpty(query))
+            {
+                // Kiểm tra nếu đã có dữ liệu trong Session
+                var sessionKey = $"SearchResults_{query}";
+                if (HttpContext.Session.TryGetValue(sessionKey, out var cachedData))
+                {
+                    // Deserialize kết quả từ Session
+                    model = JsonConvert.DeserializeObject<SearchResultModel>(Encoding.UTF8.GetString(cachedData));
+                }
+            }
+
+            ViewBag.Query = query;
             return View(model);
         }
 
+
         [HttpPost]
-        public async Task<IActionResult> Index(string query)
+        public async Task<IActionResult> Search(string query)
         {
             // Lưu query vào ViewBag để hiển thị lại
             ViewBag.Query = query;
@@ -46,6 +58,19 @@ namespace AI_Cooking_Guide_Website.Controllers
 
             try
             {
+
+                // Kiểm tra nếu đã có dữ liệu trong Session
+                var sessionKey = $"SearchResults_{query}";
+                if (HttpContext.Session.TryGetValue(sessionKey, out var cachedData))
+                {
+                    // Deserialize kết quả từ Session
+                    var cachedResults = JsonConvert.DeserializeObject<SearchResultModel>(Encoding.UTF8.GetString(cachedData));
+                    // Chuyển hướng lại Index với query
+                    return RedirectToAction("Index", new { query = query });
+                }
+
+
+                // call API 
                 var request = new HttpRequestMessage(HttpMethod.Post, "https://google.serper.dev/search");
                 request.Headers.Add("X-API-KEY", "8c10c44a0cbc789d18974590233c7f4a2610ab50");
 
@@ -118,12 +143,16 @@ namespace AI_Cooking_Guide_Website.Controllers
                     }
                 }
 
-                return View(model);
+                // Lưu kết quả vào Session
+                var serializedData = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(model));
+                HttpContext.Session.Set(sessionKey, serializedData);
+
+                return RedirectToAction("Index", new { query = query });
             }
             catch
             {
                 ModelState.AddModelError("", "Có lỗi xảy ra khi gọi API.");
-                return View();
+                return RedirectToAction("Index");
             }
         }
 

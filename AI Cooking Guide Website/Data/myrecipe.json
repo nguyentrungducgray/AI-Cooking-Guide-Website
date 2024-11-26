@@ -1,19 +1,21 @@
 [
   {
     "Id": 1,
-    "Name": "Bún đậu",
-    "Description": "de",
-    "Image": "/mrimages/kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg",
+    "Name": "pho ",
+    "Description": "đs hn ",
+    "Image": "/mrimages/pho-o-my-2.jpg",
     "UserName": "Gray",
     "Status": null,
     "IngredientsText": null,
     "StepsText": null,
     "IsAccepted": true,
     "Ingredients": [
-      "edde"
+      "bò",
+      "mì"
     ],
     "Steps": [
-      "de"
+      "nấu mì",
+      "ád"
     ]
   }
 ]

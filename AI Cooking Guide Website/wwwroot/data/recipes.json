@@ -111,5 +111,24 @@
     "Steps": [
       "de"
     ]
+  },
+  {
+    "Id": 7,
+    "Name": "pho ",
+    "Description": "đs hn ",
+    "Image": "/mrimages/pho-o-my-2.jpg",
+    "UserName": "Gray",
+    "Status": null,
+    "IngredientsText": null,
+    "StepsText": null,
+    "IsAccepted": true,
+    "Ingredients": [
+      "bò",
+      "mì"
+    ],
+    "Steps": [
+      "nấu mì",
+      "ád"
+    ]
   }
 ]

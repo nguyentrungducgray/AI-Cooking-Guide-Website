@@ -20,13 +20,16 @@ namespace AI_Cooking_Guide_Website
                     options.LogoutPath = "/Logout"; // Path to the logout page
                 });
 
-            // Add session services
+            builder.Services.AddDistributedMemoryCache();
             builder.Services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromMinutes(30); // Session timeout
-                options.Cookie.HttpOnly = true; // Ensure cookies are accessible only via the server
-                options.Cookie.IsEssential = true; // Mark the session cookie as essential
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian lưu trữ session
+                options.Cookie.HttpOnly = true; // Bảo mật
+                options.Cookie.IsEssential = true; // Yêu cầu cookie luôn được sử dụng
             });
+
+           
+
 
             // Add controllers with views
             builder.Services.AddControllersWithViews();
