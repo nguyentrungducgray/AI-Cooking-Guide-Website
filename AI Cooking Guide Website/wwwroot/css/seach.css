@@ -1,0 +1,116 @@
+﻿/* Background and text styles */
+.bg-accent-modern {
+    background: linear-gradient(135deg, #00ffff, #0094ff);
+    padding: 3rem 0;
+    color: #fff;
+    border-radius: 25px; /* Bo tròn các góc mềm mại hơn */
+    margin-top: 3rem; /* Dịch xuống dưới để tạo không gian */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Bóng đổ mềm mại */
+    transition: box-shadow 0.3s ease; /* Hiệu ứng bóng đổ mượt mà */
+}
+
+    .bg-accent-modern:hover {
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); /* Bóng đổ sâu hơn khi hover */
+    }
+
+/* Text gradient with more subtle effect */
+.text-gradient-modern {
+    background: linear-gradient(90deg, #b200ff, #ff006e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    top: -2rem;
+    font-weight: bold; /* Làm văn bản đậm hơn để nổi bật */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Thêm bóng cho văn bản */
+}
+
+/* Input and button styles */
+.search-input-modern {
+    border: 2px solid #e5e5e5;
+    border-radius: 12px; /* Bo tròn mềm mại hơn */
+    padding: 0.8rem;
+    font-size: 1rem; /* Kích thước chữ hợp lý */
+    width: 100%;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9; /* Nền sáng hơn */
+}
+
+    .search-input-modern:focus {
+        border-color: #ff00dc;
+        box-shadow: 0 0 8px rgba(255, 0, 220, 0.5); /* Bóng khi focus */
+        outline: none;
+    }
+
+/* Button with modern effect */
+.search-btn-modern {
+    background: #ff00dc;
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem 1.5rem; /* Tăng kích thước nút để dễ nhấn */
+    font-size: 1rem;
+    color: #fff;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 0, 220, 0.2); /* Bóng nhẹ cho nút */
+}
+
+    .search-btn-modern:hover {
+        background: #e52e71;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Bóng đổ rõ ràng khi hover */
+    }
+
+    .search-btn-modern:active {
+        transform: scale(0.98); /* Tạo hiệu ứng nhấn */
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Bóng nhẹ khi nhấn */
+    }
+
+/* Voice button styles */
+.voice-btn-modern {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    width: 50px; /* Kích thước nút cân đối */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #f9f9f9; /* Màu icon tươi sáng */
+    font-size: 1.5rem; /* Kích thước icon hợp lý */
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng nhẹ cho icon */
+}
+
+    .voice-btn-modern:hover {
+        transform: scale(1.1);
+        color: #ffd800; /* Đổi màu icon khi hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bóng đổ rõ hơn khi hover */
+    }
+
+    .voice-btn-modern:active {
+        transform: scale(0.95); /* Nhấn icon khi active */
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Bóng đổ giảm khi nhấn */
+    }
+
+    .voice-btn-modern:focus {
+        outline: none;
+        box-shadow: 0 0 12px rgba(255, 138, 0, 0.6), 0 0 20px rgba(0, 114, 255, 0.6); /* Hiệu ứng glow khi focus */
+    }
+
+/* Icon style */
+.bi {
+    vertical-align: middle;
+}
+
+/* Image search form */
+.image-search-modern {
+    background: rgba(255, 255, 255, 0.15); /* Màu nền trong suốt */
+    padding: 1.5rem;
+    border-radius: 15px; /* Bo tròn mềm mại */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Bóng nhẹ cho khung tìm kiếm */
+    transition: box-shadow 0.3s ease;
+}
+
+    .image-search-modern:hover {
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Bóng đổ sâu hơn khi hover */
+    }
