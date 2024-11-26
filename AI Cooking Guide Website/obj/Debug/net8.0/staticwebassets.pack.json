@@ -35813,6 +35813,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\hocki6\\Project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\4K-Beautiful-Desktop-Wallpaper-Colorful-Nature-Sunset-Landscape-Free-Download-1536x864.jpg",
+      "PackagePath": "staticwebassets\\images\\4K-Beautiful-Desktop-Wallpaper-Colorful-Nature-Sunset-Landscape-Free-Download-1536x864.jpg"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\MEGUMI~1.JPG",
+      "PackagePath": "staticwebassets\\images\\MEGUMI~1.JPG"
+    },
+    {
       "Id": "D:\\hocki6\\Project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\OIP.jpg",
       "PackagePath": "staticwebassets\\images\\OIP.jpg"
     },
@@ -36371,6 +36379,10 @@
     {
       "Id": "D:\\hocki6\\Project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\mrimages\\tao_pho_1.jpg",
       "PackagePath": "staticwebassets\\mrimages\\tao_pho_1.jpg"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\mrimages\\wallpaperflare.com_wallpaper.jpg",
+      "PackagePath": "staticwebassets\\mrimages\\wallpaperflare.com_wallpaper.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AI Cooking Guide Website.Microsoft.AspNetCore.StaticWebAssets.props",

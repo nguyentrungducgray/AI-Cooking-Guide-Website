@@ -30,23 +30,23 @@
             <ul>
                 @if (Model.Ingredients.Count > 0)
                 {
-                    // Lấy tất cả nguyên liệu ngoại trừ phần tử cuối
-                    foreach (var ingredient in Model.Ingredients.Take(Model.Ingredients.Count - 1))
+                    // Duyệt qua toàn bộ danh sách Ingredients
+                    foreach (var ingredient in Model.Ingredients)
                     {
                         <li>@ingredient</li>
                     }
-                }
-                else
+                } else
                 {
                     <li>Không có nguyên liệu nào.</li>
                 }
             </ul>
+
             <h3 class="mt-4">Các bước nấu:</h3>
             <ol>
                 @if (Model.Steps.Count > 0)
                 {
-                    // Lấy tất cả các bước nấu ngoại trừ phần tử cuối
-                    foreach (var step in Model.Steps.Take(Model.Steps.Count - 1))
+                    // Duyệt qua toàn bộ danh sách Steps
+                    foreach (var step in Model.Steps)
                     {
                         <li>@step</li>
                     }

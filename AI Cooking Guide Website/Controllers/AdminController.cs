@@ -1,15 +1,15 @@
-﻿
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.Json;
 using AI_Cooking_Guide_Website.Models;
 
 namespace AI_Cooking_Guide_Website.Controllers
 {
-	[Route("Admin")]
-	public class AdminController : Controller
-	{
+    [Route("Admin")]
+    public class AdminController : Controller
+    {
         [HttpPost("SaveRecipe")]
         public IActionResult SaveRecipe([FromForm] AddModel.Recipe recipe, IFormFile image)
         {
@@ -36,6 +36,18 @@ namespace AI_Cooking_Guide_Website.Controllers
 
                 // Lưu đường dẫn ảnh vào thuộc tính của món ăn
                 recipe.Image = "/images/" + image.FileName; // Đường dẫn tới ảnh
+
+                // Xử lý danh sách Ingredients
+                if (recipe.Ingredients != null)
+                {
+                    recipe.Ingredients = CleanList(recipe.Ingredients);
+                }
+
+                // Xử lý danh sách Steps
+                if (recipe.Steps != null)
+                {
+                    recipe.Steps = CleanList(recipe.Steps);
+                }
 
                 // Đường dẫn lưu tệp JSON
                 var filePath = Path.Combine("wwwroot", "data", "recipes.json");
@@ -67,11 +79,56 @@ namespace AI_Cooking_Guide_Website.Controllers
             }
         }
 
+        // Hàm làm sạch danh sách, xử lý JSON lồng nhau
+        private List<string> CleanList(List<string> inputList)
+        {
+            List<string> cleanedList = new List<string>();
+
+            foreach (var item in inputList)
+            {
+                // Kiểm tra nếu phần tử là chuỗi JSON lồng nhau
+                if (item.StartsWith("[") && item.EndsWith("]"))
+                {
+                    try
+                    {
+                        // Giải mã chuỗi JSON thành danh sách
+                        var deserializedItems = JsonSerializer.Deserialize<List<string>>(item);
+
+                        // Thêm các phần tử đã giải mã vào danh sách chính nếu chưa tồn tại
+                        foreach (var subItem in deserializedItems)
+                        {
+                            if (!cleanedList.Contains(subItem.Trim()))
+                            {
+                                cleanedList.Add(subItem.Trim());
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        // Bỏ qua nếu chuỗi không thể giải mã
+                        if (!cleanedList.Contains(item.Trim()))
+                        {
+                            cleanedList.Add(item.Trim());
+                        }
+                    }
+                }
+                else
+                {
+                    // Thêm phần tử thông thường (sau khi loại bỏ khoảng trắng)
+                    if (!cleanedList.Contains(item.Trim()))
+                    {
+                        cleanedList.Add(item.Trim());
+                    }
+                }
+            }
+
+            return cleanedList;
+        }
 
 
         public IActionResult Index()
-		{
-			return View();
-		}
-	}
+        {
+            return View();
+        }
+    }
 }
