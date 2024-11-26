@@ -1,134 +1,65 @@
 [
   {
     "Id": 1,
-    "Name": "Bánh mì trứng",
-    "Description": "Món Việt Nam",
-    "Image": "/images/lmao.jpg",
-    "UserName": null,
-    "Status": null,
-    "IngredientsText": null,
-    "StepsText": null,
-    "IsAccepted": false,
+    "Name": "pho ",
     "Ingredients": [
-      "Bánh mì ",
-      "Trứng",
-      "[\"Bánh mì \",\"Trứng\"]"
+      "b\u00F2",
+      "m\u00EC"
     ],
+    "Description": "\u0111\u1EB7c s\u1EA3n Nam \u0110\u1ECBnh ",
     "Steps": [
-      "Bước 1: Rán trứng",
-      "Bước 2: Cho Trứng vào bánh mì",
-      "[\"Bước 1: Rán trứng\",\"Bước 2: Cho Trứng vào bánh mì\"]"
-    ]
+      "n\u1EA5u m\u00EC",
+      "n\u1EA5u n\u01B0\u1EDBc d\u00F9ng"
+    ],
+    "Image": "/mrimages/pho-o-my-2.jpg"
   },
   {
     "Id": 2,
-    "Name": "Phở",
-    "Description": "Món Truyền Thông VIệt Nam",
-    "Image": "/images/kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg",
-    "UserName": null,
-    "Status": null,
-    "IngredientsText": null,
-    "StepsText": null,
-    "IsAccepted": false,
+    "Name": "B\u00E1nh Ch\u01B0ng",
     "Ingredients": [
-      "Bánh phở",
-      "Xương lợn",
-      "[\"Bánh phở\",\"Xương lợn\"]"
+      "Th\u1ECBt l\u1EE3n",
+      "s\u1EE3i ph\u1EDF",
+      "[\u0022Th\u1ECBt l\u1EE3n\u0022,\u0022s\u1EE3i ph\u1EDF\u0022]"
     ],
+    "Description": "M\u00F3n b\u00E1nh ko th\u1EC3 thi\u1EBFu trong ng\u00E0y t\u1EBFt ",
     "Steps": [
-      "Ninh Xương",
-      "Cắt bánh phở",
-      "Đổ nước dùng vào bánh phở",
-      "[\"Ninh Xương\",\"Cắt bánh phở\",\"Đổ nước dùng vào bánh phở\"]"
-    ]
+      "cho g\u1EA1o v\u00E0o l\u00E1 dong ",
+      "n\u1EA5u n\u01B0\u1EDBc d\u00F9ng",
+      null,
+      "[\u0022cho g\u1EA1o v\u00E0o l\u00E1 dong \u0022,\u0022n\u1EA5u n\u01B0\u1EDBc d\u00F9ng\u0022,\u0022\u0022]"
+    ],
+    "Image": "/images/pho-o-my-2.jpg"
   },
   {
     "Id": 3,
-    "Name": "Phở",
-    "Description": "Món Truyền Thông VIệt Nam",
-    "Image": "/images/OIP.jpg",
-    "UserName": null,
-    "Status": null,
-    "IngredientsText": null,
-    "StepsText": null,
-    "IsAccepted": false,
+    "Name": "B\u00E1nh Ch\u01B0ng",
     "Ingredients": [
-      "Bánh phở",
-      "[\"Bánh phở\"]"
+      "Th\u1ECBt l\u1EE3n",
+      "sad",
+      "ddsads",
+      "\u0111asa"
     ],
+    "Description": "m\u00F3n \u0103n \u0111\u1EB7c tr\u01B0ng c\u1EE7a h\u00E0 n\u1ED9i ",
     "Steps": [
-      "Ninh Xương",
-      "[\"Ninh Xương\"]"
-    ]
+      "n\u1EA5u n\u01B0\u1EDBc d\u00F9ng",
+      "ads\u0111sd",
+      "dd",
+      "aa"
+    ],
+    "Image": "/images/pho-o-my-2.jpg"
   },
   {
     "Id": 4,
-    "Name": "Gà xào xả ớt",
-    "Description": "fces",
-    "Image": "/mrimages/banh-mi-nuong-muoi-ot-thumbnail.jpg",
-    "UserName": "Phuong Diem",
-    "Status": null,
-    "IngredientsText": null,
-    "StepsText": null,
-    "IsAccepted": false,
+    "Name": "B\u00E1nh Ch\u01B0ng",
     "Ingredients": [
-      "vcs"
+      "s\u1EE3i ph\u1EDF",
+      "Th\u1ECBt l\u1EE3n"
     ],
+    "Description": "M\u00F3n b\u00E1nh ko th\u1EC3 thi\u1EBFu trong ng\u00E0y t\u1EBFt ",
     "Steps": [
-      "vsde"
-    ]
-  },
-  {
-    "Id": 5,
-    "Name": "Tào Phớ",
-    "Description": "fev",
-    "Image": "/mrimages/tao_pho_1.jpg",
-    "UserName": "Gray",
-    "Status": null,
-    "IngredientsText": null,
-    "StepsText": null,
-    "IsAccepted": false,
-    "Ingredients": [
-      "1"
+      "cho g\u1EA1o v\u00E0o l\u00E1 dong",
+      "n\u1EA5u n\u01B0\u1EDBc d\u00F9ng"
     ],
-    "Steps": [
-      "rf"
-    ]
-  },
-  {
-    "Id": 6,
-    "Name": "Bún đậu",
-    "Description": "de",
-    "Image": "/mrimages/kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg",
-    "UserName": "Gray",
-    "Status": null,
-    "IngredientsText": null,
-    "StepsText": null,
-    "IsAccepted": true,
-    "Ingredients": [
-      "edde"
-    ],
-    "Steps": [
-      "de"
-    ]
-  },
-  {
-    "Id": 7,
-    "Name": "pho ",
-    "Description": "đs hn ",
-    "Image": "/mrimages/pho-o-my-2.jpg",
-    "UserName": "Gray",
-    "Status": null,
-    "IngredientsText": null,
-    "StepsText": null,
-    "IsAccepted": true,
-    "Ingredients": [
-      "bò",
-      "mì"
-    ],
-    "Steps": [
-      "nấu mì",
-      "ád"
-    ]
+    "Image": "/images/pho-o-my-2.jpg"
   }
 ]

@@ -4,10 +4,9 @@ using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.IO;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
-using Newtonsoft.Json;
 using System.Text;
+using Newtonsoft.Json;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace AI_Cooking_Guide_Website.Controllers
 {
@@ -21,62 +20,88 @@ namespace AI_Cooking_Guide_Website.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index(string query)
+        public IActionResult Index(string query, string imageUrl)
         {
-            var model = new SearchResultModel
+            var textSearchModel = new SearchResultModel
             {
                 Organic = new List<RecipeModel>()
             };
 
+            var imageSearchModel = new ImageSearchResultModel
+            {
+                Images = new List<ImageSearchResultModel>()
+            };
+
             if (!string.IsNullOrEmpty(query))
             {
-                // Kiểm tra nếu đã có dữ liệu trong Session
                 var sessionKey = $"SearchResults_{query}";
                 if (HttpContext.Session.TryGetValue(sessionKey, out var cachedData))
                 {
-                    // Deserialize kết quả từ Session
-                    model = JsonConvert.DeserializeObject<SearchResultModel>(Encoding.UTF8.GetString(cachedData));
+                    textSearchModel = JsonConvert.DeserializeObject<SearchResultModel>(Encoding.UTF8.GetString(cachedData));
+                }
+            }
+            else if (!string.IsNullOrEmpty(imageUrl))
+            {
+                var sessionKey = $"SearchResults_{imageUrl}";
+                if (HttpContext.Session.TryGetValue(sessionKey, out var cachedData))
+                {
+                    imageSearchModel = JsonConvert.DeserializeObject<ImageSearchResultModel>(Encoding.UTF8.GetString(cachedData));
                 }
             }
 
             ViewBag.Query = query;
-            return View(model);
+            ViewBag.ImageUrl = imageUrl;
+
+            // Determine which view to return based on input
+            if (!string.IsNullOrEmpty(query))
+            {
+                return View("Index", textSearchModel); // Render text-based search results
+            }
+            else if (!string.IsNullOrEmpty(imageUrl))
+            {
+                return View("Index", imageSearchModel); // Render image-based search results
+            }
+
+            return View("Index", textSearchModel); // Default to text-based search
         }
 
-
         [HttpPost]
-        public async Task<IActionResult> Search(string query)
+        public async Task<IActionResult> Search(string query, string imageUrl)
         {
-            // Lưu query vào ViewBag để hiển thị lại
-            ViewBag.Query = query;
-            if (string.IsNullOrWhiteSpace(query))
+            if (string.IsNullOrEmpty(query) && string.IsNullOrEmpty(imageUrl))
             {
-                ModelState.AddModelError("", "Tên món ăn hoặc nguyên liệu không được để trống.");
-                // Chuyển hướng tới GET method với từ khóa trong Query String
+                ModelState.AddModelError("", "Vui lòng cung cấp từ khóa hoặc URL hình ảnh để tìm kiếm.");
+                return RedirectToAction("Index");
+            }
+
+            if (!string.IsNullOrEmpty(query))
+            {
+                return await PerformTextSearch(query);
+            }
+            else if (!string.IsNullOrEmpty(imageUrl))
+            {
+                return await PerformImageSearch(imageUrl);
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        private async Task<IActionResult> PerformTextSearch(string query)
+        {
+            var sessionKey = $"SearchResults_{query}";
+            if (HttpContext.Session.TryGetValue(sessionKey, out var cachedData))
+            {
                 return RedirectToAction("Index", new { query });
             }
 
             try
             {
-
-                // Kiểm tra nếu đã có dữ liệu trong Session
-                var sessionKey = $"SearchResults_{query}";
-                if (HttpContext.Session.TryGetValue(sessionKey, out var cachedData))
-                {
-                    // Deserialize kết quả từ Session
-                    var cachedResults = JsonConvert.DeserializeObject<SearchResultModel>(Encoding.UTF8.GetString(cachedData));
-                    // Chuyển hướng lại Index với query
-                    return RedirectToAction("Index", new { query = query });
-                }
-
-
-                // call API 
                 var request = new HttpRequestMessage(HttpMethod.Post, "https://google.serper.dev/search");
                 request.Headers.Add("X-API-KEY", "8c10c44a0cbc789d18974590233c7f4a2610ab50");
 
                 string refinedQuery = $"{query} công thức OR nấu ăn OR nguyên liệu OR ẩm thực";
-                string contentJson = $"{{\"q\":\"{refinedQuery}\",\"gl\":\"vn\",\"hl\":\"vi\"}}";
-                var content = new StringContent(contentJson, null, "application/json");
+                string contentJson = $"{{\"q\":\"{refinedQuery}\",\"gl\":\"vn\",\"hl\":\"vi\", \"num\":20}}";
+                var content = new StringContent(contentJson, Encoding.UTF8, "application/json");
                 request.Content = content;
 
                 var response = await _httpClient.SendAsync(request);
@@ -86,7 +111,6 @@ namespace AI_Cooking_Guide_Website.Controllers
                 var searchResults = JObject.Parse(jsonResponse);
 
                 var model = new SearchResultModel();
-
                 // Danh sách các ảnh mặc định
                 var placeholderImages = new List<string>
                 {
@@ -116,8 +140,6 @@ namespace AI_Cooking_Guide_Website.Controllers
                 var random = new Random();
                 var shuffledImages = placeholderImages.OrderBy(_ => random.Next()).ToList();
                 int currentIndex = 0;
-
-                // Xử lý kết quả Organic (nếu có)
                 var organicResults = searchResults["organic"];
                 if (organicResults != null && organicResults.HasValues)
                 {
@@ -130,107 +152,112 @@ namespace AI_Cooking_Guide_Website.Controllers
                             imageUrl = shuffledImages[currentIndex];
                             currentIndex = (currentIndex + 1) % shuffledImages.Count; // Quay vòng ảnh
                         }
-
-                        var recipe = new RecipeModel
+                        model.Organic.Add(new RecipeModel
                         {
                             Title = item["title"]?.ToString(),
                             Snippet = item["snippet"]?.ToString(),
                             Link = item["link"]?.ToString(),
-                            ImageUrl = imageUrl
-                        };
-
-                        model.Organic.Add(recipe);
+                            ImageUrl = imageUrl,
+                        });
                     }
                 }
 
-                // Lưu kết quả vào Session
-                var serializedData = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(model));
-                HttpContext.Session.Set(sessionKey, serializedData);
-
-                return RedirectToAction("Index", new { query = query });
+                HttpContext.Session.Set(sessionKey, Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(model)));
+                return RedirectToAction("Index", new { query });
             }
             catch
             {
-                ModelState.AddModelError("", "Có lỗi xảy ra khi gọi API.");
+                ModelState.AddModelError("", "Có lỗi xảy ra khi gọi API cho tìm kiếm văn bản.");
                 return RedirectToAction("Index");
             }
         }
 
-
-
-        // Xử lý tìm kiếm theo hình ảnh
-
-        [HttpPost]
-        public async Task<IActionResult> SearchByImageAI(IFormFile imageQuery)
+        private async Task<IActionResult> PerformImageSearch(string imageUrl)
         {
-            if (imageQuery == null || imageQuery.Length == 0)
+            // Validate the provided image URL
+            if (!Uri.TryCreate(imageUrl, UriKind.Absolute, out Uri uriResult) ||
+                (uriResult.Scheme != Uri.UriSchemeHttp && uriResult.Scheme != Uri.UriSchemeHttps))
             {
-                ModelState.AddModelError("", "Vui lòng cung cấp hình ảnh để tìm kiếm.");
-                return View("Index", new SearchResultModel());
+                ModelState.AddModelError("", "URL hình ảnh không hợp lệ.");
+                return RedirectToAction("Index");
+            }
+
+            var sessionKey = $"SearchResults_{imageUrl}";
+
+            // Check if the result is already cached
+            if (HttpContext.Session.TryGetValue(sessionKey, out var cachedData))
+            {
+                return RedirectToAction("Index", new { imageUrl });
             }
 
             try
             {
-                // Chuyển hình ảnh thành chuỗi base64
-                string imageBase64;
-                using (var memoryStream = new MemoryStream())
-                {
-                    await imageQuery.CopyToAsync(memoryStream);
-                    imageBase64 = Convert.ToBase64String(memoryStream.ToArray());
-                }
-
-                // Gửi yêu cầu đến API tìm kiếm hình ảnh
-                var request = new HttpRequestMessage(HttpMethod.Post, "https://your-ai-service.com/api/search");
-                request.Headers.Add("Authorization", "Bearer YOUR_API_KEY");
-
+                // Create HTTP request for the image search API
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://google.serper.dev/lens");
+                request.Headers.Add("X-API-KEY", "8c10c44a0cbc789d18974590233c7f4a2610ab50");
+                string refinedQuery = $"công thức OR nấu ăn OR nguyên liệu OR ẩm thực";
+                // Prepare payload with image URL
                 var payload = new
                 {
-                    image = imageBase64,
-                    options = new { gl = "vn", hl = "vi" }
+                    url = imageUrl,
+                    gl = "vn",
+                    hl = "vi"
                 };
-                string contentJson = JsonConvert.SerializeObject(payload);
-                request.Content = new StringContent(contentJson, Encoding.UTF8, "application/json");
 
+                // Add payload to request body
+                request.Content = new StringContent(JsonConvert.SerializeObject(payload), Encoding.UTF8, "application/json");
+
+                // Send the request
                 var response = await _httpClient.SendAsync(request);
+
+                // Ensure the response is successful
                 response.EnsureSuccessStatusCode();
 
+                // Parse the response JSON
                 var jsonResponse = await response.Content.ReadAsStringAsync();
                 var searchResults = JObject.Parse(jsonResponse);
 
-                // Xử lý kết quả trả về
-                var imageResults = new List<ImageSearchResultModel>();
-                var imageItems = searchResults["results"];
-                foreach (var item in imageItems)
+                // Process search results into the model
+                var model = new ImageSearchResultModel();
+                var imageResults = searchResults["organic"];
+
+                if (imageResults != null && imageResults.HasValues)
                 {
-                    imageResults.Add(new ImageSearchResultModel
+                    foreach (var item in imageResults)
                     {
-                        Title = item["title"]?.ToString(),
-                        ImageUrl = item["imageUrl"]?.ToString(),
-                        ThumbnailUrl = item["thumbnailUrl"]?.ToString(),
-                        Source = item["source"]?.ToString(),
-                        Domain = item["domain"]?.ToString(),
-                        Link = item["link"]?.ToString(),
-                        GoogleUrl = item["googleUrl"]?.ToString(),
-                        Position = item["position"]?.ToObject<int>() ?? 0
-                    });
+                        model.Images.Add(new ImageSearchResultModel
+                        {
+                            Title = item["title"]?.ToString(),
+                            Source = item["source"]?.ToString(),
+                            Link = item["link"]?.ToString(),
+                            ImageUrl = item["imageUrl"]?.ToString()
+                        });
+                    }
                 }
 
-                // Truyền kết quả vào mô hình và trả về view Index
-                var model = new SearchResultModel
-                {
-                    Organic = new List<RecipeModel>(), // Giữ danh sách Organic trống nếu không tìm kiếm văn bản
-                };
+                // Cache the results in the session
+                HttpContext.Session.Set(sessionKey, Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(model)));
 
-                ViewBag.ImageResults = imageResults; // Đặt kết quả hình ảnh vào ViewBag
-                return View("Index", model);
+                // Redirect to display the results
+                return RedirectToAction("Index", new { imageUrl });
+            }
+            catch (HttpRequestException ex)
+            {
+                // Log the exception (optional)
+                Console.WriteLine($"HTTP Request Error: {ex.Message}");
+
+                ModelState.AddModelError("", "Có lỗi xảy ra khi gọi API cho tìm kiếm hình ảnh.");
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("", $"Có lỗi xảy ra khi tìm kiếm bằng AI: {ex.Message}");
-                return View("Index", new SearchResultModel());
+                // Log the exception (optional)
+                Console.WriteLine($"General Error: {ex.Message}");
+
+                ModelState.AddModelError("", "Một lỗi không xác định đã xảy ra.");
+                return RedirectToAction("Index");
             }
         }
-
 
     }
 }

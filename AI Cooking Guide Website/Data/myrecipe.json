@@ -2,7 +2,7 @@
   {
     "Id": 1,
     "Name": "pho ",
-    "Description": "đs hn ",
+    "Description": "đặc sản Nam Định ",
     "Image": "/mrimages/pho-o-my-2.jpg",
     "UserName": "Gray",
     "Status": null,
@@ -15,7 +15,7 @@
     ],
     "Steps": [
       "nấu mì",
-      "ád"
+      "nấu nước dùng"
     ]
   }
 ]

@@ -1,6 +1,4 @@
-﻿@model dynamic
-
-<!-- Newsletter Section -->
+﻿<!-- Newsletter Section -->
 <section class="py-3 py-md-5 py-xl-10 bsb-section-py-xxl-1 bg-accent">
     <div class="container">
         <div class="row justify-content-md-center">
@@ -20,39 +18,43 @@
                                placeholder="Nhập tên món ăn hoặc nguyên liệu..." aria-label="search-query"
                                aria-describedby="email-newsletter-help">
                     </div>
-
-                    <!-- Input for Image Search -->
-                    <div class="col-12 col-lg-3 d-flex flex-column align-items-center align-items-lg-start">
-                        <label for="image-input" class="form-label visually-hidden">Tìm kiếm bằng hình ảnh</label>
-                        <div class="input-group">
-                            <input type="file" id="image-input" name="imageQuery" class="form-control" accept="image/*">
-                            <button type="submit" class="btn btn-secondary">
-                                <i class="bi bi-camera"></i> Tìm kiếm bằng hình ảnh
-                            </button>
-                        </div>
-                        <small class="text-muted mt-1">Hỗ trợ tệp ảnh (jpg, png)</small>
-                    </div>
-
                     <!-- Voice Search Button -->
                     <div class="col-2 col-lg-1 d-flex align-items-center justify-content-center">
-                        <a type="button" id="voice-search-btn" class="btn btn-outline-secondary p-2">
+                        <button type="button" id="voice-search-btn" class="btn btn-outline-secondary p-2">
                             <img src="~/img/microphone.jpg" alt="Tìm kiếm bằng giọng nói" class="img-fluid mx-auto" />
-                        </a>
+                        </button>
                     </div>
 
                     <!-- Standard Search Button -->
                     <div class="col-12 col-lg-3 text-center text-lg-start mt-3 mt-lg-0">
                         <button type="submit" class="btn btn-primary bsb-btn-3xl w-100">Tìm kiếm</button>
                     </div>
+
+                    
                 </form>
             </div>
+           
         </div>
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7">
+                <form id="search-form" asp-controller="Search" asp-action="Search" method="post" enctype="multipart/form-data" class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center">
+                    <div class="input-group">
+                        <input value="@ViewBag.ImageUrl" id="image-url-input" name="imageUrl" class="form-control" placeholder="Nhập URL hình ảnh" required>
+                        <button type="submit" class="btn btn-secondary">
+                            <i class="bi bi-search"></i> Tìm kiếm bằng hình ảnh
+                        </button>
+                    </div>
+                    <small class="text-muted mt-1">Nhập URL của hình ảnh (jpg, png)</small>
+                </form>
+            </div>
 
+        </div>
+     
     </div>
 </section>
 
+<!-- JavaScript for Voice Search -->
 <script>
-    // Speech recognition setup
     const searchInput = document.getElementById('search-query');
     const voiceSearchBtn = document.getElementById('voice-search-btn');
     const searchForm = document.getElementById('search-form');
@@ -60,52 +62,21 @@
     if ('webkitSpeechRecognition' in window) {
         const recognition = new webkitSpeechRecognition();
         recognition.lang = 'vi-VN';
-        recognition.continuous = false;
-        recognition.interimResults = false;
-
-        let isRecognizing = false;
 
         voiceSearchBtn.addEventListener('click', () => {
-            if (isRecognizing) {
-                recognition.stop();
-            } else {
-                recognition.start();
-            }
+            recognition.start();
         });
-
-        recognition.onstart = () => {
-            isRecognizing = true;
-            voiceSearchBtn.classList.add('voice-active');
-        };
 
         recognition.onresult = (event) => {
             const transcript = event.results[0][0].transcript;
             searchInput.value = transcript;
-        };
-
-        recognition.onspeechend = () => {
-            recognition.stop();
             searchForm.submit();
         };
-
-        recognition.onend = () => {
-            isRecognizing = false;
-            voiceSearchBtn.classList.remove('voice-active');
-        };
-
-        recognition.onerror = (event) => {
-            console.error('Lỗi nhận dạng giọng nói:', event.error);
-            isRecognizing = false;
-            voiceSearchBtn.classList.remove('voice-active');
-        };
-
-       
     } else {
-        alert('Trình duyệt của bạn không hỗ trợ tìm kiếm bằng giọng nói');
+        alert('Trình duyệt không hỗ trợ tìm kiếm bằng giọng nói');
         voiceSearchBtn.disabled = true;
     }
 </script>
-
 
 <!-- Search Results Section -->
 <section class="bsb-blog-5 py-3 py-md-5 py-xl-8 bsb-section-py-xxl-1">
@@ -115,9 +86,6 @@
                 <h2 class="h4 mb-4 mb-md-5">Kết quả tìm kiếm</h2>
             </div>
         </div>
-    </div>
-
-    <div class="container overflow-hidden">
         <div class="row">
             @if (Model is AI_Cooking_Guide_Website.Models.SearchResultModel searchResults)
             {
@@ -147,63 +115,42 @@
                     </div>
                 </div>
             }
-            @if (Model is List<AI_Cooking_Guide_Website.Models.ImageSearchResultModel> imageResults)
+
+            @if (Model is AI_Cooking_Guide_Website.Models.ImageSearchResultModel imageResults)
             {
                 <!-- Image Search Results -->
                 <div class="col-12">
-                    <h3 class="text-center mb-5">Kết quả tìm kiếm hình ảnh</h3>
-                    <div class="row gy-4 gy-md-5 gx-lg-5">
-                        @if (imageResults.Count > 0)
+                    <div class="row gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9">
+                        @foreach (var image in imageResults.Images)
                         {
-                            @foreach (var result in imageResults)
-                            {
-                                <div class="col-12 col-sm-6 col-lg-4">
-                                    <div class="card h-100 border-0 shadow-sm">
-                                        <!-- Image Section -->
-                                        <figure class="card-img-top overflow-hidden">
-                                            <a href="@result.Link" target="_blank" rel="noopener noreferrer">
-                                                <img class="img-fluid bsb-scale bsb-hover-scale-up"
-                                                     loading="lazy"
-                                                     src="@result.ImageUrl"
-                                                     alt="@result.Title" />
+                            <div class="col-12 col-lg-4">
+                                <article>
+                                    <div class="card border-0 bg-transparent">
+                                        <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
+                                            <a href="@image.Link">
+                                                <img class="img-fluid bsb-scale bsb-hover-scale-up" style="height: 410px" loading="lazy" src="@image.ImageUrl" alt="@image.Title" />
                                             </a>
                                         </figure>
-                                        <!-- Content Section -->
-                                        <div class="card-body">
-                                            <h5 class="card-title text-truncate">
-                                                <a href="@result.Link" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
-                                                    @result.Title
-                                                </a>
-                                            </h5>
-                                            <p class="card-text small text-muted">
-                                                Nguồn: <strong>@result.Source</strong> (@result.Domain)
-                                            </p>
-                                        </div>
-                                        <div class="card-footer bg-transparent border-0 text-end">
-                                            <a href="@result.GoogleUrl" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
-                                                Tìm trên Google
-                                            </a>
+                                        <div class="card-body m-0 p-0">
+                                            <h2 class="card-title h5">
+                                                <a class="link-dark text-decoration-none" href="@image.Link">@image.Title</a>
+                                            </h2>
+                                            <p class="small text-muted">Nguồn: @image.Source</p>
                                         </div>
                                     </div>
-                                </div>
-                            }
-                        }
-                        else
-                        {
-                            <div class="col-12 text-center">
-                                <p class="text-muted">Không tìm thấy kết quả nào. Vui lòng thử lại!</p>
+                                </article>
                             </div>
                         }
                     </div>
                 </div>
             }
+
             else
             {
-                <div class="col-12 text-center">
-                    <p class="text-danger">Dữ liệu không hợp lệ. Vui lòng kiểm tra lại.</p>
-                </div>
+            <div class="col-12 text-center">
+                <p class="text-danger">Không tìm thấy kết quả phù hợp.</p>
+            </div>
             }
-
         </div>
     </div>
 </section>
