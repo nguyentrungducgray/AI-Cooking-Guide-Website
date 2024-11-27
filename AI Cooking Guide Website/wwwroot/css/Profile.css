@@ -1,127 +1,319 @@
-﻿<style >
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7fc;
+﻿/* General reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Profile container styling */
 .profile-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #f8d7e0; /* Light pink color */
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+    animation: fadeIn 1s ease-out;
 }
 
-h2 {
-    text-align: center;
-    font-size: 1.8em;
+/* Profile card styling */
+.profile-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 850px;
+    padding: 40px;
+    transform: translateY(10px);
+    animation: slideIn 0.6s ease-out;
+    border: 1px solid #eee; /* Subtle border */
+}
+
+/* Section titles */
+.section-title {
+    font-size: 28px;
+    font-weight: 600;
     color: #333;
     margin-bottom: 20px;
-    position: relative;
+    border-bottom: 3px solid #eee;
+    padding-bottom: 12px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.3s;
 }
 
-    h2::after {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #ff69b4;
+/* Profile details */
+.profile-details p {
+    font-size: 18px;
+    margin: 12px 0;
+    color: #555;
+}
+
+/* Input fields */
+.input-field {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+    .input-field:focus {
+        border-color: #6c5ce7;
+        box-shadow: 0 0 12px rgba(108, 92, 247, 0.3);
+        transform: scale(1.03);
     }
 
+/* Button */
+.custom-button {
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(108, 92, 247, 0.3);
+    margin-top: 20px;
+}
+
+    .custom-button:hover {
+        background-color: #5a4cc7;
+        transform: translateY(-4px);
+    }
+
+    .custom-button:active {
+        transform: translateY(2px);
+        box-shadow: 0 6px 20px rgba(108, 92, 247, 0.4);
+    }
+
+/* Recipe list */
 .recipe-list {
-    margin-top: 30px;
-    padding-top: 20px;
+    margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 .recipe-item {
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    border-radius: 10px;
+    background-color: #dcc95e;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-    .recipe-item img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
+    .recipe-item:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
     }
 
-    .recipe-item a {
-        font-size: 1.2em;
-        color: #ff69b4;
-        text-decoration: none;
-        font-weight: bold;
-        margin-top: 10px;
-        display: block;
+.recipe-image {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.recipe-item:hover .recipe-image {
+    transform: scale(1.1);
+}
+
+.recipe-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+    .recipe-name:hover {
+        color: #6c5ce7;
     }
 
-        .recipe-item a:hover {
-            text-decoration: underline;
-        }
-
+/* Status labels */
 .status {
-    font-weight: bold;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 10px;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 12px;
+    transition: background-color 0.3s ease;
 }
 
 .status-approved {
-    background-color: #4CAF50; /* Green for approved */
+    background-color: #27ae60;
     color: white;
 }
 
 .status-pending {
-    background-color: #FFC107; /* Yellow for pending */
+    background-color: #f39c12;
     color: white;
 }
 
 .status-rejected {
-    background-color: #F44336; /* Red for rejected */
+    background-color: #e74c3c;
     color: white;
 }
 
+/* Success message */
 .success-message {
-    color: green;
-    font-weight: bold;
-    margin-bottom: 20px;
+    padding: 18px;
+    margin-top: 40px;
+    background-color: #d4edda;
+    border-radius: 8px;
+    color: #155724;
+    font-size: 18px;
+    border: 1px solid #c3e6cb;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.5s;
 }
 
-.form-group {
+/* Keyframe animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* General styling for the recipe list container */
+.recipe-list {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 15px;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Recipe item card style */
+.recipe-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+    .recipe-item:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+    }
+
+/* Recipe image style */
+.recipe-image {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
     margin-bottom: 15px;
 }
 
-    .form-group input {
-        padding: 8px;
-        width: 100%;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-
-.btn-primary {
-    padding: 10px 20px;
-    background-color: #ff69b4;
-    border: none;
-    color: white;
-    font-size: 1.1em;
-    border-radius: 5px;
-    cursor: pointer;
+.recipe-item:hover .recipe-image {
+    transform: scale(1.05);
 }
 
-    .btn-primary:hover {
-        background-color: #e55a98;
+/* Recipe name style */
+.recipe-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    .recipe-name:hover {
+        color: #6c5ce7;
+        text-decoration: underline;
     }
 
-</style >
+/* Message for no recipes */
+.no-recipes-message {
+    font-size: 18px;
+    color: #aaa;
+    text-align: center;
+    margin-top: 50px;
+    font-style: italic;
+}
+
+/* Success message style */
+.success-message {
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #d4edda;
+    border-radius: 10px;
+    color: #155724;
+    font-size: 18px;
+    border: 1px solid #c3e6cb;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Keyframe animation for fadeInUp */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

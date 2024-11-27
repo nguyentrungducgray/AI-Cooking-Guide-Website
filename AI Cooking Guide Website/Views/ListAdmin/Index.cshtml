@@ -49,9 +49,8 @@
                                 </td>
                                 <td>@recipe.Name</td>
                                 <td>
-                                    <a href="@Url.Action("Index", "EditAdminList", new { id = recipe.Id })" class="btn btn-edit">
-                                        <i class='bx bx-edit-alt'></i>Edit
-                                    </a>
+                                    <!-- Corrected Edit Button -->
+                                    <a href="@Url.Action("Edit", "ListAdmin", new { id = recipe.Id })" class="btn-edit">Edit</a>
                                     <!-- Delete Button -->
                                     <form action="@Url.Action("Delete", "ListAdmin", new { id = recipe.Id })" method="post" style="display:inline;">
                                         @Html.AntiForgeryToken() <!-- CSRF Token for security -->
