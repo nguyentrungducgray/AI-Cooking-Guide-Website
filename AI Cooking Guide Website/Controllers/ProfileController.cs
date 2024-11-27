@@ -14,6 +14,7 @@ namespace AI_Cooking_Guide_Website.Controllers
             // Get the username of the currently logged-in user
             var userName = User.Identity.Name;
 
+
             if (string.IsNullOrEmpty(userName))
             {
                 return RedirectToAction("Login", "Login"); // Redirect to login if user is not authenticated
@@ -30,19 +31,39 @@ namespace AI_Cooking_Guide_Website.Controllers
                 // Filter the recipes for the logged-in user
                 var userRecipes = recipes?.Where(r => r.UserName == userName).ToList();
 
-                // Create a ViewModel to pass to the view
-                var profileViewModel = new ProfileViewModel
+                // Load admin replies
+                var adminReplies = LoadAdminRepliesFromFile("Data/replycontact.json");
+
+                if (adminReplies != null)
                 {
-                    User = user,
-                    Recipes = userRecipes ?? new List<MyRecipeModel>()
-                };
+                    // Log the replies to debug
+                    foreach (var reply in adminReplies)
+                    {
+                        Console.WriteLine($"Reply ID: {reply.Id}, UserName: {reply.UserName}, Message: {reply.Message}");
+                    }
 
-                // Add success or error message to the view
-                ViewBag.SuccessMessage = TempData["SuccessMessage"];
-                ViewBag.ErrorMessage = TempData["ErrorMessage"];
+                    // Filter replies for the logged-in user
+                    var userReplies = adminReplies?.Where(r => r.UserName == user.UserName).ToList();
 
-                // Pass ViewModel to the view
-                return View(profileViewModel);
+                    // Create a ViewModel to pass to the view
+                    var profileViewModel = new ProfileViewModel
+                    {
+                        User = user,
+                        Recipes = userRecipes ?? new List<MyRecipeModel>(),
+                        AdminReplies = userReplies ?? new List<AdminReplyModel>()
+                    };
+
+                    // Add success or error message to the view
+                    ViewBag.SuccessMessage = TempData["SuccessMessage"];
+                    ViewBag.ErrorMessage = TempData["ErrorMessage"];
+
+                    // Pass ViewModel to the view
+                    return View(profileViewModel);
+                }
+                else
+                {
+                    Console.WriteLine("No admin replies found.");
+                }
             }
 
             // If user is not found, redirect to login page
@@ -143,6 +164,21 @@ namespace AI_Cooking_Guide_Website.Controllers
                 return null;
             }
         }
+
+        private List<AdminReplyModel>? LoadAdminRepliesFromFile(string fileName)
+        {
+            try
+            {
+                string readText = System.IO.File.ReadAllText(fileName);
+                return JsonSerializer.Deserialize<List<AdminReplyModel>>(readText);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi đọc file {fileName}: {ex.Message}");
+                return null;
+            }
+        }
+
 
     }
 }

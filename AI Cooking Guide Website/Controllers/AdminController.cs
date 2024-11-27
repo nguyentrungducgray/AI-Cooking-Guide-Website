@@ -4,10 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using AI_Cooking_Guide_Website.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AI_Cooking_Guide_Website.Controllers
 {
-    [Route("Admin")]
+    [Authorize(Policy = "AdminPolicy")]
     public class AdminController : Controller
     {
         [HttpPost("SaveRecipe")]

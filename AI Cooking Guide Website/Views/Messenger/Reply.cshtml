@@ -1,0 +1,38 @@
+﻿@model AI_Cooking_Guide_Website.Models.AdminReplyModel
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<main>
+    <div class="head-title">
+        <div class="left">
+            <h1>Reply to Message</h1>
+            <ul class="breadcrumb">
+                <li><a href="#">Dashboard</a></li>
+                <li><i class='bx bx-chevron-right'></i></li>
+                <li><a class="active" href="#">Reply</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="form-container">
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+
+        <h2>Reply to: @Model.UserName</h2>
+        <form method="post" asp-action="Reply">
+            <div class="form-group">
+                <label for="replyMessage">Message:</label>
+                <textarea id="replyMessage" name="replyMessage" rows="5" required></textarea>
+            </div>
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <input type="hidden" name="FullName" value="@Model.UserName" />
+            <button type="submit">Send Reply</button>
+        </form>
+    </div>
+</main>

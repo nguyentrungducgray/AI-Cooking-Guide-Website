@@ -41,11 +41,13 @@ namespace AI_Cooking_Guide_Website.Controllers
                 string role = matchedUser.UserName == "Admin" ? "Admin" : "User";
 
                 var claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.Name, matchedUser.UserName),
-            new Claim("AvatarUrl", GetRandomImage()), // Add random profile image URL as a claim
-            new Claim(ClaimTypes.Role, role) // Assign role claim based on user
-        };
+                {
+                    new Claim(ClaimTypes.Name, matchedUser.UserName),  // Họ và tên
+                    new Claim("email", matchedUser.Email),            // Email
+                    new Claim(ClaimTypes.Name, matchedUser.UserName),
+                    new Claim("AvatarUrl", GetRandomImage()), // Add random profile image URL as a claim
+                    new Claim(ClaimTypes.Role, role) // Assign role claim based on user
+                };
 
                 var claimsIdentity = new ClaimsIdentity(claims, "YourCookieScheme");
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
@@ -178,10 +180,13 @@ namespace AI_Cooking_Guide_Website.Controllers
             System.IO.File.WriteAllText(fileName, json);
         }
 
+        
         public async Task<IActionResult> Logout()
         {
-            await HttpContext.SignOutAsync("YourCookieScheme");
-            return RedirectToAction("Index", "Home");
+            await HttpContext.SignOutAsync("YourCookieScheme"); // Đăng xuất người dùng và xóa cookie
+            return RedirectToAction("Index", "Home"); // Chuyển hướng về trang chủ sau khi đăng xuất
         }
+
+
     }
 }
