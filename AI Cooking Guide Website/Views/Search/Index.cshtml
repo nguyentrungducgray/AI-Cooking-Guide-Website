@@ -1,57 +1,53 @@
 ﻿<!-- Newsletter Section -->
-<section class="py-3 py-md-5 py-xl-10 bsb-section-py-xxl-1 bg-accent">
+<section class="py-3 py-md-5 py-xl-10 bsb-section-py-xxl-1 bg-accent-modern">
     <div class="container">
-        <div class="row justify-content-md-center">
-            <div class="col-12 col-md-9 col-lg-8 col-xl-8 col-xxl-7">
-                <h2 class="display-4 fw-bold mb-4 mb-md-5 mb-xxl-6 text-center text-accent-emphasis">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-9 col-lg-8 col-xl-8 col-xxl-7 text-center">
+                <h2 class="display-4 fw-bold mb-4 mb-md-5 text-gradient-modern">
                     Tìm kiếm với công cụ AI tuyệt vời của chúng tôi
                 </h2>
             </div>
         </div>
-        <div class="row justify-content-md-center">
+        <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7">
-                <form id="search-form" asp-controller="Search" asp-action="Search" method="post" enctype="multipart/form-data" class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center">
+                <form id="search-form" asp-controller="Search" asp-action="Search" method="post" enctype="multipart/form-data" class="row gy-3 gx-lg-2 justify-content-center">
                     <!-- Input Text for Search -->
                     <div class="col-12 col-lg-7">
                         <label for="search-query" class="visually-hidden">Tìm kiếm món ăn hoặc nguyên liệu</label>
-                        <input id="search-query" name="query" class="form-control bsb-form-control-3xl" value="@ViewBag.Query"
-                               placeholder="Nhập tên món ăn hoặc nguyên liệu..." aria-label="search-query"
-                               aria-describedby="email-newsletter-help">
+                        <input id="search-query" name="query" class="form-control search-input-modern" value="@ViewBag.Query"
+                               placeholder="Nhập tên món ăn hoặc nguyên liệu..." aria-label="search-query">
                     </div>
                     <!-- Voice Search Button -->
                     <div class="col-2 col-lg-1 d-flex align-items-center justify-content-center">
-                        <button type="button" id="voice-search-btn" class="btn btn-outline-secondary p-2">
-                            <img src="~/img/microphone.jpg" alt="Tìm kiếm bằng giọng nói" class="img-fluid mx-auto" />
+                        <button type="button" id="voice-search-btn" class="voice-btn-modern">
+                            <i class="bi bi-mic-fill"></i> <!-- Icon mic -->
                         </button>
                     </div>
 
-                    <!-- Standard Search Button -->
-                    <div class="col-12 col-lg-3 text-center text-lg-start mt-3 mt-lg-0">
-                        <button type="submit" class="btn btn-primary bsb-btn-3xl w-100">Tìm kiếm</button>
-                    </div>
 
-                    
+                    <!-- Standard Search Button -->
+                    <div class="col-12 col-lg-3 text-center text-lg-start">
+                        <button type="submit" class="btn btn-primary search-btn-modern w-100">Tìm kiếm</button>
+                    </div>
                 </form>
             </div>
-           
         </div>
-        <div class="row justify-content-md-center">
+        <div class="row justify-content-center mt-4">
             <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7">
-                <form id="search-form" asp-controller="Search" asp-action="Search" method="post" enctype="multipart/form-data" class="row gy-3 gy-lg-0 gx-lg-2 justify-content-center">
+                <form id="image-search-form" asp-controller="Search" asp-action="Search" method="post" enctype="multipart/form-data" class="image-search-modern">
                     <div class="input-group">
                         <input value="@ViewBag.ImageUrl" id="image-url-input" name="imageUrl" class="form-control" placeholder="Nhập URL hình ảnh" required>
                         <button type="submit" class="btn btn-secondary">
                             <i class="bi bi-search"></i> Tìm kiếm bằng hình ảnh
                         </button>
                     </div>
-                    <small class="text-muted mt-1">Nhập URL của hình ảnh (jpg, png)</small>
+                    <small class="text-muted mt-1 d-block text-center">Nhập URL của hình ảnh (jpg, png)</small>
                 </form>
             </div>
-
         </div>
-     
     </div>
 </section>
+
 
 <!-- JavaScript for Voice Search -->
 <script>
