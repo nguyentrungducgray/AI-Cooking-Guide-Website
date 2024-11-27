@@ -88,10 +88,7 @@
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bóng đổ rõ hơn khi hover */
     }
 
-    .voice-btn-modern:active {
-        transform: scale(0.95); /* Nhấn icon khi active */
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Bóng đổ giảm khi nhấn */
-    }
+
 
     .voice-btn-modern:focus {
         outline: none;
