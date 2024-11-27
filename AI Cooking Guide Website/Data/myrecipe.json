@@ -17,5 +17,41 @@
       "nấu mì",
       "nấu nước dùng"
     ]
+  },
+  {
+    "Id": 2,
+    "Name": "pho ",
+    "Description": "đặc sản nam định ",
+    "Image": "/mrimages/pho-o-my-2.jpg",
+    "UserName": "Gray",
+    "Status": null,
+    "IngredientsText": null,
+    "StepsText": null,
+    "IsAccepted": true,
+    "Ingredients": [
+      "mì",
+      "bò"
+    ],
+    "Steps": [
+      "nấu mì",
+      "nấu nước"
+    ]
+  },
+  {
+    "Id": 3,
+    "Name": "pho ",
+    "Description": "đặc sản hà nội",
+    "Image": "/mrimages/pho-o-my-2.jpg",
+    "UserName": "Gray",
+    "Status": null,
+    "IngredientsText": null,
+    "StepsText": null,
+    "IsAccepted": true,
+    "Ingredients": [
+      "bò"
+    ],
+    "Steps": [
+      "Bước 1: hầm nước trong 4-8 tiếng"
+    ]
   }
 ]

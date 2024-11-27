@@ -1,64 +1,13 @@
 [
   {
     "Id": 1,
-    "Name": "pho ",
-    "Ingredients": [
-      "b\u00F2",
-      "m\u00EC"
-    ],
-    "Description": "\u0111\u1EB7c s\u1EA3n Nam \u0110\u1ECBnh ",
-    "Steps": [
-      "n\u1EA5u m\u00EC",
-      "n\u1EA5u n\u01B0\u1EDBc d\u00F9ng"
-    ],
-    "Image": "/mrimages/pho-o-my-2.jpg"
-  },
-  {
-    "Id": 2,
     "Name": "B\u00E1nh Ch\u01B0ng",
     "Ingredients": [
-      "Th\u1ECBt l\u1EE3n",
-      "s\u1EE3i ph\u1EDF",
-      "[\u0022Th\u1ECBt l\u1EE3n\u0022,\u0022s\u1EE3i ph\u1EDF\u0022]"
+      "s\u1EE3i ph\u1EDF"
     ],
-    "Description": "M\u00F3n b\u00E1nh ko th\u1EC3 thi\u1EBFu trong ng\u00E0y t\u1EBFt ",
+    "Description": "adsads",
     "Steps": [
-      "cho g\u1EA1o v\u00E0o l\u00E1 dong ",
-      "n\u1EA5u n\u01B0\u1EDBc d\u00F9ng",
-      null,
-      "[\u0022cho g\u1EA1o v\u00E0o l\u00E1 dong \u0022,\u0022n\u1EA5u n\u01B0\u1EDBc d\u00F9ng\u0022,\u0022\u0022]"
-    ],
-    "Image": "/images/pho-o-my-2.jpg"
-  },
-  {
-    "Id": 3,
-    "Name": "B\u00E1nh Ch\u01B0ng",
-    "Ingredients": [
-      "Th\u1ECBt l\u1EE3n",
-      "sad",
-      "ddsads",
-      "\u0111asa"
-    ],
-    "Description": "m\u00F3n \u0103n \u0111\u1EB7c tr\u01B0ng c\u1EE7a h\u00E0 n\u1ED9i ",
-    "Steps": [
-      "n\u1EA5u n\u01B0\u1EDBc d\u00F9ng",
-      "ads\u0111sd",
-      "dd",
-      "aa"
-    ],
-    "Image": "/images/pho-o-my-2.jpg"
-  },
-  {
-    "Id": 4,
-    "Name": "B\u00E1nh Ch\u01B0ng",
-    "Ingredients": [
-      "s\u1EE3i ph\u1EDF",
-      "Th\u1ECBt l\u1EE3n"
-    ],
-    "Description": "M\u00F3n b\u00E1nh ko th\u1EC3 thi\u1EBFu trong ng\u00E0y t\u1EBFt ",
-    "Steps": [
-      "cho g\u1EA1o v\u00E0o l\u00E1 dong",
-      "n\u1EA5u n\u01B0\u1EDBc d\u00F9ng"
+      "cho g\u1EA1o v\u00E0o l\u00E1 dong"
     ],
     "Image": "/images/pho-o-my-2.jpg"
   }
