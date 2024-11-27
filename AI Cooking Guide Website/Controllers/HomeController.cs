@@ -78,5 +78,21 @@ namespace AI_Cooking_Guide_Website.Controllers
             return View(recipeDetail); // Trả về View với thông tin chi tiết món ăn
         }
 
+        public IActionResult List()
+        {
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "data", "recipes.json");
+            List<AddModel.Recipe> recipes = new List<AddModel.Recipe>();
+
+            // Đọc dữ liệu JSON hiện có
+            if (System.IO.File.Exists(filePath))
+            {
+                var jsonData = System.IO.File.ReadAllText(filePath);
+                recipes = JsonSerializer.Deserialize<List<AddModel.Recipe>>(jsonData) ?? new List<AddModel.Recipe>();
+            }
+
+            return View(recipes); // Trả về view Index với danh sách món ăn
+        }
+
     }
+
 }

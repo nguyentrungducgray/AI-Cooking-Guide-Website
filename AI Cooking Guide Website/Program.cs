@@ -12,13 +12,7 @@ namespace AI_Cooking_Guide_Website
             builder.Services.AddScoped<RecipeApiService>();
             builder.Services.AddHttpClient<RecipeApiService>();
 
-            // Add authentication service
-            builder.Services.AddAuthentication("YourCookieScheme")
-                .AddCookie("YourCookieScheme", options =>
-                {
-                    options.LoginPath = "/Login"; // Path to the login page
-                    options.LogoutPath = "/Logout"; // Path to the logout page
-                });
+          
 
             builder.Services.AddDistributedMemoryCache();
             builder.Services.AddSession(options =>
@@ -28,7 +22,19 @@ namespace AI_Cooking_Guide_Website
                 options.Cookie.IsEssential = true; // Yêu cầu cookie luôn được sử dụng
             });
 
-           
+            // Add authentication service
+            builder.Services.AddAuthentication("YourCookieScheme")
+                .AddCookie("YourCookieScheme", options =>
+                {
+                    options.LoginPath = "/Login/Login";  // Path to the login page
+                    options.LogoutPath = "/Logout"; // Path to the logout page
+                });
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminPolicy", policy =>
+                    policy.RequireRole("Admin"));
+            });
+
 
 
             // Add controllers with views
