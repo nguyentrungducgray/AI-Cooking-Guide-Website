@@ -47,10 +47,10 @@
 					<span class="text">Analytics</span>
 				</a>
 			</li>
-			<li class="@((ViewContext.RouteData.Values["controller"]?.ToString() == "Message") ? "active" : "")">
-				<a asp-controller="Message" asp-action="Index">
+			<li class="@((ViewContext.RouteData.Values["controller"]?.ToString() == "Messenger") && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")">
+				<a asp-controller="Messenger" asp-action="Index">
 					<i class='bx bxs-message-dots'></i>
-					<span class="text">Message</span>
+					<span class="text">Messenger</span>
 				</a>
 			</li>
 			<li class="@((ViewContext.RouteData.Values["controller"]?.ToString() == "Team") ? "active" : "")">

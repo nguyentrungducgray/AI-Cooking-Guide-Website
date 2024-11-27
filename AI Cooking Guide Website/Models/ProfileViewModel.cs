@@ -4,5 +4,8 @@
     {
         public Users User { get; set; }
         public List<MyRecipeModel> Recipes { get; set; }
+        public List<AdminReplyModel> AdminReplies { get; set; }
+
+
     }
 }

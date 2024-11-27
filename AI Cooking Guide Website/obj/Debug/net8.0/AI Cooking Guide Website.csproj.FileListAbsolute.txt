@@ -334,6 +334,7 @@ E:\du an 3\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\re
 E:\du an 3\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.pdb
 E:\du an 3\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.genruntimeconfig.cache
 E:\du an 3\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\ref\AI Cooking Guide Website.dll
+<<<<<<< HEAD
 D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\CloudinaryDotNet.dll
 D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\FirebaseAdmin.dll
 D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\FireSharp.dll
@@ -352,3 +353,75 @@ D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\ne
 D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.CodeDom.dll
 D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Management.dll
 D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll
+=======
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.csproj.AssemblyReference.cache
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.GeneratedMSBuildEditorConfig.editorconfig
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.AssemblyInfoInputs.cache
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.AssemblyInfo.cs
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.csproj.CoreCompileInputs.cache
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.MvcApplicationPartsAssemblyInfo.cache
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.RazorAssemblyInfo.cache
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.RazorAssemblyInfo.cs
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.sourcelink.json
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\appsettings.Development.json
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\appsettings.json
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\contact.json
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\myrecipe.json
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\users.json
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.staticwebassets.runtime.json
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.exe
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.deps.json
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.runtimeconfig.json
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.pdb
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\CloudinaryDotNet.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\FirebaseAdmin.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\FireSharp.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Api.Gax.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Api.Gax.Rest.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.Auth.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.Core.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.Storage.v1.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Threading.Tasks.Extensions.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Threading.Tasks.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Net.Http.Extensions.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Net.Http.Primitives.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.CodeDom.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Management.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets.build.json
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets.development.json
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.AI Cooking Guide Website.Microsoft.AspNetCore.StaticWebAssets.props
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.build.AI Cooking Guide Website.props
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AI Cooking Guide Website.props
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AI Cooking Guide Website.props
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets.pack.json
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\scopedcss\bundle\AI Cooking Guide Website.styles.css
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\scopedcss\projectbundle\AI Cooking Guide Website.bundle.scp.css
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooki.7A29CA36.Up2Date
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\refint\AI Cooking Guide Website.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.pdb
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.genruntimeconfig.cache
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\ref\AI Cooking Guide Website.dll
+E:\BTEC\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\replycontact.json
+>>>>>>> origin/contact

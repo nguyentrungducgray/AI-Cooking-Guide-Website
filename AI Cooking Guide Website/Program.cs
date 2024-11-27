@@ -1,5 +1,6 @@
 using AI_Cooking_Guide_Website.ModelAI;
 
+
 namespace AI_Cooking_Guide_Website
 {
     public class Program
@@ -12,15 +13,9 @@ namespace AI_Cooking_Guide_Website
             builder.Services.AddScoped<RecipeApiService>();
             builder.Services.AddHttpClient<RecipeApiService>();
 
-          
+            
 
             builder.Services.AddDistributedMemoryCache();
-            builder.Services.AddSession(options =>
-            {
-                options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian lưu trữ session
-                options.Cookie.HttpOnly = true; // Bảo mật
-                options.Cookie.IsEssential = true; // Yêu cầu cookie luôn được sử dụng
-            });
 
             // Add authentication service
             builder.Services.AddAuthentication("YourCookieScheme")
@@ -28,15 +23,24 @@ namespace AI_Cooking_Guide_Website
                 {
                     options.LoginPath = "/Login/Login";  // Path to the login page
                     options.LogoutPath = "/Logout"; // Path to the logout page
+                    options.AccessDeniedPath = "/Login/Login"; // Redirect to login if access is denied
+                    options.SlidingExpiration = true; // Cookie expiration sliding
+                    options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Cookie expiration time
                 });
+            // Add authorization policy for admin
             builder.Services.AddAuthorization(options =>
             {
                 options.AddPolicy("AdminPolicy", policy =>
-                    policy.RequireRole("Admin"));
+                    policy.RequireRole("Admin")); // Only users with the "Admin" role can access the admin area
             });
 
-
-
+            // Add session services
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // Session timeout
+                options.Cookie.HttpOnly = true; // Ensure cookies are accessible only via the server
+                options.Cookie.IsEssential = true; // Mark the session cookie as essential
+            });
             // Add controllers with views
             builder.Services.AddControllersWithViews();
 
@@ -59,7 +63,9 @@ namespace AI_Cooking_Guide_Website
 
             // Add session middleware to the request pipeline
             app.UseSession();
+            
 
+            // Default route for other areas
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");

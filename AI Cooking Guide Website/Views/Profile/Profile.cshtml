@@ -5,7 +5,7 @@
         <div class="profile-card">
             <h2 class="section-title">Thông tin cá nhân</h2>
             <div class="profile-details">
-                <p><strong>Username:</strong> @Model.User.UserName</p>
+                <p><strong>Họ và tên:</strong> @Model.User.UserName</p>
                 <p><strong>Email:</strong> @Model.User.Email</p>
                 <div class="form-group">
                     <label for="PhoneNumber"><strong>Số điện thoại:</strong></label>
@@ -38,13 +38,41 @@
                     <p>Bạn chưa có công thức nào.</p>
                 }
             </div>
+            <h2 class="section-title">Phản Hồi từ Admin:</h2>
+            <div>
+                @if (Model.AdminReplies.Any())
+                {
+                    <ul>
+                        @foreach (var reply in Model.AdminReplies)
+                        {
+                            <li>
+                                <strong>Phản hồi:</strong> @reply.Message
+                                <br />
+                                <em>Ngày gửi: @reply.DateSent</em>
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p>Chưa có phản hồi từ Admin.</p>
+                }
+            </div>
 
-            @if (TempData["SuccessMessage"] != null)
+            <!-- Hiển thị thông báo thành công hoặc lỗi -->
+            @if (!string.IsNullOrEmpty(ViewBag.SuccessMessage))
             {
-                <div class="success-message">
-                    @TempData["SuccessMessage"]
+                <div class="alert alert-success">
+                    @ViewBag.SuccessMessage
                 </div>
             }
-
+            @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+            {
+                <div class="alert alert-danger">
+                    @ViewBag.ErrorMessage
+                </div>
+            }
+            
     </div>
+       
 </body>
