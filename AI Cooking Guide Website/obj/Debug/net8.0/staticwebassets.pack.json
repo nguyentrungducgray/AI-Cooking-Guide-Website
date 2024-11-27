@@ -35837,11 +35837,19 @@
       "PackagePath": "staticwebassets\\images\\4K-Beautiful-Desktop-Wallpaper-Colorful-Nature-Sunset-Landscape-Free-Download-1536x864.jpg"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\Jamie Chastain.png",
       "PackagePath": "staticwebassets\\images\\Jamie Chastain.png"
     },
     {
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\MEGUMI~1.JPG",
+=======
+      "Id": "D:\\hocki6\\Project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\4l9r2arpe9l91.webp",
+      "PackagePath": "staticwebassets\\images\\4l9r2arpe9l91.webp"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\MEGUMI~1.JPG",
+>>>>>>> origin/fixAdd
       "PackagePath": "staticwebassets\\images\\MEGUMI~1.JPG"
     },
     {
@@ -35849,6 +35857,7 @@
       "PackagePath": "staticwebassets\\images\\OIP.jpg"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\Remove-bg.ai_1731132245057.png",
       "PackagePath": "staticwebassets\\images\\Remove-bg.ai_1731132245057.png"
     },
@@ -35866,6 +35875,13 @@
     },
     {
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg",
+=======
+      "Id": "D:\\hocki6\\Project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\anime-anime-girls-kono-subarashii-sekai-ni-shukufuku-wo-megumin-wallpaper-preview.jpg",
+      "PackagePath": "staticwebassets\\images\\anime-anime-girls-kono-subarashii-sekai-ni-shukufuku-wo-megumin-wallpaper-preview.jpg"
+    },
+    {
+      "Id": "D:\\hocki6\\Project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg",
+>>>>>>> origin/fixAdd
       "PackagePath": "staticwebassets\\images\\kaiwaii.food_75372337_429955101026184_156279787507794299_n-e1574683794404.jpg"
     },
     {
