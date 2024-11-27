@@ -1,3 +1,59 @@
 [
-
+  {
+    "Id": 1,
+    "Name": "pho ",
+    "Description": "jklkjk",
+    "Image": "/mrimages/pho-o-my-2.jpg",
+    "UserName": "TrungDuc",
+    "Status": null,
+    "IngredientsText": null,
+    "StepsText": null,
+    "IsAccepted": true,
+    "Ingredients": [
+      "bò",
+      "mì"
+    ],
+    "Steps": [
+      "nấu mì",
+      "sdfdf"
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "bánh chưng ",
+    "Description": "jhkjjhk",
+    "Image": "/mrimages/pho-o-my-2.jpg",
+    "UserName": "TrungDuc",
+    "Status": null,
+    "IngredientsText": null,
+    "StepsText": null,
+    "IsAccepted": true,
+    "Ingredients": [
+      "thịt heo",
+      "gạo"
+    ],
+    "Steps": [
+      "jhkjhk",
+      "kjhhkjh"
+    ]
+  },
+  {
+    "Id": 3,
+    "Name": "mì cay",
+    "Description": "jgjhgj",
+    "Image": "/mrimages/2-cach-nau-mi-cay-hai-san-chuan-cong-thuc-han-quoc-202112301425006195.jpg",
+    "UserName": "TrungDuc",
+    "Status": null,
+    "IngredientsText": null,
+    "StepsText": null,
+    "IsAccepted": true,
+    "Ingredients": [
+      "mì",
+      "thịt"
+    ],
+    "Steps": [
+      "Bước 1: hầm nước trong 4-8 tiếng",
+      "hhgjhh"
+    ]
+  }
 ]

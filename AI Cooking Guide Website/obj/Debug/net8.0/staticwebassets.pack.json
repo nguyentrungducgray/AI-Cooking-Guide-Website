@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\css\\EditAdminList.css"
     },
     {
+      "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\HieuungHome.css",
+      "PackagePath": "staticwebassets\\css\\HieuungHome.css"
+    },
+    {
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\css\\ListAdmin.css",
       "PackagePath": "staticwebassets\\css\\ListAdmin.css"
     },
@@ -35829,6 +35833,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\2-cach-nau-mi-cay-hai-san-chuan-cong-thuc-han-quoc-202112301425006195.jpg",
+      "PackagePath": "staticwebassets\\images\\2-cach-nau-mi-cay-hai-san-chuan-cong-thuc-han-quoc-202112301425006195.jpg"
+    },
+    {
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\images\\462540685_509611018603413_3825466364173806727_n.jpg",
       "PackagePath": "staticwebassets\\images\\462540685_509611018603413_3825466364173806727_n.jpg"
     },
@@ -36077,6 +36085,30 @@
       "PackagePath": "staticwebassets\\img\\branding\\planet-logo.svg"
     },
     {
+      "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\branding\\poodvn1.jpg",
+      "PackagePath": "staticwebassets\\img\\branding\\poodvn1.jpg"
+    },
+    {
+      "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\branding\\poodvn2.jpg",
+      "PackagePath": "staticwebassets\\img\\branding\\poodvn2.jpg"
+    },
+    {
+      "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\branding\\poodvn3.jpg",
+      "PackagePath": "staticwebassets\\img\\branding\\poodvn3.jpg"
+    },
+    {
+      "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\branding\\poodvn4.jpg",
+      "PackagePath": "staticwebassets\\img\\branding\\poodvn4.jpg"
+    },
+    {
+      "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\branding\\poodvn5.jpg",
+      "PackagePath": "staticwebassets\\img\\branding\\poodvn5.jpg"
+    },
+    {
+      "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\branding\\poodvn6.jpg",
+      "PackagePath": "staticwebassets\\img\\branding\\poodvn6.jpg"
+    },
+    {
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\img\\branding\\search.jpg",
       "PackagePath": "staticwebassets\\img\\branding\\search.jpg"
     },
@@ -36163,6 +36195,10 @@
     {
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\js\\Detailfood.js",
       "PackagePath": "staticwebassets\\js\\Detailfood.js"
+    },
+    {
+      "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\js\\Hieuunghome.js",
+      "PackagePath": "staticwebassets\\js\\Hieuunghome.js"
     },
     {
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\js\\Loading.js",
@@ -36403,6 +36439,10 @@
     {
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\mrimages\\0_qZ1JOnVpPokvnr69.jpg",
       "PackagePath": "staticwebassets\\mrimages\\0_qZ1JOnVpPokvnr69.jpg"
+    },
+    {
+      "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\mrimages\\2-cach-nau-mi-cay-hai-san-chuan-cong-thuc-han-quoc-202112301425006195.jpg",
+      "PackagePath": "staticwebassets\\mrimages\\2-cach-nau-mi-cay-hai-san-chuan-cong-thuc-han-quoc-202112301425006195.jpg"
     },
     {
       "Id": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\wwwroot\\mrimages\\MEGUMI~1.JPG",

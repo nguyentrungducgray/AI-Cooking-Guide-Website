@@ -45,7 +45,9 @@ namespace AI_Cooking_Guide_Website.Controllers
                 recipes = JsonSerializer.Deserialize<List<AddModel.Recipe>>(jsonData) ?? new List<AddModel.Recipe>();
             }
 
-            return View(recipes); // Trả về view Index với danh sách món ăn
+            // Lấy 9 món mới nhất
+            var latestRecipes = recipes.OrderByDescending(r => r.Id).Take(9).ToList();
+            return View(latestRecipes); 
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -92,6 +94,25 @@ namespace AI_Cooking_Guide_Website.Controllers
 
             return View(recipes); // Trả về view Index với danh sách món ăn
         }
+      
+        [HttpGet("MoreRecipes")]
+        public IActionResult MoreRecipes()
+        {
+            var filePath = Path.Combine("wwwroot", "data", "recipes.json");
+            List<AddModel.Recipe> recipes = new List<AddModel.Recipe>();
+
+            // Đọc dữ liệu JSON hiện có
+            if (System.IO.File.Exists(filePath))
+            {
+                var jsonData = System.IO.File.ReadAllText(filePath);
+                recipes = JsonSerializer.Deserialize<List<AddModel.Recipe>>(jsonData) ?? new List<AddModel.Recipe>();
+            }
+
+            // Bỏ qua 9 món mới nhất và lấy phần còn lại
+            var remainingRecipes = recipes.OrderByDescending(r => r.Id).Skip(9).ToList();
+            return View(remainingRecipes);
+        }
+
 
     }
 

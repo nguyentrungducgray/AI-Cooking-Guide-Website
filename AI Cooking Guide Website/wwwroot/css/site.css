@@ -19333,7 +19333,7 @@ header {
 
 /* Đóng khung chung cho cả hai phần */
 .section-container {
-    border: 2px solid white; /* Đường viền màu xám nhạt */
+   
     padding: 20px; /* Khoảng cách bên trong đường viền */
     border-radius: 10px; /* Bo tròn các góc, nếu muốn */
     margin: 20px 0; /* Khoảng cách trên và dưới */
@@ -19348,7 +19348,7 @@ header {
 
 /* CSS cho từng cột riêng lẻ */
 .col {
-    border: 2px solid white; /* Đường viền xám nhạt */
+   
     padding: 15px; /* Khoảng cách bên trong */
     border-radius: 10px; /* Bo tròn góc */
     margin-bottom: 20px; /* Khoảng cách dưới giữa các cột */

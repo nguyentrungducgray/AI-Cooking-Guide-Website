@@ -1,0 +1,159 @@
+﻿/* Bao quanh slideshow */
+.slideshow-wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #000;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Làm cho slideshow mượt mà */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* Lớp phủ đen mờ bao quanh toàn bộ khung ảnh */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Màu đen mờ */
+    z-index: 1; /* Đảm bảo lớp phủ nằm trên ảnh */
+    border-radius: 20px; /* Đảm bảo lớp phủ có bo tròn */
+}
+
+/* Các slide ảnh */
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out, transform 1s ease-in-out;
+}
+
+    /* Ảnh chuyển động */
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        filter: brightness(70%) contrast(120%);
+        transform: scale(1.1); /* Thêm zoom hiệu ứng */
+        transition: transform 1s ease-in-out;
+        z-index: 0; /* Đảm bảo ảnh nằm dưới lớp phủ */
+    }
+
+/* Hiệu ứng Slogan */
+.slogan {
+    position: absolute;
+    top: 50%; /* Đặt slogan ở giữa ảnh */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Canh giữa theo cả chiều ngang và dọc */
+    font-size: 3rem; /* Tăng kích thước chữ */
+    color: #fff; /* Màu chữ trắng */
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive; /* Phông chữ nghệ thuật */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 255, 255, 0.7); /* Bóng chữ đậm và hiệu ứng sáng nhẹ */
+    letter-spacing: 3px;
+    text-align: center;
+    background: transparent; /* Bỏ nền đen mờ, làm nền trong suốt */
+    padding: 20px 40px;
+    border-radius: 30px;
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease, color 0.3s ease;
+    z-index: 2; /* Đảm bảo slogan nằm trên lớp phủ */
+}
+
+/* Đưa slogan vào khi chuyển ảnh */
+.slide.fade .slogan {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1); /* Đưa slogan vào và phóng to một chút */
+}
+
+/* Hiệu ứng fade cho ảnh */
+.fade {
+    animation: fadeEffect 10s infinite;
+}
+
+/* Keyframes cho hiệu ứng fade và chuyển động */
+@keyframes fadeEffect {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    80% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Hiệu ứng hover trên slideshow-wrapper */
+.slideshow-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* Hiệu ứng zoom cho ảnh khi hover */
+.slide img:hover {
+    transform: scale(1.2);
+    filter: brightness(90%) contrast(140%);
+}
+
+/* Hiệu ứng ánh sáng cho ảnh */
+.slide img {
+    transition: all 1s ease-in-out;
+    filter: brightness(70%) contrast(120%) blur(2px);
+}
+
+.slide.fade img {
+    filter: brightness(100%) contrast(120%) blur(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .slideshow-wrapper {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    .slogan {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Thêm hiệu ứng hover cho slogan */
+.slogan:hover {
+    transform: scale(1.1); /* Làm chữ phóng to khi hover */
+    color: #ffb700; /* Đổi màu chữ khi hover */
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 255, 255, 1); /* Tăng hiệu ứng bóng và sáng khi hover */
+}
