@@ -1,52 +1,14 @@
 [
   {
     "Id": 1,
-<<<<<<< HEAD
     "Name": "B\u00E1nh Ch\u01B0ng",
     "Ingredients": [
-      "s\u1EE3i ph\u1EDF"
+      "Th\u1ECBt l\u1EE3n"
     ],
-    "Description": "adsads",
+    "Description": "M\u00F3n b\u00E1nh ko th\u1EC3 thi\u1EBFu trong ng\u00E0y t\u1EBFt truy\u1EC1n th\u1ED1ng c\u1EE7a vi\u1EC7t nam ",
     "Steps": [
-      "cho g\u1EA1o v\u00E0o l\u00E1 dong"
+      "cho g\u1EA1o v\u00E0o"
     ],
     "Image": "/images/pho-o-my-2.jpg"
-=======
-    "Name": "p\u1ECBa",
-    "Ingredients": [
-      "ti\u1EBFt \u0111\u00F4ng",
-      "b\u1EA1c nh\u1EA1c",
-      "s\u1EE5n",
-      "th\u1ECBt",
-      "\u0111u\u00F4i v\u00E0 l\u1EE5c ph\u1EE7 ng\u0169 t\u1EA1ng c\u1EE7a \u0111\u1ED9ng v\u1EADt \u0103n c\u1ECF (nh\u01B0: l\u00F2ng",
-      "gan",
-      "ph\u00E8o",
-      "ph\u1ED5i)",
-      ""
-    ],
-    "Description": "sdsdsadsadsdadsdsadsads",
-    "Steps": [
-      "s\u1EA1ksjasadjkashdkjsadksahd",
-      ""
-    ],
-    "Image": "/images/patio (2).png"
-  },
-  {
-    "Id": 2,
-    "Name": "p\u1ECBa",
-    "Ingredients": [
-      "ti\u1EBFt \u0111\u00F4ng, b\u1EA1c nh\u1EA1c, s\u1EE5n, th\u1ECBt, \u0111u\u00F4i v\u00E0 l\u1EE5c ph\u1EE7 ng\u0169 t\u1EA1ng c\u1EE7a \u0111\u1ED9ng v\u1EADt \u0103n c\u1ECF (nh\u01B0: l\u00F2ng, gan, ph\u00E8o, ph\u1ED5i)",
-      "c\u1EE9t",
-      "\u0111\u00E1i",
-      "[\u0022ti\u1EBFt \u0111\u00F4ng, b\u1EA1c nh\u1EA1c, s\u1EE5n, th\u1ECBt, \u0111u\u00F4i v\u00E0 l\u1EE5c ph\u1EE7 ng\u0169 t\u1EA1ng c\u1EE7a \u0111\u1ED9ng v\u1EADt \u0103n c\u1ECF (nh\u01B0: l\u00F2ng, gan, ph\u00E8o, ph\u1ED5i)\u0022,\u0022c\u1EE9t\u0022,\u0022\u0111\u00E1i\u0022]"
-    ],
-    "Description": "sdsdsadsadsdadsdsadsads",
-    "Steps": [
-      "1",
-      "2",
-      "[\u00221\u0022,\u00222\u0022]"
-    ],
-    "Image": "/images/patio (2).png"
->>>>>>> origin/fontProfile
   }
 ]
