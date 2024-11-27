@@ -10,15 +10,14 @@
 
     public class SearchResultModel
     {
-        
         public List<RecipeModel> Organic { get; set; }  // Danh sách kết quả tìm kiếm
+       
 
         public SearchResultModel()
         {
             Organic = new List<RecipeModel>();
+           
         }
-
-
     }
 
     public class ImageSearchResultModel
@@ -28,12 +27,13 @@
         public string Link { get; set; }
         public string ImageUrl { get; set; }
 
-        public List <ImageSearchResultModel> Images { get; set; }   
+        public List<ImageSearchResultModel> Images { get; set; }
+       
 
         public ImageSearchResultModel()
         {
             Images = new List<ImageSearchResultModel>();
+            
         }
     }
-
 }
