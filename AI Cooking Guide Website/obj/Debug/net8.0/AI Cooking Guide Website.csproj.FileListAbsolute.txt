@@ -334,3 +334,21 @@ E:\du an 3\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\re
 E:\du an 3\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.pdb
 E:\du an 3\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.genruntimeconfig.cache
 E:\du an 3\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\ref\AI Cooking Guide Website.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\CloudinaryDotNet.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\FirebaseAdmin.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\FireSharp.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Api.Gax.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Api.Gax.Rest.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.Auth.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.Core.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.Storage.v1.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Threading.Tasks.Extensions.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Threading.Tasks.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Net.Http.Extensions.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Net.Http.Primitives.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.CodeDom.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Management.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll

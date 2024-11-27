@@ -1,0 +1,83 @@
+﻿namespace AI_Cooking_Guide_Website.wwwroot.css
+{
+    public class Details
+    {
+
+    }
+}
+button {
+    margin: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+        animation: rainbow-blink 3s infinite;
+    }
+@keyframes rainbow-blink {
+    0% {
+        background-color: red;
+    }
+    /* Màu đỏ */
+    14% {
+        background-color: orange;
+    }
+    /* Màu cam */
+    28% {
+        background-color: yellow;
+    }
+    /* Màu vàng */
+    42% {
+        background-color: green;
+    }
+    /* Màu xanh lá */
+    57% {
+        background-color: blue;
+    }
+    /* Màu xanh dương */
+    71% {
+        background-color: indigo;
+    }
+    /* Màu chàm */
+    85% {
+        background-color: violet;
+    }
+    /* Màu tím */
+    100% {
+        background-color: red;
+    }
+    /* Quay lại màu đỏ */
+}
+    }
+    button:active {
+        background-color: #003d80;
+        transform: scale(0.95);
+    }
+
+    button:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+    }
+
+#read-again {
+    background-color: #28a745;
+}
+
+    #read-again:hover {
+        background-color: #218838;
+    }
+
+    #read-again:active {
+        background-color: #1e7e34;
+    }

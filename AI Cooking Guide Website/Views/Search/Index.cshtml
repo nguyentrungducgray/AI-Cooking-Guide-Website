@@ -72,6 +72,23 @@
         alert('Trình duyệt không hỗ trợ tìm kiếm bằng giọng nói');
         voiceSearchBtn.disabled = true;
     }
+
+    // Lấy nút voice button
+    const voiceBtn = document.querySelector('.voice-btn-modern');
+
+    // Biến trạng thái kích hoạt
+    let isActive = false;
+
+    // Lắng nghe sự kiện click
+    voiceBtn.addEventListener('click', () => {
+        isActive = !isActive; // Đổi trạng thái kích hoạt
+        if (isActive) {
+            voiceBtn.classList.add('voice-btn-active'); // Thêm hiệu ứng khi kích hoạt
+        } else {
+            voiceBtn.classList.remove('voice-btn-active'); // Bỏ hiệu ứng khi hủy kích hoạt
+        }
+    });
+
 </script>
 
 <!-- Search Results Section -->

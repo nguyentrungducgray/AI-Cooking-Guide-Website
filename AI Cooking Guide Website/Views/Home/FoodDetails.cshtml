@@ -1,4 +1,5 @@
 ﻿@model AI_Cooking_Guide_Website.Models.AddModel.Recipe
+<link href="~/css/Details.css" rel="stylesheet" />
 <button id="read-content">Đọc nội dung</button>
 <button id="read-again" ">Đọc lại từ đầu</button>
 <section class="py-3 py-md-5 py-xl-8 bg-light">
@@ -42,7 +43,7 @@
             </ul>
 
             <h3 class="mt-4">Các bước nấu:</h3>
-            <ol>
+            <ul>
                 @if (Model.Steps.Count > 0)
                 {
                     // Duyệt qua toàn bộ danh sách Steps
@@ -55,7 +56,7 @@
                 {
                     <li>Không có bước nấu nào.</li>
                 }
-            </ol>
+            </ul>
 
         </div>
     </div>
