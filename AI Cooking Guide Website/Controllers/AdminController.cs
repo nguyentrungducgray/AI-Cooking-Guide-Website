@@ -9,8 +9,10 @@ using Microsoft.AspNetCore.Authorization;
 namespace AI_Cooking_Guide_Website.Controllers
 {
     [Authorize(Policy = "AdminPolicy")]
-    public class AdminController : Controller
+	[Route("Admin")]
+	public class AdminController : Controller
     {
+
         [HttpPost("SaveRecipe")]
         public IActionResult SaveRecipe([FromForm] AddModel.Recipe recipe, IFormFile image)
         {
@@ -36,7 +38,7 @@ namespace AI_Cooking_Guide_Website.Controllers
                 }
 
                 // Lưu đường dẫn ảnh vào thuộc tính của món ăn
-                recipe.Image = "/images/" + image.FileName; // Đường dẫn tới ảnh
+                recipe.Image = "~/images/" + image.FileName; // Đường dẫn tới ảnh
 
                 // Xử lý danh sách Ingredients
                 if (recipe.Ingredients != null)

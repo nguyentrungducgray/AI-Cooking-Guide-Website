@@ -1,3 +1,19 @@
 [
-
+  {
+    "Id": 1,
+    "Name": "pho ",
+    "Description": "ádsad",
+    "Image": "/mrimages/poodvn6.jpg",
+    "UserName": "Gray",
+    "Status": null,
+    "IngredientsText": null,
+    "StepsText": null,
+    "IsAccepted": true,
+    "Ingredients": [
+      "mì"
+    ],
+    "Steps": [
+      "Bước 1: hầm nước trong 4-8 tiếng"
+    ]
+  }
 ]

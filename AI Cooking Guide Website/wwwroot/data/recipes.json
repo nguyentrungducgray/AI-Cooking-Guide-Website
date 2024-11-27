@@ -1,3 +1,26 @@
 [
-
+  {
+    "Id": 1,
+    "Name": "pho ",
+    "Ingredients": [
+      "m\u00EC"
+    ],
+    "Description": "\u00E1dsad",
+    "Steps": [
+      "B\u01B0\u1EDBc 1: h\u1EA7m n\u01B0\u1EDBc trong 4-8 ti\u1EBFng"
+    ],
+    "Image": "/mrimages/poodvn6.jpg"
+  },
+  {
+    "Id": 2,
+    "Name": "B\u00E1nh Ch\u01B0ng",
+    "Ingredients": [
+      "Th\u1ECBt l\u1EE3n"
+    ],
+    "Description": "M\u00F3n b\u00E1nh ko th\u1EC3 thi\u1EBFu trong ng\u00E0y t\u1EBFt ",
+    "Steps": [
+      "n\u1EA5u c\u1EE9t"
+    ],
+    "Image": "~/images/poodvn1.jpg"
+  }
 ]

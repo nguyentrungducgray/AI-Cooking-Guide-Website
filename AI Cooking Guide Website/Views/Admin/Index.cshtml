@@ -1,8 +1,8 @@
-﻿			@{
-				Layout = "~/Views/Shared/_AdminLayout.cshtml";
-			}
+﻿@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
 
-			<body>
+<body>
 
 
 
@@ -168,15 +168,15 @@
 					recipeDiv.className = "recipe-item";
 
 					recipeDiv.innerHTML = `
-													<h3>${recipe.Id}: ${recipe.Name}</h3>
-													<p><strong>Mô tả:</strong> ${recipe.Description}</p>
-													<p><strong>Nguyên liệu:</strong></p>
-													<ul>${recipe.Ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}</ul>
-													<p><strong>Các bước:</strong></p>
-													<ol>${recipe.Steps.map(step => `<li>${step}</li>`).join("")}</ol>
-													<img src="${recipe.Image}" alt="Hình ảnh món ăn" style="max-width: 200px; margin-top: 10px;">
-													<hr>
-												`;
+																	<h3>${recipe.Id}: ${recipe.Name}</h3>
+																	<p><strong>Mô tả:</strong> ${recipe.Description}</p>
+																	<p><strong>Nguyên liệu:</strong></p>
+																	<ul>${recipe.Ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}</ul>
+																	<p><strong>Các bước:</strong></p>
+																	<ol>${recipe.Steps.map(step => `<li>${step}</li>`).join("")}</ol>
+																	<img src="${recipe.Image}" alt="Hình ảnh món ăn" style="max-width: 200px; margin-top: 10px;">
+																	<hr>
+																`;
 
 					recipeList.appendChild(recipeDiv);
 				}
