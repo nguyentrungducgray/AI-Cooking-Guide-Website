@@ -9,115 +9,115 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AI_Cooking_Guide_Website
 build_property.RootNamespace = AI_Cooking_Guide_Website
-build_property.ProjectDir = D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\
+build_property.ProjectDir = D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website
+build_property.MSBuildProjectDirectory = D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/About/Index.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Accept/Index.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Accept/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXB0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Admin/Index.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Contact/Index.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Food/Index.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Food/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9vZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Home/FoodDetails.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Home/FoodDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb29kRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Home/Index.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Home/List.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Home/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/ListAdmin/Edit.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/ListAdmin/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdEFkbWluXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/ListAdmin/Index.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/ListAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdEFkbWluXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/List/Index.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/List/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Login/Forgot.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Login/Forgot.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yZ290LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Login/Login.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Login/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Login/ResetPassword.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Login/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVzZXRQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/MyRecipe/Index.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/MyRecipe/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlSZWNpcGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Profile/Profile.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Profile/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Profile/RecipeDetails.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Profile/RecipeDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxSZWNpcGVEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Register/Register.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Register/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Search/Index.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Search/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Search/RecipeDetails.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Search/RecipeDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXFJlY2lwZURldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Shared/Error.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Shared/_AdminLayout.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/_ViewImports.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/_ViewStart.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Computing Reseaver project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Shared/_Layout.cshtml]
+[D:/hocki6/Project/AI-Cooking-Guide-Website/AI Cooking Guide Website/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-nlww1a931m

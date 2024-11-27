@@ -20,8 +20,10 @@ namespace AI_Cooking_Guide_Website.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index(string query, string imageUrl)
+        public IActionResult Index(string query, string imageUrl )
         {
+           
+
             var textSearchModel = new SearchResultModel
             {
                 Organic = new List<RecipeModel>()
@@ -32,23 +34,32 @@ namespace AI_Cooking_Guide_Website.Controllers
                 Images = new List<ImageSearchResultModel>()
             };
 
+
+
+            // Tìm kiếm văn bản
             if (!string.IsNullOrEmpty(query))
             {
                 var sessionKey = $"SearchResults_{query}";
                 if (HttpContext.Session.TryGetValue(sessionKey, out var cachedData))
                 {
                     textSearchModel = JsonConvert.DeserializeObject<SearchResultModel>(Encoding.UTF8.GetString(cachedData));
+
+                   
                 }
             }
+            // Tìm kiếm hình ảnh
             else if (!string.IsNullOrEmpty(imageUrl))
             {
                 var sessionKey = $"SearchResults_{imageUrl}";
                 if (HttpContext.Session.TryGetValue(sessionKey, out var cachedData))
                 {
                     imageSearchModel = JsonConvert.DeserializeObject<ImageSearchResultModel>(Encoding.UTF8.GetString(cachedData));
+
+                   
                 }
             }
 
+            
             ViewBag.Query = query;
             ViewBag.ImageUrl = imageUrl;
 
@@ -64,6 +75,7 @@ namespace AI_Cooking_Guide_Website.Controllers
 
             return View("Index", textSearchModel); // Default to text-based search
         }
+
 
         [HttpPost]
         public async Task<IActionResult> Search(string query, string imageUrl)
