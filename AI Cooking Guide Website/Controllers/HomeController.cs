@@ -80,7 +80,7 @@ namespace AI_Cooking_Guide_Website.Controllers
             return View(recipeDetail); // Trả về View với thông tin chi tiết món ăn
         }
 
-        public IActionResult List()
+        public IActionResult List(string searchKeyword)
         {
             var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "data", "recipes.json");
             List<AddModel.Recipe> recipes = new List<AddModel.Recipe>();
@@ -92,9 +92,16 @@ namespace AI_Cooking_Guide_Website.Controllers
                 recipes = JsonSerializer.Deserialize<List<AddModel.Recipe>>(jsonData) ?? new List<AddModel.Recipe>();
             }
 
-            return View(recipes); // Trả về view Index với danh sách món ăn
+            // Nếu có từ khóa tìm kiếm, lọc món ăn theo tên chứa từ khóa đó
+            if (!string.IsNullOrEmpty(searchKeyword))
+            {
+                recipes = recipes.Where(r => r.Name.Contains(searchKeyword, StringComparison.OrdinalIgnoreCase)).ToList();
+            }
+
+            return View(recipes); // Trả về view với danh sách món ăn
         }
-      
+
+
         [HttpGet("MoreRecipes")]
         public IActionResult MoreRecipes()
         {

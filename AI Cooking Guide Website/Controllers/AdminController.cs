@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Authorization;
 namespace AI_Cooking_Guide_Website.Controllers
 {
     [Authorize(Policy = "AdminPolicy")]
+    [Route("Admin")]
+
     public class AdminController : Controller
     {
         [HttpPost("SaveRecipe")]

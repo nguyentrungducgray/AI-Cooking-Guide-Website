@@ -1,3 +1,30 @@
 [
-
+  {
+    "Id": 1,
+    "Name": "Gà xào xả ớt",
+    "Description": "Gà xào sả ớt cay cay, bùi bùi, đậm đà hương vị của thịt gà quyện với sả và ớt sừng rất hấp dẫn người ăn. Vào mùa đông lạnh hoặc những ngày mưa, nếu được thưởng thức một đĩa gà xào sả ớt nóng hổi quả thực rất tuyệt vời.",
+    "Image": "/mrimages/ga-xao-sa-ot-1-1671.jpg",
+    "UserName": "Phuong Diem",
+    "Status": null,
+    "IngredientsText": null,
+    "StepsText": null,
+    "IsAccepted": true,
+    "Ingredients": [
+      "500g thịt đùi gà",
+      "5 nhánh sả",
+      "2 quả ớt sừng",
+      "Gừng, hành, tỏi",
+      "Lá chanh",
+      "Chút bột nghệ",
+      "Nước mắm, bột ngọt, hạt tiêu"
+    ],
+    "Steps": [
+      "1. Sơ chế nguyên liệu",
+      "Hành khô bóc vỏ, băm nhỏ.  Gừng cạo vỏ, băm nhỏ.",
+      "2.Ướp thịt gà",
+      "Gà bóp qua với muối hạt, rượu gừng (nếu có) rồi rửa sạch. Dùng dao nhỏ lọc xương món ăn sẽ hấp dẫn hơn. Nếu để tiết kiệm thời gian thì bỏ qua bước lọc xương và chặt thành miếng vừa ăn.",
+      "3. Nấu gà xào sả ớt",
+      "Cho 2 thìa dầu ăn vào chảo, làm nóng dầu thì phi thơm hành, tỏi, gừng và 1 nửa số sả."
+    ]
+  }
 ]

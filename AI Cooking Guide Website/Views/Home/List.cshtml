@@ -6,17 +6,92 @@
 
 
 
+<style>
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /* Căn giữa theo chiều dọc */
+    }
 
+    h2 {
+        margin: 0; /* Đảm bảo tiêu đề không có khoảng trống không cần thiết */
+    }
+
+    .form-input {
+        display: flex;
+        align-items: center;
+        gap: 8px; /* Khoảng cách giữa input và button */
+    }
+
+    input[type="search"] {
+        padding: 8px 12px; /* Căn chỉnh nội dung bên trong input */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+  
+    /* Định dạng cho form tìm kiếm */
+    .search-form {
+        display: flex;
+        justify-content: flex-end; /* Căn phải */
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+
+    /* Định dạng cho ô nhập tìm kiếm */
+    .search-input {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ddd;
+        border-radius: 50px;
+        outline: none;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        /* Hiệu ứng khi người dùng hover vào ô tìm kiếm */
+        .search-input:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+        }
+
+    /* Định dạng cho nút tìm kiếm */
+    .search-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+        /* Hiệu ứng khi hover vào nút tìm kiếm */
+        .search-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+</style>
 <!-- Blog 5 - Bootstrap Brain Component -->
 <section class="bsb-blog-5 py-3 py-md-5 py-xl-8 bsb-section-py-xxl-1">
-    <div class="container">
-        <div class="row justify-content-md-center">
-            <div class="col-12">
-                <h2 class="h4 mb-4 mb-md-5">Mới nhất</h2>
-            </div>
+    <div class="row">
+        <div class="col-auto">
+            <h2 class="h4">Mới nhất</h2>
+        </div>
+        <div class="col-auto">
+            <!-- Form tìm kiếm -->
+            <form method="get" action="@Url.Action("List", "Home")" class="search-form">
+                <input type="text" name="searchKeyword" placeholder="Nhập từ khóa tìm kiếm..." class="search-input" value="@Context.Request.Query["searchKeyword"]" />
+                <button type="submit" class="search-button">Tìm kiếm</button>
+            </form>
+
+           
         </div>
     </div>
-
     <div class="container">
         <div class="row gy-4">
             @if (Model != null && Model.Count > 0)
