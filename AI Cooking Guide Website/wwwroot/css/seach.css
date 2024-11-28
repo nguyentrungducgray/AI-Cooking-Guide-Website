@@ -67,6 +67,7 @@
 
 /* Voice button styles */
 .voice-btn-modern {
+
     background: none;
     border: none;
     border-radius: 50%;
@@ -114,15 +115,44 @@
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Bóng đổ sâu hơn khi hover */
     }
 
-/* Hiệu ứng khi nút được kích hoạt */
-.voice-btn-modern.voice-btn-active {
-    transform: scale(1.2); /* Phóng to nhẹ */
-    background: rgb(255, 0, 0); /* Bắt đầu với màu đỏ */
-    color: #fff; /* Chữ màu trắng */
-    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.3), 0 0 20px rgba(255, 138, 0, 0.5); /* Bóng đổ và hiệu ứng phát sáng */
-    animation: pulsate 5s linear infinite; /* Tạo hiệu ứng pulsate chạy liên tục */
-    transition: background 1s ease, box-shadow 0.5s ease; /* Hiệu ứng chuyển màu mượt mà */
+/* Voice button styles */
+.voice-btn-modern {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    width: 50px; /* Kích thước nút cân đối */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #f9f9f9; /* Màu icon tươi sáng */
+    font-size: 1.5rem; /* Kích thước icon hợp lý */
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3); /* Bóng nhẹ cho icon */
 }
+
+    .voice-btn-modern:hover {
+        transform: scale(1.1);
+        color: #ffd800; /* Đổi màu icon khi hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bóng đổ rõ hơn khi hover */
+    }
+
+
+
+    .voice-btn-modern:focus {
+        outline: none;
+        box-shadow: 0 0 12px rgba(255, 138, 0, 0.6), 0 0 20px rgba(0, 114, 255, 0.6); /* Hiệu ứng glow khi focus */
+    }
+    /* Hiệu ứng khi nút được kích hoạt */
+    .voice-btn-modern.voice-btn-active {
+        transform: scale(1.2); /* Phóng to nhẹ */
+        background: rgb(255, 0, 0); /* Bắt đầu với màu đỏ */
+        color: #fff; /* Chữ màu trắng */
+        box-shadow: 0 8px 16px rgba(255, 0, 0, 0.3), 0 0 20px rgba(255, 138, 0, 0.5); /* Bóng đổ và hiệu ứng phát sáng */
+        animation: pulsate 5s linear infinite; /* Tạo hiệu ứng pulsate chạy liên tục */
+        transition: background 1s ease, box-shadow 0.5s ease; /* Hiệu ứng chuyển màu mượt mà */
+    }
 
 /* Hiệu ứng pulsate với RGB */
 @keyframes pulsate {
@@ -151,6 +181,108 @@
         box-shadow: 0 8px 16px rgba(255, 0, 0, 0.3), 0 0 20px rgba(255, 0, 0, 0.5);
     }
 }
+
+
+.playing {
+    margin-left:50px;
+    margin-top: 30px;
+    background: rgba(255,255,255,.1);
+    width: 5rem;
+    height: 5rem;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: .8rem;
+    box-sizing: border-box;
+}
+
+.playing__bar {
+    display: inline-block;
+    background: white;
+    width: 30%;
+    height: 100%;
+    animation: up-and-down 1.3s ease infinite alternate;
+}
+
+.playing__bar1 {
+    height: 60%;
+}
+
+.playing__bar2 {
+    height: 30%;
+    animation-delay: -2.2s;
+}
+
+.playing__bar3 {
+    height: 75%;
+    animation-delay: -3.7s;
+}
+
+@keyframes up-and-down {
+    10% {
+        height: 30%;
+    }
+
+    30% {
+        height: 100%;
+    }
+
+    60% {
+        height: 50%;
+    }
+
+    80% {
+        height: 75%;
+    }
+
+    100% {
+        height: 60%;
+    }
+}
+
+
+/* Lớp phủ làm mờ */
+.page-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+    backdrop-filter: blur(5px); /* Hiệu ứng mờ */
+    z-index: 999; /* Nổi trên các thành phần khác */
+    display: none; /* Ẩn mặc định */
+    pointer-events: none; /* Không ảnh hưởng đến tương tác */
+    transition: opacity 0.3s ease; /* Hiệu ứng mờ dần */
+}
+
+    .page-overlay.active {
+        display: block;
+        pointer-events: all; /* Cho phép nhận sự kiện khi hiển thị */
+        opacity: 1;
+    }
+
+/* Định nghĩa nội dung bên trong lớp phủ */
+.overlay-content {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+
+/* Text cho overlay */
+.overlay-text {
+    display: flex;
+    margin-top: 10px;
+}
+
+
 
 
 

@@ -1,4 +1,5 @@
-﻿<!-- Newsletter Section -->
+﻿
+<!-- Newsletter Section -->
 <section class="py-3 py-md-5 py-xl-10 bsb-section-py-xxl-1 bg-accent-modern">
     <div class="container">
         <div class="row justify-content-center">
@@ -18,6 +19,19 @@
                                placeholder="Nhập tên món ăn hoặc nguyên liệu..." aria-label="search-query">
                     </div>
                     <!-- Voice Search Button -->
+                    <div class="page-overlay" id="pageOverlay">
+                        <div class="overlay-content">
+                            <span class="overlay-text">Đang nghe...</span>
+                            <div class="playing">
+                                <span class="playing__bar playing__bar1"></span>
+                                <span class="playing__bar playing__bar2"></span>
+                                <span class="playing__bar playing__bar3"></span>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+
                     <div class="col-2 col-lg-1 d-flex align-items-center justify-content-center">
                         <button type="button" id="voice-search-btn" class="voice-btn-modern">
                             <i class="bi bi-mic-fill"></i> <!-- Icon mic -->
@@ -88,6 +102,18 @@
             voiceBtn.classList.remove('voice-btn-active'); // Bỏ hiệu ứng khi hủy kích hoạt
         }
     });
+
+    const voiceButton = document.getElementById('voice-search-btn');
+    const pageOverlay = document.getElementById('pageOverlay');
+
+    voiceButton.addEventListener('click', () => {
+        
+        voiceButton.classList.toggle('voice-btn-active'); // Kích hoạt nút
+        pageOverlay.classList.toggle('active'); // Hiển thị lớp phủ
+    });
+
+
+
 
 </script>
 
