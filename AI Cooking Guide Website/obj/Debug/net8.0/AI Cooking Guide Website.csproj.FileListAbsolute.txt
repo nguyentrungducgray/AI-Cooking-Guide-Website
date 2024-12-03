@@ -1,143 +1,70 @@
-<<<<<<< HEAD
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\appsettings.Development.json
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\appsettings.json
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\contact.json
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\myrecipe.json
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\replycontact.json
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\users.json
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.staticwebassets.runtime.json
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.exe
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.deps.json
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.runtimeconfig.json
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.pdb
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\CloudinaryDotNet.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\FirebaseAdmin.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\FireSharp.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Api.Gax.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Api.Gax.Rest.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.Auth.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.Core.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.Storage.v1.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Threading.Tasks.Extensions.Desktop.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Threading.Tasks.Extensions.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Threading.Tasks.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Net.Http.Extensions.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Net.Http.Primitives.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Newtonsoft.Json.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.CodeDom.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Management.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.csproj.AssemblyReference.cache
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.GeneratedMSBuildEditorConfig.editorconfig
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.AssemblyInfoInputs.cache
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.AssemblyInfo.cs
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.csproj.CoreCompileInputs.cache
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.MvcApplicationPartsAssemblyInfo.cache
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.RazorAssemblyInfo.cache
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.RazorAssemblyInfo.cs
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.sourcelink.json
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets.build.json
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets.development.json
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.AI Cooking Guide Website.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.build.AI Cooking Guide Website.props
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AI Cooking Guide Website.props
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AI Cooking Guide Website.props
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets.pack.json
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\scopedcss\bundle\AI Cooking Guide Website.styles.css
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\scopedcss\projectbundle\AI Cooking Guide Website.bundle.scp.css
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooki.7A29CA36.Up2Date
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\refint\AI Cooking Guide Website.dll
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.pdb
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.genruntimeconfig.cache
-D:\Computing Reseaver project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\ref\AI Cooking Guide Website.dll
-=======
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\appsettings.Development.json
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\appsettings.json
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\contact.json
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\myrecipe.json
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\replycontact.json
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\users.json
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.staticwebassets.runtime.json
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.exe
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.deps.json
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.runtimeconfig.json
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.pdb
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\CloudinaryDotNet.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\FirebaseAdmin.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\FireSharp.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Api.Gax.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Api.Gax.Rest.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.Auth.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.Core.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.Storage.v1.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Threading.Tasks.Extensions.Desktop.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Threading.Tasks.Extensions.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Threading.Tasks.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Net.Http.Extensions.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Net.Http.Primitives.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Newtonsoft.Json.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.CodeDom.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Management.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.csproj.AssemblyReference.cache
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.GeneratedMSBuildEditorConfig.editorconfig
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.AssemblyInfoInputs.cache
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.AssemblyInfo.cs
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.csproj.CoreCompileInputs.cache
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.MvcApplicationPartsAssemblyInfo.cache
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.RazorAssemblyInfo.cache
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.RazorAssemblyInfo.cs
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.sourcelink.json
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets.build.json
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets.development.json
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.AI Cooking Guide Website.Microsoft.AspNetCore.StaticWebAssets.props
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.build.AI Cooking Guide Website.props
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AI Cooking Guide Website.props
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AI Cooking Guide Website.props
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets.pack.json
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\scopedcss\bundle\AI Cooking Guide Website.styles.css
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\scopedcss\projectbundle\AI Cooking Guide Website.bundle.scp.css
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooki.7A29CA36.Up2Date
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\refint\AI Cooking Guide Website.dll
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.pdb
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.genruntimeconfig.cache
-E:\Cooks\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\ref\AI Cooking Guide Website.dll
->>>>>>> origin/listsearch
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\appsettings.Development.json
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\appsettings.json
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\contact.json
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\myrecipe.json
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\replycontact.json
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Data\users.json
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.staticwebassets.runtime.json
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.exe
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.deps.json
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.runtimeconfig.json
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\AI Cooking Guide Website.pdb
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\CloudinaryDotNet.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\FirebaseAdmin.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\FireSharp.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Api.Gax.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Api.Gax.Rest.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.Auth.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.Core.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Google.Apis.Storage.v1.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Threading.Tasks.Extensions.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Threading.Tasks.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Net.Http.Extensions.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Net.Http.Primitives.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.CodeDom.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\System.Management.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.csproj.AssemblyReference.cache
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.GeneratedMSBuildEditorConfig.editorconfig
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.AssemblyInfoInputs.cache
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.AssemblyInfo.cs
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.csproj.CoreCompileInputs.cache
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.MvcApplicationPartsAssemblyInfo.cache
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.RazorAssemblyInfo.cache
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.RazorAssemblyInfo.cs
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.sourcelink.json
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets.build.json
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets.development.json
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.AI Cooking Guide Website.Microsoft.AspNetCore.StaticWebAssets.props
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.build.AI Cooking Guide Website.props
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AI Cooking Guide Website.props
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AI Cooking Guide Website.props
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\staticwebassets.pack.json
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\scopedcss\bundle\AI Cooking Guide Website.styles.css
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\scopedcss\projectbundle\AI Cooking Guide Website.bundle.scp.css
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooki.7A29CA36.Up2Date
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\refint\AI Cooking Guide Website.dll
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.pdb
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\AI Cooking Guide Website.genruntimeconfig.cache
+D:\hocki6\Project\AI-Cooking-Guide-Website\AI Cooking Guide Website\obj\Debug\net8.0\ref\AI Cooking Guide Website.dll
