@@ -6,20 +6,20 @@
 <main>
     <div class="head-title">
         <div class="left">
-            <h1>Messenger</h1>
+            <h1>Hộp Thư</h1>
             <ul class="breadcrumb">
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a href="#">Bảng Điều Khiển</a>
                 </li>
                 <li><i class='bx bx-chevron-right'></i></li>
                 <li>
-                    <a class="active" href="#">Messenger</a>
+                    <a class="active" href="#">Hộp Thư</a>
                 </li>
             </ul>
         </div>
     </div>
 
-    <!-- Success Message Display -->
+    <!-- Hiển thị thông báo thành công -->
     @if (TempData["SuccessMessage"] != null)
     {
         <div class="alert alert-success">
@@ -31,13 +31,13 @@
         <table class="styled-table">
             <thead>
                 <tr>
-                    <th>FullName</th>
+                    <th>Họ Tên</th>
                     <th>Email</th>
-                    <th>Phone</th>
-                    <th>Subject</th>
-                    <th>Message</th>
-                    <th>DateSent</th>
-                    <th>Actions</th>
+                    <th>Số Điện Thoại</th>
+                    <th>Chủ Đề</th>
+                    <th>Nội Dung</th>
+                    <th>Ngày Gửi</th>
+                    <th>Hành Động</th>
                 </tr>
             </thead>
             <tbody>
@@ -52,7 +52,7 @@
                         <td>@contact.DateSent.ToString("dd/MM/yyyy HH:mm")</td>
                         <td>
                             <!-- Nút phản hồi -->
-                            <a href="@Url.Action("Reply", "Messenger", new { id = contact.Id })" class="btn btn-info">Phản hồi</a>
+                            <a href="@Url.Action("Reply", "Messenger", new { id = contact.Id })" class="btn btn-info">Phản Hồi</a>
 
                             <!-- Nút xóa -->
                             <a href="@Url.Action("Delete", "Messenger", new { id = contact.Id })" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa tin nhắn này không?')">Xóa</a>
