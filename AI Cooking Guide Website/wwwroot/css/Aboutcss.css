@@ -270,7 +270,7 @@
 
     /* Hiệu ứng hiện thị các bước */
     .step h5, .step p {
-        opacity: 0;
+       
         transform: translateY(30px);
         transition: opacity 1s ease-out, transform 1s ease-out;
     }
@@ -374,3 +374,129 @@
     .elegant-slogan:hover:before {
         opacity: 1; /* Mở màn che khi hover */
     }
+/* Reset body and html margins */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wrapper ensures content stretches to available space */
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content grows to fill available space */
+.main-content {
+    flex: 1;
+}
+
+/* Footer styles */
+.footer {
+   
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* Optional: Style parallax background */
+.parallax-effect {
+    min-height: 300px;
+    color: #fff;
+    text-align: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+/* Parallax Section */
+.parallax-effect {
+    position: relative;
+    background-image: url('../img/branding/pada.jpg');
+    background-attachment: fixed; /* Parallax effect */
+    background-size: cover;
+    background-position: center;
+    min-height: 400px; /* Set minimum height for the section */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    overflow: hidden;
+}
+
+    .parallax-effect::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6); /* Overlay tối màu */
+        z-index: 1; /* Overlay ở phía sau nội dung */
+    }
+
+
+    /* Content inside parallax effect */
+    .parallax-effect .content-overlay {
+        position: relative;
+        z-index: 2; /* Keep content above overlay */
+        text-align: center;
+    }
+
+    /* Text styling */
+    .parallax-effect h2 {
+        font-size: 3rem; /* Adjust for large screens */
+        animation: fadeInDown 1s ease-in-out;
+    }
+
+    .parallax-effect p {
+        font-size: 1.5rem;
+        color: #f8f9fa;
+        animation: fadeInUp 1.5s ease-in-out;
+    }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .parallax-effect h2 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .parallax-effect p {
+        font-size: 1.2rem;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.parallax-effect p.slogan {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-top: 50px; /* Điều chỉnh tại đây */
+    animation: fadeInUp 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.parallax-effect h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ffffff, #00ffff); /* Gradient màu sắc */
+    -webkit-background-clip: text; /* Lấy gradient cho chữ */
+    color: transparent;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Bóng mờ nhẹ */
+    letter-spacing: 2px;
+    text-align: center;
+    border: 2px solid transparent;
+    background-clip: text; /* Làm cho viền chỉ bao quanh chữ */
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+
