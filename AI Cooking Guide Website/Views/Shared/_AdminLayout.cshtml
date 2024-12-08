@@ -23,7 +23,7 @@
 			<img src="~/img/logo/logo.png" alt="Logo AdminHub" class="icon" />
 			<span class="text">Michelin Btec</span>
 		</a>
-
+		
 		<ul class="side-menu top">
 			<li class="@((ViewContext.RouteData.Values["controller"]?.ToString() == "Admin" && ViewContext.RouteData.Values["action"]?.ToString() == "Index") ? "active" : "")">
 				<a asp-controller="Admin" asp-action="Index">
@@ -51,12 +51,7 @@
 					<span class="text">Hộp thư</span>
 				</a>
 			</li>
-			<li class="@((ViewContext.RouteData.Values["controller"]?.ToString() == "Team") ? "active" : "")">
-				<a asp-controller="Team" asp-action="Index">
-					<i class='bx bxs-group'></i>
-					<span class="text">Nhóm</span>
-				</a>
-			</li>
+			
 		</ul>
 
 	</section>
@@ -65,7 +60,7 @@
 	<section id="content">
 		<!-- THANH ĐIỀU HƯỚNG -->
 		<nav>
-			<a href="#" class="nav-link">Danh mục</a>
+			
 			<form action="#">
 				<div class="form-input">
 					<input type="search" placeholder="Tìm kiếm...">

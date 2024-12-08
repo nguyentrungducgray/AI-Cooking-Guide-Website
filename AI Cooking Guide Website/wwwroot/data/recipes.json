@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "Id": 1,
+    "Name": "B\u00E1nh Ch\u01B0ng",
+    "Ingredients": [
+      "s\u1EE3i ph\u1EDF",
+      "Th\u1ECBt l\u1EE3n"
+    ],
+    "Description": "M\u00F3n b\u00E1nh ko th\u1EC3 thi\u1EBFu trong ng\u00E0y t\u1EBFt ",
+    "Steps": [
+      "B\u01B0\u1EDBc 1: L\u1EA5y m\u1ED9t chi\u1EBFc m\u00E2m r\u1ED9ng",
+      "x\u1EBFp l\u00E1 m\u1ED9t b\u00EAn",
+      "l\u1EA1t m\u1ED9t b\u00EAn",
+      "g\u1EA1o v\u00E0 \u0111\u1ED7",
+      "nh\u00E2n th\u1ECBt l\u1EE3n \u0111\u1EC3 ph\u00EDa tr\u01B0\u1EDBc."
+    ],
+    "Image": "/images/poodvn6.jpg"
+  }
+]

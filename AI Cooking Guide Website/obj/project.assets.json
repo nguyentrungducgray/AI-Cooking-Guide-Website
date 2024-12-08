@@ -4649,18 +4649,12 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\trung\\.nuget\\packages\\": {},
     "D:\\Setup App\\Visual tool\\NuGetPackages": {}
-=======
-    "C:\\Users\\hotma\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
->>>>>>> origin/fontlisthome
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\AI Cooking Guide Website.csproj",
       "projectName": "AI Cooking Guide Website",
       "projectPath": "D:\\Computing Reseaver project\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\AI Cooking Guide Website.csproj",
@@ -4672,19 +4666,6 @@
       ],
       "configFilePaths": [
         "C:\\Users\\trung\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "E:\\du an 5\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\AI Cooking Guide Website.csproj",
-      "projectName": "AI Cooking Guide Website",
-      "projectPath": "E:\\du an 5\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\AI Cooking Guide Website.csproj",
-      "packagesPath": "C:\\Users\\hotma\\.nuget\\packages\\",
-      "outputPath": "E:\\du an 5\\AI-Cooking-Guide-Website\\AI Cooking Guide Website\\obj\\",
-      "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
-      "configFilePaths": [
-        "C:\\Users\\hotma\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> origin/fontlisthome
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

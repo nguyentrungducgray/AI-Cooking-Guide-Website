@@ -128,7 +128,7 @@ namespace AI_Cooking_Guide_Website.Controllers
         }
 
 
-    public IActionResult RecipeDetails(int id)
+        public IActionResult RecipeDetails(int id)
         {
             // Load recipes from JSON file
             var recipes = LoadMyRecipesFromFile("Data/myrecipe.json");
