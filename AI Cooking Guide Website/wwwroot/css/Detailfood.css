@@ -1,2 +1,70 @@
-﻿body {
+﻿/* Đặt font nghệ thuật */
+body {
+    font-family: 'Poppins', sans-serif;
+
+    margin: 0;
+    color: #333;
+}
+
+/* Container - khoảng cách đẹp */
+.container {
+    padding: 20px;
+}
+
+/* Recipe Card */
+.recipe-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background: #fff;
+    transform: scale(1);
+}
+
+    .recipe-card:hover {
+        transform: translateY(-12px) scale(1.05); /* Nổi lên và phóng to khi hover */
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ khi hover */
+    }
+
+/* Ảnh nghệ thuật */
+.recipe-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(0.85); /* Làm tối ảnh một chút */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.recipe-card:hover .recipe-image {
+    transform: scale(1.1); /* Phóng to ảnh khi hover */
+    filter: brightness(1); /* Làm sáng ảnh khi hover */
+}
+
+/* Tiêu đề */
+.recipe-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 15px;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.recipe-card:hover .recipe-title {
+    color: #ff7e5f; /* Màu sắc sáng và ấn tượng khi hover */
+}
+
+/* Tạo hiệu ứng gradient cho background */
+.card-body {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Thêm hiệu ứng bóng cho chữ */
+.recipe-title {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Bóng chữ mờ */
 }
