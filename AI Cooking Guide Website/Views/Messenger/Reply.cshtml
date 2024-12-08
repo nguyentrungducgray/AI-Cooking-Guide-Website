@@ -7,11 +7,11 @@
 <main>
     <div class="head-title">
         <div class="left">
-            <h1>Reply to Message</h1>
+            <h1>Phản Hồi Tin Nhắn</h1>
             <ul class="breadcrumb">
-                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Bảng Điều Khiển</a></li>
                 <li><i class='bx bx-chevron-right'></i></li>
-                <li><a class="active" href="#">Reply</a></li>
+                <li><a class="active" href="#">Phản Hồi</a></li>
             </ul>
         </div>
     </div>
@@ -24,15 +24,15 @@
             </div>
         }
 
-        <h2>Reply to: @Model.UserName</h2>
+        <h2>Phản Hồi Đến: @Model.UserName</h2>
         <form method="post" asp-action="Reply">
             <div class="form-group">
-                <label for="replyMessage">Message:</label>
+                <label for="replyMessage">Nội Dung Phản Hồi:</label>
                 <textarea id="replyMessage" name="replyMessage" rows="5" required></textarea>
             </div>
             <input type="hidden" name="Id" value="@Model.Id" />
             <input type="hidden" name="FullName" value="@Model.UserName" />
-            <button type="submit">Send Reply</button>
+            <button type="submit">Gửi Phản Hồi</button>
         </form>
     </div>
 </main>

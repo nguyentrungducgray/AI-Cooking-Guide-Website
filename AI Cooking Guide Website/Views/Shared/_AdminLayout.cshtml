@@ -1,6 +1,5 @@
-﻿
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="vi">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,14 +11,13 @@
 	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 	<link href="~/css/editadminlist.css" rel="stylesheet" />
 	<link href="~/css/listadmin.css" rel="stylesheet" />
-	<linkrel =”stylesheet”href =”https://maxcdn.bootstrapcdn.com/font-Awesome/4.6.3/css/font-Awesome.min.css” />
+	<linkrel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-Awesome/4.6.3/css/font-Awesome.min.css" />
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
 
-	
 	<title>AdminHub</title>
 </head>
 <body>
-	<!-- SIDEBAR -->
+	<!-- THANH BÊN -->
 	<section id="sidebar">
 		<a href="#" class="brand">
 			<img src="~/img/logo/logo.png" alt="Logo AdminHub" class="icon" />
@@ -30,48 +28,47 @@
 			<li class="@((ViewContext.RouteData.Values["controller"]?.ToString() == "Admin" && ViewContext.RouteData.Values["action"]?.ToString() == "Index") ? "active" : "")">
 				<a asp-controller="Admin" asp-action="Index">
 					<i class='bx bxs-dashboard'></i>
-					<span class="text">Add food</span>
+					<span class="text">Thêm món ăn</span>
 				</a>
 			</li>
 
 			<li class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "ListAdmin" && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")">
 				<a asp-controller="ListAdmin" asp-action="Index">
 					<i class='bx bxs-shopping-bag-alt'></i>
-					<span class="text">List food</span>
+					<span class="text">Danh sách món ăn</span>
 				</a>
 			</li>
 
 			<li class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Accept" && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")">
 				<a asp-controller="Accept" asp-action="Index">
 					<i class='bx bxs-doughnut-chart'></i>
-					<span class="text">Analytics</span>
+					<span class="text">Quản lí công thức</span>
 				</a>
 			</li>
 			<li class="@((ViewContext.RouteData.Values["controller"]?.ToString() == "Messenger") && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")">
 				<a asp-controller="Messenger" asp-action="Index">
 					<i class='bx bxs-message-dots'></i>
-					<span class="text">Messenger</span>
+					<span class="text">Hộp thư</span>
 				</a>
 			</li>
 			<li class="@((ViewContext.RouteData.Values["controller"]?.ToString() == "Team") ? "active" : "")">
 				<a asp-controller="Team" asp-action="Index">
 					<i class='bx bxs-group'></i>
-					<span class="text">Team</span>
+					<span class="text">Nhóm</span>
 				</a>
 			</li>
 		</ul>
 
 	</section>
-	<!-- SIDEBAR -->
-	<!-- CONTENT -->
+	<!-- THANH BÊN -->
+	<!-- NỘI DUNG -->
 	<section id="content">
-		<!-- NAVBAR -->
+		<!-- THANH ĐIỀU HƯỚNG -->
 		<nav>
-
-			<a href="#" class="nav-link">Categories</a>
+			<a href="#" class="nav-link">Danh mục</a>
 			<form action="#">
 				<div class="form-input">
-					<input type="search" placeholder="Search...">
+					<input type="search" placeholder="Tìm kiếm...">
 					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
 				</div>
 			</form>
@@ -87,7 +84,7 @@
 					{
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="@User.FindFirst("AvatarUrl")?.Value" alt="Avatar" class="rounded-circle" style="width: 30px; height: 30px; object-fit: cover;">
+							<img src="@User.FindFirst("AvatarUrl")?.Value" alt="Ảnh đại diện" class="rounded-circle" style="width: 30px; height: 30px; object-fit: cover;">
 								@User.Identity.Name
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end">
@@ -105,8 +102,8 @@
 				</li>
 			</a>
 		</nav>
-		<!-- NAVBAR -->
-			<div class="container">
+		<!-- THANH ĐIỀU HƯỚNG -->
+		<div class="container">
 			<main role="main" class="pb-3">
 				@RenderBody()
 			</main>
@@ -115,7 +112,6 @@
 
 	<script src="~/js/admin.js"></script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/loading.js"></script>
+	<script src="~/js/loading.js"></script>
 </body>
 </html>
-	

@@ -8,58 +8,58 @@
     <main class="edit-recipe">
         <div class="container">
             <div class="head-title text-center">
-                <h1>Edit Recipe</h1>
-                <p class="lead">Make changes to your recipe details below</p>
+                <h1>Chỉnh sửa công thức nấu ăn</h1>
+                <p class="lead">Thay đổi chi tiết công thức nấu ăn của bạn bên dưới</p>
             </div>
 
             <form method="post" enctype="multipart/form-data" asp-action="Edit" asp-controller="ListAdmin" asp-route-id="@Model.Id" class="recipe-form">
                 @Html.AntiForgeryToken()
 
-                <!-- Recipe Name -->
+                <!-- Tên công thức -->
                 <div class="form-group">
-                    <label for="Name">Recipe Name</label>
+                    <label for="Name">Tên công thức</label>
                     <input type="text" id="Name" name="Name" class="form-control" value="@Model.Name" required />
                 </div>
 
-                <!-- Ingredients -->
+                <!-- Nguyên liệu -->
                 <div class="form-group">
-                    <label for="Ingredients">Ingredients</label>
+                    <label for="Ingredients">Nguyên liệu</label>
                     <textarea id="Ingredients" name="Ingredients" class="form-control" rows="3" required>@string.Join(", ", Model.Ingredients ?? new List<string>())</textarea>
-                    <small class="form-text text-muted">Separate ingredients with commas (e.g., sugar, flour, eggs).</small>
+                    <small class="form-text text-muted">Ngăn cách các nguyên liệu bằng dấu phẩy (ví dụ: đường, bột mì, trứng).</small>
                 </div>
 
-                <!-- Description -->
+                <!-- Mô tả -->
                 <div class="form-group">
-                    <label for="Description">Description</label>
+                    <label for="Description">Mô tả</label>
                     <textarea id="Description" name="Description" class="form-control" rows="5" required>@Model.Description</textarea>
                 </div>
 
-                <!-- Steps -->
+                <!-- Các bước thực hiện -->
                 <div class="form-group">
-                    <label for="Steps">Steps</label>
+                    <label for="Steps">Các bước thực hiện</label>
                     <textarea id="Steps" name="Steps" class="form-control" rows="5" required>@string.Join(", ", Model.Steps ?? new List<string>())</textarea>
-                    <small class="form-text text-muted">Separate steps with commas (e.g., step 1, step 2, step 3).</small>
+                    <small class="form-text text-muted">Ngăn cách các bước bằng dấu phẩy (ví dụ: bước 1, bước 2, bước 3).</small>
                 </div>
 
-                <!-- Image Upload -->
+                <!-- Tải lên hình ảnh -->
                 <div class="form-group">
-                    <label for="Image">Recipe Image</label>
+                    <label for="Image">Hình ảnh công thức</label>
                     <input type="file" id="Image" name="image" class="form-control-file" />
                     @if (!string.IsNullOrEmpty(Model.Image))
                     {
                         <div class="current-image">
-                            <img src="@Model.Image" alt="Current Image" class="img-thumbnail" />
-                            <p>Current Image: <strong>@Model.Image</strong></p>
+                            <img src="@Model.Image" alt="Hình ảnh hiện tại" class="img-thumbnail" />
+                            <p>Hình ảnh hiện tại: <strong>@Model.Image</strong></p>
                         </div>
                     }
                 </div>
 
-                <!-- Action Buttons -->
+                <!-- Nút hành động -->
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-success btn-lg">Save Changes</button>
-                    <a href="@Url.Action("Index", "ListAdmin")" class="btn btn-secondary btn-lg">Cancel</a>
+                    <button type="submit" class="btn btn-success btn-lg">Lưu thay đổi</button>
+                    <a href="@Url.Action("Index", "ListAdmin")" class="btn btn-secondary btn-lg">Hủy</a>
                 </div>
             </form>
         </div>
     </main>
-    </body>
+</body>
