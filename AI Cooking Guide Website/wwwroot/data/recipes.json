@@ -1,19 +1,77 @@
 [
   {
     "Id": 1,
-    "Name": "B\u00E1nh Ch\u01B0ng",
+    "Name": "Bánh Chưng",
+    "Description": "Món bánh ko thể thiếu trong ngày tết ",
+    "Image": "/images/poodvn6.jpg",
+    "UserName": null,
+    "Status": null,
+    "IngredientsText": null,
+    "StepsText": null,
+    "IsAccepted": false,
     "Ingredients": [
-      "s\u1EE3i ph\u1EDF",
-      "Th\u1ECBt l\u1EE3n"
+      "sợi phở",
+      "Thịt lợn"
     ],
-    "Description": "M\u00F3n b\u00E1nh ko th\u1EC3 thi\u1EBFu trong ng\u00E0y t\u1EBFt ",
     "Steps": [
-      "B\u01B0\u1EDBc 1: L\u1EA5y m\u1ED9t chi\u1EBFc m\u00E2m r\u1ED9ng",
-      "x\u1EBFp l\u00E1 m\u1ED9t b\u00EAn",
-      "l\u1EA1t m\u1ED9t b\u00EAn",
-      "g\u1EA1o v\u00E0 \u0111\u1ED7",
-      "nh\u00E2n th\u1ECBt l\u1EE3n \u0111\u1EC3 ph\u00EDa tr\u01B0\u1EDBc."
+      "Bước 1: Lấy một chiếc mâm rộng",
+      "xếp lá một bên",
+      "lạt một bên",
+      "gạo và đỗ",
+      "nhân thịt lợn để phía trước."
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "pho ",
+    "Description": "jhygjhg",
+    "Image": "/mrimages/2-cach-nau-mi-cay-hai-san-chuan-cong-thuc-han-quoc-202112301425006195.jpg",
+    "UserName": "Gray",
+    "Status": null,
+    "IngredientsText": null,
+    "StepsText": null,
+    "IsAccepted": true,
+    "Ingredients": [
+      "bò",
+      "mì"
     ],
-    "Image": "/images/poodvn6.jpg"
+    "Steps": [
+      "Bước 1: hầm nước trong 4-8 tiếng"
+    ]
+  },
+  {
+    "Id": 3,
+    "Name": "bánh chưng ",
+    "Description": "hjgjhg",
+    "Image": "/mrimages/2-cach-nau-mi-cay-hai-san-chuan-cong-thuc-han-quoc-202112301425006195.jpg",
+    "UserName": "Gray",
+    "Status": null,
+    "IngredientsText": null,
+    "StepsText": null,
+    "IsAccepted": true,
+    "Ingredients": [
+      "mì"
+    ],
+    "Steps": [
+      "nấu mì"
+    ]
+  },
+  {
+    "Id": 4,
+    "Name": "mì cay",
+    "Description": "asdsad",
+    "Image": "/mrimages/poodvn3.jpg",
+    "UserName": "Gray",
+    "Status": null,
+    "IngredientsText": null,
+    "StepsText": null,
+    "IsAccepted": true,
+    "Ingredients": [
+      "bò"
+    ],
+    "Steps": [
+      "asdsd",
+      "asdasd"
+    ]
   }
 ]

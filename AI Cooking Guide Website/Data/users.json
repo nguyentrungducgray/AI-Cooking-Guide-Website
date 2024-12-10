@@ -1,39 +1,19 @@
 [
   {
-    "Id": "BH00465",
+    "Id": "59a5443a-6eb3-4cf5-b190-4aebc993c0a3",
     "UserName": "Gray",
-    "Email": "ducntbh00465@gmail.com",
-    "Password": "123",
-    "ProfileImageUrl": null,
-    "PhoneNumber": null,
-    "Address": null,
-    "Recipes": null
-  },
-  {
-    "Id": "BH00556",
-    "UserName": "Admin",
-    "Email": "ducntbh00465@gmail.com",
-    "Password": "123",
-    "ProfileImageUrl": null,
-    "PhoneNumber": null,
-    "Address": null,
-    "Recipes": null
-  },
-  {
-    "Id": "3487d497-2840-42d6-9776-e10be28e745c",
-    "UserName": "Phuong Diem",
-    "Email": "phuongdiemtranthi23@gmail.com",
-    "Password": "diem123",
-    "ProfileImageUrl": null,
-    "PhoneNumber": "1234567899",
-    "Address": "Nam Dinh",
-    "Recipes": null
-  },
-  {
-    "Id": "ce2647e6-0d1d-428c-a0e0-47290c105f21",
-    "UserName": "TrungDuc",
     "Email": "trungduc2004@gmail.com",
     "Password": "1234",
+    "ProfileImageUrl": null,
+    "PhoneNumber": null,
+    "Address": null,
+    "Recipes": null
+  },
+  {
+    "Id": "672d7905-51a7-47de-afb8-fadfc9b694fb",
+    "UserName": "Admin",
+    "Email": "trungduc2004k54@gmail.com",
+    "Password": "123",
     "ProfileImageUrl": null,
     "PhoneNumber": null,
     "Address": null,

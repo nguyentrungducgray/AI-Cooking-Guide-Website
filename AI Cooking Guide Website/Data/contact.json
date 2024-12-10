@@ -8,5 +8,13 @@
     "Message": "tuyệt",
     "DateSent": "2024-11-27T23:31:31.8549261+07:00"
   },
- 
+  {
+    "Id": 2,
+    "FullName": "Gray",
+    "Email": "ducntbh00465@gmail.com",
+    "Phone": null,
+    "Subject": "sađâs",
+    "Message": "jhgjh",
+    "DateSent": "2024-12-08T18:50:56.8793116+07:00"
+  }
 ]
