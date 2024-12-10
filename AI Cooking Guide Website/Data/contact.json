@@ -1,20 +1,11 @@
 [
   {
-    "Id": 1,
-    "FullName": "Phuong Diem",
-    "Email": "phuongdiemtranthi23@gmail.com",
-    "Phone": "1234456677",
-    "Subject": "Bổ ích",
-    "Message": "tuyệt",
-    "DateSent": "2024-11-27T23:31:31.8549261+07:00"
-  },
-  {
-    "Id": 2,
+    "Id": 3,
     "FullName": "Gray",
-    "Email": "ducntbh00465@gmail.com",
-    "Phone": null,
+    "Email": "trungduc2004@gmail.com",
+    "Phone": "0357340724",
     "Subject": "sađâs",
-    "Message": "jhgjh",
-    "DateSent": "2024-12-08T18:50:56.8793116+07:00"
+    "Message": "hjhgjhhg",
+    "DateSent": "2024-12-10T12:20:31.1996527+07:00"
   }
 ]
